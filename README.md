@@ -13,3 +13,5 @@ The purpose of this project is to grow YVO<sub>4</sub> crystals by a variety of 
 [GEMD Docs](https://github.com/CitrineInformatics/gemd-docs)
 
 [GEMD Python Docs](https://citrineinformatics.github.io/citrine-python/getting_started/index.html)
+
+[GEMD Tools](https://github.com/openmsi/gemd_tools/tree/main)
