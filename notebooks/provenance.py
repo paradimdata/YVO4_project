@@ -10,3 +10,13 @@ class Provenance:
         self.date = date    # Date of the experiment yyyy-mm-dd, default is date of notebook creation (ex: 2023-06-22)
         self.page = page    # Page number, assuming 4-digit BPPP format (ex: 2034)
         self.title = title  # Descriptive title of notebook entry (ex: Hydrothermal Growth of YVO4 in HNO3/HCL)
+
+    def header(name,tag,date,page,title):
+        prv = Provenance()
+        print(f"""
+        {prv.name}
+        {prv.tag}
+        {prv.page}
+        {prv.title}
+        {prv.date}
+        """)
