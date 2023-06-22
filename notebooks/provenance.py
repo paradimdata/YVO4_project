@@ -11,12 +11,15 @@ class Provenance:
         self.page = page    # Page number, assuming 4-digit BPPP format (ex: 2034)
         self.title = title  # Descriptive title of notebook entry (ex: Hydrothermal Growth of YVO4 in HNO3/HCL)
 
-    def header(nm,tg,pg,tl,dt):
-        prv = Provenance(nm,tg,pg,tl,dt)
+    def header(self):
+
+        # Prints a notebook header from provenance
+
         print(f"""
-        {prv.name}
-        {prv.tag}
-        {prv.page}
-        {prv.title}
-        {prv.date}
-        """)
+            {self.name}
+            {self.tag}
+            {self.page}
+            {self.title}
+            {self.date}
+            """
+        )
