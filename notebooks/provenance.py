@@ -4,7 +4,13 @@ from datetime import date
 
 class Provenance:
     
-    def __init__(self,name='User Name',tag='TAG',page='0000',title='Entry Title',date=date.today()):
+    def __init__(self,
+            name='User Name',
+            tag='TAG',page='0000',
+            title='Entry Title',
+            date=date.today()
+            ):
+        
         self.name = name    # Full name of the notebook keeper (ex: John Doe)
         self.tag = tag      # Tag to identify notebook keeper, usually initials (ex: JHD)
         self.date = date    # Date of the experiment yyyy-mm-dd, default is date of notebook creation (ex: 2023-06-22)
