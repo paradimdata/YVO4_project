@@ -4,8 +4,8 @@ from typing import ClassVar
 
 from gemd import ProcessTemplate, ParameterTemplate, CategoricalBounds, NominalCategorical
 
-from entity.base import Process
-from entity.base.attributes import AttrsDict, define_attribute, finalize_template
+from ..base import Process
+from ..base.attributes import AttrsDict, define_attribute, finalize_template
 
 __all__ = ['BuyStartingMaterials']
 

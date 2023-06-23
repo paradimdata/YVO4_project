@@ -8,7 +8,7 @@ from gemd import (
 )
 from gemd.entity.util import make_instance
 
-from entity.base.typing import ValueAndOrigin
+from ..base.typing import ValueAndOrigin
 
 from .process_or_measurement import ProcessOrMeasurement
 

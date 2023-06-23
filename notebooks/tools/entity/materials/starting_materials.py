@@ -1,6 +1,6 @@
 '''Classes for starting materials.'''
 
-from entity.base import Material
+from ..base import Material
 
 __all__ = ['PurchasedMaterial', 'ElementalMaterial', 'AtmosphericMaterial']
 

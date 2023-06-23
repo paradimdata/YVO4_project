@@ -1,6 +1,6 @@
 '''Class for terminal material.'''
 
-from entity.base import Material
+from ..base import Material
 
 __all__ = ['TerminalMaterial']
 
