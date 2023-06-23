@@ -1,1 +1,0 @@
-[GEMD Tools](https://github.com/openmsi/gemd_tools/tree/main) are created by Ali Rachidi and Soren Bear. 
