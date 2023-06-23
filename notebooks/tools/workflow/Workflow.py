@@ -15,7 +15,7 @@ class Workflow:
         self.blocks = defaultdict()
         self.terminal_blocks = defaultdict()
         self.encoder = GEMDJson()
-        self.output_folder = kwargs["output_folder"]
+        self.output_folder = kwargs['output_folder']
 
     def thin_dumps(self):
         """
