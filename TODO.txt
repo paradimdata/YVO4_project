@@ -1,0 +1,7 @@
+(A) 2023-06-26 Ask about Blocks and Workflows
+(A) 2023-06-26 Complete electronic lab notebook template
+(A) 2023-06-26 Outline procedures for each growth method
+2023-06-26 Find resources for graphical neural networks over knowledge graphs
+2023-06-26 Migrate lab notebook into experiment specs
+2023-06-26 Populate attribute templates
+2023-06-26 Populate object templates
