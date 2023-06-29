@@ -8,6 +8,7 @@ from gemd.entity.attribute import Property, Parameter, Condition, PropertyAndCon
 
 from utils.templates.attribute_templates import ATTR_TEMPL
 from utils.templates.object_templates import OBJ_TEMPL
+from utils.reagents import REAGENTS
 
 ### Process Spec Builders ###
 
@@ -115,7 +116,7 @@ def build_heating_material_proc_spec(name,temperature,rate,duration,location,not
 def build_pressing_material_proc_spec():
     pass
 
-def build_acquire_raw_material_proc_spec(name,manufacturer,lot_id,cas_rn=None,notes=None):
+def build_acquire_raw_material_proc_spec(name,notes=None):
     '''
     Builds a process spec for acquiring a new material.
 
@@ -123,12 +124,6 @@ def build_acquire_raw_material_proc_spec(name,manufacturer,lot_id,cas_rn=None,no
 
     Name: Name of the Process, must be the same as associated material and ingredient
         ex: 'YVO4'
-    Manufacturer: Manufacturer of the material purchased
-        ex: 'Alfa Aesar', 'Thermo Scientific' 
-    Lot ID: Lot ID  of the purchased material
-        ex: 'W19F006','R10H008'
-    CAS RN: CAS Registry Number of the purchased material (optional)
-
     '''
     PROCESS_SPECS[f'Purchasing {name} Spec'] = ProcessSpec(
         name=f'Purchasing {name} Spec',
@@ -136,15 +131,15 @@ def build_acquire_raw_material_proc_spec(name,manufacturer,lot_id,cas_rn=None,no
         parameters=[
             Parameter(name='Manufacturer',
                 template=ATTR_TEMPL['Manufacturer'],
-                value=NominalCategorical(manufacturer)
+                value=NominalCategorical(REAGENTS[name].manufacturer)
                 ),
             Parameter(name='Lot ID',
                 template=ATTR_TEMPL['Lot ID'],
-                value=NominalCategorical(lot_id)
+                value=NominalCategorical(REAGENTS[name].lot)
                 ),
             Parameter(name='CAS RN',
                 template=ATTR_TEMPL['CAS RN'],
-                value=NominalCategorical(cas_rn)
+                value=NominalCategorical(REAGENTS[name].cas_rn)
                 )
         ],
         notes=notes
@@ -254,14 +249,14 @@ def build_raw_material_mat_spec(name,form,purity,notes=None):
                 property=Property(
                 name='Form',
                 template=ATTR_TEMPL['Form'],
-                value=NominalCategorical(form)
+                value=NominalCategorical(REAGENTS[name].form)
                     )
                 ),
                     PropertyAndConditions(
                 property=Property(
                 name='Purity Percentage',
                 template=ATTR_TEMPL['Purity Percentage'],
-                value=NominalReal(purity,'')
+                value=NominalReal(REAGENTS[name].purity,'')
                 )
             )
         ],
