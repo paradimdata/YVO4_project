@@ -25,6 +25,13 @@ ATTR_TEMPL[name] = PropertyTemplate(
 
 ### Parameter Templates ###
 
+name = 'XRD Adhesive'
+ATTR_TEMPL[name] = ParameterTemplate(
+    name,
+    bounds=CategoricalBounds(['Vaseline','Ethanol']),
+    description='The adhesive agent used to prepare a sample for XRD'
+)
+
 # TODO: Maybe add categorical bounds like in Lot ID?
 name = 'CAS RN'
 ATTR_TEMPL[name] = ParameterTemplate(

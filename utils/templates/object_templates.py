@@ -65,6 +65,15 @@ OBJ_TEMPL[name] = MaterialTemplate(
     ]
 )
 
+name = 'Terminal Material'
+OBJ_TEMPL[name] = MaterialTemplate(
+    name,
+    description='The final material in a synthesis process',
+    properties=[
+        ATTR_TEMPL['Form'],
+    ]
+)
+
 ### Process Templates ###
 
 name = 'Chunking Material'
@@ -208,6 +217,7 @@ OBJ_TEMPL[name] = MeasurementTemplate(
     ],
     parameters = [
         ATTR_TEMPL['Duration'],
-        ATTR_TEMPL['XRD Range']
+        ATTR_TEMPL['XRD Range'],
+        ATTR_TEMPL['XRD Adhesive']
     ]
 )
