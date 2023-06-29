@@ -7,8 +7,8 @@ from gemd.entity.value import NominalCategorical, NominalReal, UniformReal, Norm
 from gemd.entity.attribute import Property, Parameter, Condition, PropertyAndConditions
 
 
-from templates.attribute_templates import ATTR_TEMPL
-from templates.object_templates import OBJ_TEMPL
+from utils.templates.attribute_templates import ATTR_TEMPL
+from utils.templates.object_templates import OBJ_TEMPL
 
 ### Process Spec Builders ###
 
@@ -112,16 +112,20 @@ def build_raw_material_mat_spec(name,form,purity):
         template=OBJ_TEMPL['Raw Material'],
         process=PROCESS_SPECS[f'Purchasing {name} Spec'],
         properties=[
-            Property(
-                name='Purity Percentage',
-                template=ATTR_TEMPL['Purity Percentage'],
-                value=NominalReal(purity,'')
-                ),
-            Property(
+            PropertyAndConditions(
+                property=Property(
                 name='Form',
                 template=ATTR_TEMPL['Form'],
                 value=NominalCategorical(form)
-            )
+                )
+                    ),
+                    PropertyAndConditions(
+                property=Property(
+                name='Purity Percentage',
+                template=ATTR_TEMPL['Purity Percentage'],
+                value=NominalReal(purity,'')
+                )
+                    )
         ]
     )
 
@@ -170,25 +174,3 @@ def build_temperature_meas_spec():
 
 def build_xrd_meas_spec():
     pass
-
-
-my_proccess = build_acquire_raw_material_proc_spec(
-    name='V2O5',
-    manufacturer='Alfa Aesar',
-    lot_id='W19F006',
-    cas_rn=''
-)
-
-my_material = build_raw_material_mat_spec(
-    name='V2O5',
-    form='Powder',
-    purity=54.66
-)
-
-my_ingredients = [build_ingredient_spec(
-    name='V2O5',
-    quantity=10.0,
-    unc=0.1,
-    units='g'
-    )
-]
