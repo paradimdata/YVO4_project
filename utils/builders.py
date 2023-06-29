@@ -351,15 +351,12 @@ def build_xrd_meas_spec(name,duration,range,adhesive,location='X-Ray Diffraction
                 value=NominalCategorical(adhesive)
                     )
                 ],
-        conditions=[
-            PropertyAndConditions(
-                conditions=Condition(
+        conditions=[Condition(
                     name='Location',
                     template=ATTR_TEMPL['Location'],
                     value=NominalCategorical(location)
                 )
-            )
-        ],
+            ],
         file_links=file,
         notes=notes
     )
