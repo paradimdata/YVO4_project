@@ -54,7 +54,7 @@ def build_grinding_material_proc_spec(name,location,equipment='Mortar and Pestle
                 value=NominalCategorical(location)
                     )
                 )
-            ]
+            ],
         notes=notes
     )
 
