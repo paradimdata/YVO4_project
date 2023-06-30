@@ -69,6 +69,20 @@ ATTR_TEMPL[name] = ParameterTemplate(
     description="The temperature of a heating phase in a furnace. Can be dynamic with a schedule or fixed like a pre-heating temperature",
 )
 
+name = 'Laser Power'
+ATTR_TEMPL[name] = ParameterTemplate(
+    name,
+    bounds=RealBounds(0.,100.,''),
+    description='The power of the diode lasers in the LDFZ expressed as a percentage'
+)
+
+name = 'Laser Rate'
+ATTR_TEMPL[name] = ParameterTemplate(
+    name,
+    bounds=RealBounds(0.,100.,''),
+    description='The power ramp rate of the diode lasers in the LDFZ expressed as a percentage/hr'
+)
+
 name = 'Lot ID'
 ATTR_TEMPL[name] = ParameterTemplate(
     name,

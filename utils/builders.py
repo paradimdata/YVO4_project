@@ -8,7 +8,25 @@ from gemd.entity.attribute import Property, Parameter, Condition, PropertyAndCon
 
 from utils.templates.attribute_templates import ATTR_TEMPL
 from utils.templates.object_templates import OBJ_TEMPL
-from utils.reagents import REAGENTS
+
+### Validate Attributes ###
+
+def attr_validate(attr,value):
+    '''
+    Validates that a categorical value exists and adds it to the attribute bounds if requested.
+    '''
+    if value not in ATTR_TEMPL[attr].bounds.categories:
+        confirm = input(f'{value} does not exist in category {attr}. Would you like to add it? (y/n)')
+        if confirm.lower() == 'y':
+            ATTR_TEMPL[attr].bounds.categories.add(value)
+            print(f'Added {value} to category {attr}.')
+        elif confirm.lower() == 'n':
+            print(f'Please choose a different value for {attr}')
+            return
+        else:
+            raise ValueError('Invalid response. Please answer y/n.')
+    else:
+        pass
 
 ### Process Spec Builders ###
 
@@ -37,6 +55,9 @@ def build_grinding_material_proc_spec(name,location,equipment='Mortar and Pestle
         ex: 'Mortar and Pestle'
 
     '''
+    attr_validate('Equipment Used',equipment)
+    attr_validate('Location',location)
+
     PROCESS_SPECS[f'Grinding {name} Spec'] = ProcessSpec(
         name=f'Grinding {name} Spec',
         template=OBJ_TEMPL['Grinding Material'],
@@ -48,18 +69,16 @@ def build_grinding_material_proc_spec(name,location,equipment='Mortar and Pestle
                     )
                 ],
         conditions=[
-            PropertyAndConditions(
             Condition(
                 name='Location',
                 template=ATTR_TEMPL['Location'],
                 value=NominalCategorical(location)
                     )
-                )
-            ],
+                ],
         notes=notes
     )
 
-    return PROCESS_SPECS[f'Purchasing {name} Spec']
+    return PROCESS_SPECS[f'Grinding {name} Spec']
 
 def build_heating_material_proc_spec(name,temperature,rate,duration,location,notes=None):
     '''
@@ -79,6 +98,8 @@ def build_heating_material_proc_spec(name,temperature,rate,duration,location,not
         ex: 'Synthesis Tube Furnace', 'X-Ray Diffraction Panel'
 
     '''
+    attr_validate('Location',location)
+
     PROCESS_SPECS[f'Heating {name} Spec'] = ProcessSpec(
         name=f'Heating {name} Spec',
         template=OBJ_TEMPL['Heating Material'],
@@ -111,12 +132,74 @@ def build_heating_material_proc_spec(name,temperature,rate,duration,location,not
         notes=notes
     )
 
+    return PROCESS_SPECS[f'Heating {name} Spec']
+
+def build_ldfz_material_proc_spec(name,power,rate,duration,atmosphere,location,notes=None):
+    '''
+    Builds a process spec for heating a material.
+
+    ### Parameters
+
+    Name: Name of the Process, must be the same as associated material and ingredient
+        ex: 'YVO4'
+    Temperature: Holding temperature of the heating process in degC
+        ex: 750.
+    Rate: The ramp rate in degC/hr of the heating/cooling of the material.
+        ex: 100.
+    Duration: Duration of the heating process in hours
+        ex: 10.
+    Location: Location where a process was performed
+        ex: 'Synthesis Tube Furnace', 'X-Ray Diffraction Panel'
+
+    '''
+    attr_validate('Location',location)
+    attr_validate('Atmosphere',atmosphere)
+
+    PROCESS_SPECS[f'LDFZ {name} Spec'] = ProcessSpec(
+        name=f'LDFZ {name} Spec',
+        template=OBJ_TEMPL['LDFZ Material'],
+        parameters=[
+            Parameter(
+                name='Laser Power',
+                template=ATTR_TEMPL['Laser Power'],
+                value=NominalReal(power,'')
+                    ),
+            Parameter(
+                name='Laser Rate',
+                template=ATTR_TEMPL['Laser Rate'],
+                value=NominalReal(rate,'')
+                    ),
+            Parameter(
+                name='Duration',
+                template=ATTR_TEMPL['Duration'],
+                value=NominalReal(duration,'hr')
+            )
+                ],
+        conditions=[
+            PropertyAndConditions(
+            Condition(
+                name='Location',
+                template=ATTR_TEMPL['Location'],
+                value=NominalCategorical(location)
+                    )
+                ),
+            PropertyAndConditions(
+            Condition(
+                name='Atmosphere',
+                template=ATTR_TEMPL['Atmosphere'],
+                value=NominalCategorical(atmosphere)
+                    )
+                )   
+            ],   
+        notes=notes
+    )
+
     return PROCESS_SPECS[f'Purchasing {name} Spec']
 
 def build_pressing_material_proc_spec():
     pass
 
-def build_acquire_raw_material_proc_spec(name,notes=None):
+def build_acquire_raw_material_proc_spec(name,manufacturer,lot_id,cas_rn=None,notes=None):
     '''
     Builds a process spec for acquiring a new material.
 
@@ -124,22 +207,32 @@ def build_acquire_raw_material_proc_spec(name,notes=None):
 
     Name: Name of the Process, must be the same as associated material and ingredient
         ex: 'YVO4'
-    '''
+    Manufacturer: The manufacturer from which the material was purchased
+        ex: 'Thermo Scientific'
+    Lot ID: Lot ID of the purchased material
+        ex: '2134WX'
+    CAS RN: CAS registry number of the purchased material (Optional)
+        ex: '123-45-678'
+    ''' 
+    attr_validate('Manufacturer',manufacturer)
+    attr_validate('Lot ID',lot_id)
+    attr_validate('CAS RN',cas_rn)
+
     PROCESS_SPECS[f'Purchasing {name} Spec'] = ProcessSpec(
         name=f'Purchasing {name} Spec',
         template=OBJ_TEMPL['Purchasing Raw Material'],
         parameters=[
             Parameter(name='Manufacturer',
                 template=ATTR_TEMPL['Manufacturer'],
-                value=NominalCategorical(REAGENTS[name].manufacturer)
+                value=NominalCategorical(manufacturer)
                 ),
             Parameter(name='Lot ID',
                 template=ATTR_TEMPL['Lot ID'],
-                value=NominalCategorical(REAGENTS[name].lot)
+                value=NominalCategorical(lot_id)
                 ),
             Parameter(name='CAS RN',
                 template=ATTR_TEMPL['CAS RN'],
-                value=NominalCategorical(REAGENTS[name].cas_rn)
+                value=NominalCategorical(cas_rn)
                 )
         ],
         notes=notes
@@ -175,6 +268,8 @@ def build_ground_material_mat_spec(name,form='Powder',notes=None):
         ex: 'Powder', 'Rod'
 
     '''
+    attr_validate('Form',form)
+
     MATERIAL_SPECS[f'{name} Material Spec'] = MaterialSpec(
         name=f'{name} Material Spec',
         template=OBJ_TEMPL['Ground Material'],
@@ -205,6 +300,8 @@ def build_heated_material_mat_spec(name,form,notes=None):
         ex: 'Powder', 'Rod'
 
     '''
+    attr_validate('Form',form)
+
     MATERIAL_SPECS[f'{name} Material Spec'] = MaterialSpec(
         name=f'{name} Material Spec',
         template=OBJ_TEMPL['Heated Material'],
@@ -238,8 +335,9 @@ def build_raw_material_mat_spec(name,form,purity,notes=None):
         ex: 'Powder', 'Rod'
     Purity: Purity of the material as a percent
         ex: 99.996
-
     '''
+    attr_validate('Form',form)
+
     MATERIAL_SPECS[f'{name} Material Spec'] = MaterialSpec(
         name=f'{name} Material Spec',
         template=OBJ_TEMPL['Raw Material'],
@@ -249,14 +347,14 @@ def build_raw_material_mat_spec(name,form,purity,notes=None):
                 property=Property(
                 name='Form',
                 template=ATTR_TEMPL['Form'],
-                value=NominalCategorical(REAGENTS[name].form)
+                value=NominalCategorical(form)
                     )
                 ),
                     PropertyAndConditions(
                 property=Property(
                 name='Purity Percentage',
                 template=ATTR_TEMPL['Purity Percentage'],
-                value=NominalReal(REAGENTS[name].purity,'')
+                value=NominalReal(purity,'')
                 )
             )
         ],
@@ -326,6 +424,9 @@ def build_xrd_meas_spec(name,duration,range,adhesive,location='X-Ray Diffraction
     Location: Location in which the measurement was taken. Default is XRD Panel.
         ex: 'XRD Panel'
     '''
+    attr_validate('Location',location)
+    attr_validate('XRD Adhesive',adhesive)
+
     MEASUREMENT_SPECS[f'{name} XRD Measurement Spec'] = MeasurementSpec(
         name=f'{name} XRD Measurement Spec',
         template=OBJ_TEMPL['X-Ray Diffraction'],

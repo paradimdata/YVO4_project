@@ -132,6 +132,22 @@ OBJ_TEMPL[name] = ProcessTemplate(
     ]
 )
 
+name = 'LDFZ Material'
+OBJ_TEMPL[name] = ProcessTemplate(
+    name,
+    description='Heating a material in the laser-diode floating zone furnace',
+    parameters=[
+        [ATTR_TEMPL['Laser Power'], RealBounds(0., 100., '')],
+        [ATTR_TEMPL['Laser Rate'], RealBounds(0., 100., '')],
+        ATTR_TEMPL['Duration'],
+
+    ],
+    conditions=[
+        ATTR_TEMPL['Location'],
+        ATTR_TEMPL['Atmosphere']
+    ]
+)
+
 name = 'Pressing Material'
 OBJ_TEMPL[name] = ProcessTemplate(
     name,
