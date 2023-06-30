@@ -1,13 +1,13 @@
 (A) 2023-06-26 Complete electronic lab notebook template
-(A) 2023-06-26 Outline procedures for each growth method
 2023-06-26 Find resources for graphical neural networks over knowledge graphs
 2023-06-26 Migrate lab notebook into experiment specs
 2023-06-28 Complete spec builders toolbox
 2023-06-29 Make the heating material process more robust for complex heating programs
-x 2023-06-29 Test REAGENTS implementation
 2023-06-30 Create directories to store data for file links
 x (A) 2023-06-26 Ask about Blocks and Workflows
+x (A) 2023-06-26 Outline procedures for each growth method
 x (A) 2023-06-28 Fix build_raw_material_mat_spec
 x 2023-06-26 Populate attribute templates
 x 2023-06-26 Populate object templates
 x 2023-06-28 Create tool to convert molarity to %wt
+x 2023-06-29 Test REAGENTS implementation
