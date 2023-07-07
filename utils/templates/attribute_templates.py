@@ -129,7 +129,7 @@ ATTR_TEMPL[name] = ParameterTemplate(
 name = 'XRD Range'
 ATTR_TEMPL[name] = ParameterTemplate(
     name,
-    bounds=RealBounds(5,90,'deg'),
+    bounds=CategoricalBounds(config['BOUNDS'][name]['categories']),
     description='The range of angles at which an X-ray Diffraction measurement is taken, usually expressed as 2*theta',
 )
 

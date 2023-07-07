@@ -18,8 +18,6 @@ def save_config(config):
     with open(file_path, 'w') as file:
         json.dump(config, file, indent=2)
 
-save_config(config)
-
 def attr_validate(attr,value):
     '''
     Validates that a categorical value exists and adds it to the attribute bounds config if requested.
@@ -37,8 +35,6 @@ def attr_validate(attr,value):
             raise ValueError('Invalid response. Please answer y/n.')
     else:
         pass
-
-
 
 ### Process Spec Builders ###
 
@@ -130,17 +126,14 @@ def build_heating_material_proc_spec(name,temperature,rate,duration,location,not
                 name='Duration',
                 template=ATTR_TEMPL['Duration'],
                 value=NominalReal(duration,'hr')
-            )
+                    )
                 ],
-        conditions=[
-            PropertyAndConditions(
-            Condition(
+        conditions=[Condition(
                 name='Location',
                 template=ATTR_TEMPL['Location'],
                 value=NominalCategorical(location)
-                    )
-                )   
-            ],   
+                    ) 
+                ],   
         notes=notes
     )
 
@@ -383,7 +376,7 @@ def build_solution_material_mat_spec():
 
 INGREDIENT_SPECS = {}
 
-def build_ingredient_spec(name,quantity,unc,units,notes=None):
+def build_ingredient_spec(name,process,material,quantity,notes=None):
     '''
     Builds an ingredient spec.
 
@@ -400,13 +393,9 @@ def build_ingredient_spec(name,quantity,unc,units,notes=None):
     '''
     INGREDIENT_SPECS[f'{name} Ingredient Spec'] = IngredientSpec(
         name=f'{name} Ingredient Spec',
-        process=PROCESS_SPECS[f'Purchasing {name} Spec'],
-        material=MATERIAL_SPECS[f'{name} Material Spec'],
-        absolute_quantity=UniformReal(
-                            lower_bound=quantity-unc,
-                            upper_bound=quantity+unc,
-                            units=units
-        ),
+        process=process,
+        material=material,
+        absolute_quantity=quantity,
         notes=notes
     )
 
@@ -469,3 +458,4 @@ def build_xrd_meas_spec(name,duration,range,adhesive,location='X-Ray Diffraction
         notes=notes
     )
 
+    return MEASUREMENT_SPECS[f'{name} XRD Measurement Spec']

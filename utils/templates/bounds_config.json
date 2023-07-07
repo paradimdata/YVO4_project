@@ -23,6 +23,12 @@
         "Ethanol"
       ]
     },
+    "XRD Range": {
+      "categories": [
+        "5-60",
+        "5-90"
+      ]
+    },
     "CAS RN": {
       "categories": [
         "1314-36-9",
