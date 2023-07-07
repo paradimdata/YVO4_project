@@ -9,17 +9,27 @@ from gemd.entity.attribute import Property, Parameter, Condition, PropertyAndCon
 from utils.templates.attribute_templates import ATTR_TEMPL
 from utils.templates.object_templates import OBJ_TEMPL
 
+import json
+from utils.templates.attribute_templates import config,file_path
+
 ### Validate Attributes ###
+
+def save_config(config):
+    with open(file_path, 'w') as file:
+        json.dump(config, file, indent=2)
+
+save_config(config)
 
 def attr_validate(attr,value):
     '''
-    Validates that a categorical value exists and adds it to the attribute bounds if requested.
+    Validates that a categorical value exists and adds it to the attribute bounds config if requested.
     '''
-    if value not in ATTR_TEMPL[attr].bounds.categories:
+    if value not in config['BOUNDS'][attr]['categories']:
         confirm = input(f'{value} does not exist in category {attr}. Would you like to add it? (y/n)')
         if confirm.lower() == 'y':
-            ATTR_TEMPL[attr].bounds.categories.add(value)
+            config['BOUNDS'][attr]['categories'].append(value)
             print(f'Added {value} to category {attr}.')
+            save_config(config)
         elif confirm.lower() == 'n':
             print(f'Please choose a different value for {attr}')
             return
@@ -27,6 +37,8 @@ def attr_validate(attr,value):
             raise ValueError('Invalid response. Please answer y/n.')
     else:
         pass
+
+
 
 ### Process Spec Builders ###
 
@@ -456,3 +468,4 @@ def build_xrd_meas_spec(name,duration,range,adhesive,location='X-Ray Diffraction
         file_links=file,
         notes=notes
     )
+

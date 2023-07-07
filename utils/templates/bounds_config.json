@@ -1,0 +1,81 @@
+{
+  "BOUNDS": {
+    "Form": {
+      "categories": [
+        "Powder -325 mesh",
+        "Powder",
+        "Pieces",
+        "Pellet",
+        "Resublimed Crystals",
+        "Amorphous",
+        "Ingot",
+        "Solid",
+        "Crystal",
+        "Chunk",
+        "Chunk and Powder",
+        "Solution",
+        "Rod"
+      ]
+    },
+    "XRD Adhesive": {
+      "categories": [
+        "Vaseline",
+        "Ethanol"
+      ]
+    },
+    "CAS RN": {
+      "categories": [
+        "1314-36-9",
+        "1314-62-1"
+      ]
+    },
+    "Equipment Used": {
+      "categories": [
+        "Mortar and Pestle",
+        "Pellet Press Set",
+        "Quartz Tube",
+        "Quartz Wool",
+        "Nichrome Wire",
+        "Tube Sealing Station",
+        "Torch",
+        "Thermocouple",
+        "Tongs"
+      ]
+    },
+    "Lot ID": {
+      "categories": [
+        "W19F006",
+        "R10H008",
+        "X17C007",
+        "R04D028",
+        "23195800",
+        "0198917/2.1"
+      ]
+    },
+    "Manufacturer": {
+      "categories": [
+        "Alfa Aesar",
+        "Thermo Scientific",
+        "Yeemeida Technology Co. LTD",
+        "Strem Chemicals",
+        "Noah Technologies Corporation"
+      ]
+    },
+    "Atmosphere": {
+      "categories": [
+        "Inner Atmosphere Glovebox",
+        "Air"
+      ]
+    },
+    "Location": {
+      "categories": [
+        "Purification Tube Furnace",
+        "Synthesis Tube Furnace",
+        "Three Zones Tube Furnace",
+        "X-Ray Diffraction Panel",
+        "Bucket",
+        "Hot Lab"
+      ]
+    }
+  }
+}

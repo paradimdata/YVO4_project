@@ -4,6 +4,21 @@
 
 from gemd.entity.template import PropertyTemplate, ParameterTemplate, ConditionTemplate
 from gemd.entity.bounds import CategoricalBounds, RealBounds
+import json
+import os
+
+### Load Bounds Config ###
+
+script_path = os.path.abspath(__file__)
+script_dir = os.path.dirname(script_path)
+file_path = os.path.join(script_dir, 'bounds_config.json')
+
+def load_config():
+    with open(file_path, 'r') as file:
+        config = json.load(file)
+    return config
+
+config = load_config()
 
 ATTR_TEMPL = {}
 
@@ -12,7 +27,7 @@ ATTR_TEMPL = {}
 name = 'Form'
 ATTR_TEMPL[name] = PropertyTemplate(
     name,
-    bounds=CategoricalBounds(['Powder -325 mesh','Powder','Pieces', 'Pellet', 'resublimed crystals', 'Amorphous','Ingot','Solid','Crystal','Chunk','Chunk and Powder','Solution','Rod']),
+    bounds=CategoricalBounds(config['BOUNDS'][name]['categories']),
     description='The form of a particular material'
 )
 
@@ -28,7 +43,7 @@ ATTR_TEMPL[name] = PropertyTemplate(
 name = 'XRD Adhesive'
 ATTR_TEMPL[name] = ParameterTemplate(
     name,
-    bounds=CategoricalBounds(['Vaseline','Ethanol']),
+    bounds=CategoricalBounds(config['BOUNDS'][name]['categories']),
     description='The adhesive agent used to prepare a sample for XRD'
 )
 
@@ -36,7 +51,7 @@ ATTR_TEMPL[name] = ParameterTemplate(
 name = 'CAS RN'
 ATTR_TEMPL[name] = ParameterTemplate(
     name,
-    bounds=CategoricalBounds(['']),
+    bounds=CategoricalBounds(config['BOUNDS'][name]['categories']),
     description='The CAS Registry Number (RN) for a particular reagent'
 )
 
@@ -51,7 +66,7 @@ ATTR_TEMPL[name] = ParameterTemplate(
 name = 'Equipment Used'
 ATTR_TEMPL[name] = ParameterTemplate(
     name,
-    bounds=CategoricalBounds(['Mortar and Pestle', 'Pellet Press Set', 'Quartz Tube', 'Quartz Wool', 'Nichrome Wire', 'Tube Sealing Station', 'Torch', 'Thermocouple', 'Tongs']),
+    bounds=CategoricalBounds(config['BOUNDS'][name]['categories']),
     description='A parameter describing the equipment used in a particular process or measurement',
 )
 
@@ -86,14 +101,14 @@ ATTR_TEMPL[name] = ParameterTemplate(
 name = 'Lot ID'
 ATTR_TEMPL[name] = ParameterTemplate(
     name,
-    bounds=CategoricalBounds(['W19F006','R10H008','X17C007', 'R04D028']),
+    bounds=CategoricalBounds(config['BOUNDS'][name]['categories']),
     description='The particular Lot of a material purchased from a manufacturer',
 )
 
 name = 'Manufacturer'
 ATTR_TEMPL[name] = ParameterTemplate(
     name,
-    bounds=CategoricalBounds(['Alfa Aesar','Thermo Scientific','Yeemeida Technology Co. LTD']),
+    bounds=CategoricalBounds(config['BOUNDS'][name]['categories']),
     description='The name of the manufacturer from which a raw material was ordered'
 )
 
@@ -123,13 +138,13 @@ ATTR_TEMPL[name] = ParameterTemplate(
 name = 'Atmosphere'
 ATTR_TEMPL[name] = ConditionTemplate(
     name,
-    bounds=CategoricalBounds(['Inner Atmosphere Glovebox', 'Air']),
+    bounds=CategoricalBounds(config['BOUNDS'][name]['categories']),
     description='A condition describing the atmosphere in which a process occurs',
 )
 
 name = 'Location'
 ATTR_TEMPL[name] = ConditionTemplate(
     name,
-    bounds=CategoricalBounds(['Purification Tube Furnace', 'Synthesis Tube Furnace','Three Zones Tube Furnace', 'X-Ray Diffraction Panel', 'Bucket']),
+    bounds=CategoricalBounds(config['BOUNDS'][name]['categories']),
     description='A condition describing the location in which a process or measurement is performed',
 )
