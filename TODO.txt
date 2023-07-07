@@ -1,3 +1,4 @@
+(A) 2023-07-07 Complete GBM1004 entry
 2023-06-26 Find resources for graphical neural networks over knowledge graphs
 2023-06-26 Migrate lab notebook into experiment specs
 2023-06-28 Complete spec builders toolbox

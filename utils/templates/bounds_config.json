@@ -32,7 +32,9 @@
     "CAS RN": {
       "categories": [
         "1314-36-9",
-        "1314-62-1"
+        "1314-62-1",
+        "554-13-2",
+        "7697-37-2"
       ]
     },
     "Equipment Used": {
@@ -45,7 +47,8 @@
         "Tube Sealing Station",
         "Torch",
         "Thermocouple",
-        "Tongs"
+        "Tongs",
+        "Autoclave"
       ]
     },
     "Lot ID": {
@@ -55,7 +58,9 @@
         "X17C007",
         "R04D028",
         "23195800",
-        "0198917/2.1"
+        "0198917/2.1",
+        "221613",
+        "182153"
       ]
     },
     "Manufacturer": {
@@ -64,7 +69,8 @@
         "Thermo Scientific",
         "Yeemeida Technology Co. LTD",
         "Strem Chemicals",
-        "Noah Technologies Corporation"
+        "Noah Technologies Corporation",
+        "Fisher Commercial"
       ]
     },
     "Atmosphere": {
@@ -80,7 +86,8 @@
         "Three Zones Tube Furnace",
         "X-Ray Diffraction Panel",
         "Bucket",
-        "Hot Lab"
+        "Hot Lab",
+        "Wet Lab"
       ]
     }
   }

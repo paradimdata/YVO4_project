@@ -16,7 +16,7 @@ class Solution():
         Molarity: Molarity of the solution in mol/L
         Assumes a density of 1 g/mL
         '''
-        percent_wt = (molarity * self.mm) / 10
+        percent_wt = round(((molarity * self.mm) / 10),5)
         return percent_wt
         
 SOLNS = {}

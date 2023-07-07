@@ -43,8 +43,44 @@ PROCESS_SPECS = {}
 def build_chunking_material_proc_spec():
     pass
 
-def build_dissolving_material_proc_spec():
-    pass
+def build_dissolving_material_proc_spec(name,location,equipment,notes=None):
+    '''
+    Builds a process spec for dissolving a material.
+
+    ### Parameters
+
+    Name: Name of the Process, must be the same as associated material and ingredient
+        ex: 'YVO4'
+    Location: Location where a process was performed
+        ex: 'Synthesis Tube Furnace', 'X-Ray Diffraction Panel'
+    Equipment: Equipment used to perform an action. In this case it is the vessel in which it is dissolved
+        ex: 'Mortar and Pestle'
+
+    '''
+    attr_validate('Equipment Used',equipment)
+    attr_validate('Location',location)
+
+    PROCESS_SPECS[f'Dissolving {name} Spec'] = ProcessSpec(
+        name=f'Dissolving {name} Spec',
+        template=OBJ_TEMPL['Dissolving Material'],
+        parameters=[
+            Parameter(
+                name='Equipment Used',
+                template=ATTR_TEMPL['Equipment Used'],
+                value=NominalCategorical(equipment)
+                    )
+                ],
+        conditions=[
+            Condition(
+                name='Location',
+                template=ATTR_TEMPL['Location'],
+                value=NominalCategorical(location)
+                    )
+                ],
+        notes=notes
+    )
+
+    return PROCESS_SPECS[f'Dissolving {name} Spec']
 
 def build_filter_solution_proc_spec():
     pass
@@ -275,8 +311,8 @@ def build_ground_material_mat_spec(name,form='Powder',notes=None):
     '''
     attr_validate('Form',form)
 
-    MATERIAL_SPECS[f'{name} Material Spec'] = MaterialSpec(
-        name=f'{name} Material Spec',
+    MATERIAL_SPECS[f'{name} Ground Material Spec'] = MaterialSpec(
+        name=f'{name} Ground Material Spec',
         template=OBJ_TEMPL['Ground Material'],
         process=PROCESS_SPECS[f'Grinding {name} Spec'],
         properties=[
@@ -291,7 +327,7 @@ def build_ground_material_mat_spec(name,form='Powder',notes=None):
         notes=notes
     )
 
-    return MATERIAL_SPECS[f'{name} Material Spec']
+    return MATERIAL_SPECS[f'{name} Ground Material Spec']
 
 def build_heated_material_mat_spec(name,form,notes=None):
     '''
@@ -307,8 +343,8 @@ def build_heated_material_mat_spec(name,form,notes=None):
     '''
     attr_validate('Form',form)
 
-    MATERIAL_SPECS[f'{name} Material Spec'] = MaterialSpec(
-        name=f'{name} Material Spec',
+    MATERIAL_SPECS[f'{name} Heated Material Spec'] = MaterialSpec(
+        name=f'{name} Heated Material Spec',
         template=OBJ_TEMPL['Heated Material'],
         process=PROCESS_SPECS[f'Heating {name} Spec'],
         properties=[
@@ -323,7 +359,7 @@ def build_heated_material_mat_spec(name,form,notes=None):
         notes=notes
     )
 
-    return MATERIAL_SPECS[f'{name} Material Spec']
+    return MATERIAL_SPECS[f'{name} Heated Material Spec']
 
 def build_pressed_material_mat_spec():
     pass
@@ -343,8 +379,8 @@ def build_raw_material_mat_spec(name,form,purity,notes=None):
     '''
     attr_validate('Form',form)
 
-    MATERIAL_SPECS[f'{name} Material Spec'] = MaterialSpec(
-        name=f'{name} Material Spec',
+    MATERIAL_SPECS[f'{name} Raw Material Spec'] = MaterialSpec(
+        name=f'{name} Raw Material Spec',
         template=OBJ_TEMPL['Raw Material'],
         process=PROCESS_SPECS[f'Purchasing {name} Spec'],
         properties=[
@@ -367,10 +403,39 @@ def build_raw_material_mat_spec(name,form,purity,notes=None):
     )
 
             
-    return MATERIAL_SPECS[f'{name} Material Spec']
+    return MATERIAL_SPECS[f'{name} Raw Material Spec']
 
-def build_solution_material_mat_spec():
-    pass
+def build_solution_material_mat_spec(name,form='Solution',notes=None):
+    '''
+    Builds a material spec for a Solution Material (dissolved).
+
+    ### Parameters
+
+    Name: Name of the Ingredient, must be the same as associated process and ingredient
+        ex: 'YVO4'
+    Form: Physical form of the ingredient. Default is 'Solution' 
+        ex: 'Powder', 'Rod'
+
+    '''
+    attr_validate('Form',form)
+
+    MATERIAL_SPECS[f'{name} Solution Material Spec'] = MaterialSpec(
+        name=f'{name} Solution Material Spec',
+        template=OBJ_TEMPL['Solution Material'],
+        process=PROCESS_SPECS[f'Dissolving {name} Spec'],
+        properties=[
+            PropertyAndConditions(
+                property=Property(
+                name='Form',
+                template=ATTR_TEMPL['Form'],
+                value=NominalCategorical(form)
+                )
+            )
+        ],
+        notes=notes
+    )
+
+    return MATERIAL_SPECS[f'{name} Solution Material Spec']
 
 ### Ingredient Spec Builders ###
 
