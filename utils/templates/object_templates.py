@@ -19,6 +19,15 @@ OBJ_TEMPL[name] = MaterialTemplate(
     ]
 )
 
+name = 'Filtered Material'
+OBJ_TEMPL[name] = MaterialTemplate(
+    name,
+    description='A material filtered out of a solution',
+    properties=[
+        ATTR_TEMPL['Form'],
+    ]
+)
+
 name = 'Ground Material'
 OBJ_TEMPL[name] = MaterialTemplate(
     name,
@@ -94,7 +103,7 @@ OBJ_TEMPL[name] = ProcessTemplate(
     ],
 )
 
-name = 'Filter Solution'
+name = 'Filtering Material'
 OBJ_TEMPL[name] = ProcessTemplate(
     name,
     description='Filtering a solid material out of a solution',
@@ -126,6 +135,18 @@ OBJ_TEMPL[name] = ProcessTemplate(
         [ATTR_TEMPL['Furnace Temperature'], RealBounds(0., 1050., 'degC')],
         [ATTR_TEMPL['Furnace Rate'], RealBounds(0., 100., 'degC')],
         ATTR_TEMPL['Duration'],
+    ],
+    conditions=[
+        ATTR_TEMPL['Location']
+    ]
+)
+
+name = 'Improved Heating Material'
+OBJ_TEMPL[name] = ProcessTemplate(
+    name,
+    description='Heating a material in a box furnace with a series of steps',
+    parameters=[
+        ATTR_TEMPL['Step']
     ],
     conditions=[
         ATTR_TEMPL['Location']

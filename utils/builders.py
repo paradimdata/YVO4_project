@@ -2,8 +2,8 @@
 
 ### Imports ###
 
-from gemd import ProcessSpec,MaterialSpec,IngredientSpec,MeasurementSpec
-from gemd.entity.value import NominalCategorical, NominalReal, UniformReal, NormalReal
+from gemd import ProcessSpec,MaterialSpec,IngredientSpec,MeasurementSpec,FileLink
+from gemd.entity.value import NominalCategorical, NominalReal, UniformReal, NormalReal, NominalComposition, NominalInteger
 from gemd.entity.attribute import Property, Parameter, Condition, PropertyAndConditions
 
 from utils.templates.attribute_templates import ATTR_TEMPL
@@ -18,7 +18,7 @@ def save_config(config):
     with open(file_path, 'w') as file:
         json.dump(config, file, indent=2)
 
-def attr_validate(attr,value):
+def attr_validate(attr:str,value):
     '''
     Validates that a categorical value exists and adds it to the attribute bounds config if requested.
     '''
@@ -43,7 +43,7 @@ PROCESS_SPECS = {}
 def build_chunking_material_proc_spec():
     pass
 
-def build_dissolving_material_proc_spec(name,location,equipment,notes=None):
+def build_dissolving_material_proc_spec(name:str,location:str,equipment:str,notes:str=None):
     '''
     Builds a process spec for dissolving a material.
 
@@ -82,10 +82,54 @@ def build_dissolving_material_proc_spec(name,location,equipment,notes=None):
 
     return PROCESS_SPECS[f'Dissolving {name} Spec']
 
-def build_filter_solution_proc_spec():
-    pass
+def build_filtering_material_proc_spec(name:str,location:str='Wet Lab',equipment:str='Vacuum Filter',solvent:str=None,notes:str=None):
+    '''
+    Builds a process spec for filtering a material.
 
-def build_grinding_material_proc_spec(name,location,equipment='Mortar and Pestle',notes=None):
+    ### Parameters
+
+    Name: Name of the Process, must be the same as associated material and ingredient
+        ex: 'YVO4'
+    Location: Location where a process was performed. The default is 'Wet Lab'
+        ex: 'Synthesis Tube Furnace', 'X-Ray Diffraction Panel'
+    Equipment: Equipment used to perform an action. The default is 'vacuum filter'.
+        ex: 'Mortar and Pestle'
+    Solvent: Solvent used to wash/dissolve during the filtration (Optional).
+        ex: 'Water', 'Ethanol'
+
+    '''
+    attr_validate('Equipment Used',equipment)
+    attr_validate('Location',location)
+    attr_validate('Solvent',solvent)
+
+    PROCESS_SPECS[f'Filtering {name} Spec'] = ProcessSpec(
+        name=f'Filtering {name} Spec',
+        template=OBJ_TEMPL['Filtering Material'],
+        parameters=[
+            Parameter(
+                name='Equipment Used',
+                template=ATTR_TEMPL['Equipment Used'],
+                value=NominalCategorical(equipment)
+                    ),
+            Parameter(
+                name='Solvent',
+                template=ATTR_TEMPL['Solvent'],
+                value=NominalCategorical(solvent)
+                    )
+                ],
+        conditions=[
+            Condition(
+                name='Location',
+                template=ATTR_TEMPL['Location'],
+                value=NominalCategorical(location)
+                    )
+                ],
+        notes=notes
+    )
+
+    return PROCESS_SPECS[f'Filtering {name} Spec']
+
+def build_grinding_material_proc_spec(name:str,location:str,equipment:str='Mortar and Pestle',notes:str=None):
     '''
     Builds a process spec for grinding a material.
 
@@ -124,7 +168,7 @@ def build_grinding_material_proc_spec(name,location,equipment='Mortar and Pestle
 
     return PROCESS_SPECS[f'Grinding {name} Spec']
 
-def build_heating_material_proc_spec(name,temperature,rate,duration,location,notes=None):
+def build_heating_material_proc_spec(name:str,temperature:str,rate:float,duration:float,location:str,notes:str=None):
     '''
     Builds a process spec for heating a material.
 
@@ -175,7 +219,78 @@ def build_heating_material_proc_spec(name,temperature,rate,duration,location,not
 
     return PROCESS_SPECS[f'Heating {name} Spec']
 
-def build_ldfz_material_proc_spec(name,power,rate,duration,atmosphere,location,notes=None):
+def build_improved_heating_proc_spec(name:str,steps:int,location:str='Hot Lab',notes:str=None):
+
+    '''
+    Dynamically builds a process spec for heating a material in a multi-step temperature program.
+
+    ### Parameters
+
+    Name: Name of the Process, must be the same as associated material and ingredient
+        ex: 'YVO4'
+    Steps: An integer number of steps in the temperature program.
+        ex: 3
+    Location: Location where a process was performed. Default is 'Hot Lab'
+        ex: 'Hot Lab' 'Synthesis Tube Furnace', 'X-Ray Diffraction Panel'
+
+        
+    #### After this function is called additional parameters will be prompted for each step. 
+
+    Type: The type of heating step. 
+        ex: 'Init','Ramp','Hold','End'
+    Temp: The target end temperature of a ramp or the temperature maintained during a hold. Enter 0 for 'Init' or 'End' type steps. (degC)
+        ex: 250
+    Duration: Duration of the ramp or hold in hours.
+        ex: 24, 6.5
+    '''
+
+    attr_validate('Location',location)
+
+    PROCESS_SPECS[f'Heating {name} Spec'] = ProcessSpec(
+        name=f'Heating {name} Spec',
+        template=OBJ_TEMPL['Improved Heating Material'],
+        parameters=[
+            Parameter(
+                name='StepsNum',
+                template=ATTR_TEMPL['StepsNum'],
+                value=NominalInteger(steps)
+            )
+        ],
+        conditions=[Condition(
+                name='Location',
+                template=ATTR_TEMPL['Location'],
+                value=NominalCategorical(location)
+                    ) 
+                ],   
+        notes=notes
+    )
+
+    STEPS = []
+
+    for i in range(steps):
+        STEPS.append(
+            {
+            'Number':int(i+1),
+            'Type':str(input(f'Step {i+1} Type (Init,Ramp,Hold,End):')),
+            'Temp':float(input(f'Step {i+1} Temperature (degC):')),
+            'Duration':float(input(f'Step {i+1} Duration (hours):'))
+            }
+        )
+
+        attr_validate('Step Type',STEPS[i]['Type'])
+
+        PROCESS_SPECS[f'Heating {name} Spec'].parameters.append(Parameter(
+            name=f'Step {i}',
+            template=ATTR_TEMPL['Step'],
+            value=NominalComposition(
+                quantities=STEPS[i]
+                )
+            )
+        )
+
+    return PROCESS_SPECS[f'Heating {name} Spec']    
+
+def build_ldfz_material_proc_spec(name:str,power:float,rate:float,duration:float,atmosphere:str,location:str,notes:str=None):
     '''
     Builds a process spec for heating a material.
 
@@ -240,7 +355,7 @@ def build_ldfz_material_proc_spec(name,power,rate,duration,atmosphere,location,n
 def build_pressing_material_proc_spec():
     pass
 
-def build_acquire_raw_material_proc_spec(name,manufacturer,lot_id,cas_rn=None,notes=None):
+def build_acquire_raw_material_proc_spec(name:str,manufacturer:str,lot_id:str,cas_rn:str=None,notes:str=None):
     '''
     Builds a process spec for acquiring a new material.
 
@@ -297,7 +412,39 @@ MATERIAL_SPECS = {}
 def build_chunked_material_mat_spec():
     pass
 
-def build_ground_material_mat_spec(name,form='Powder',notes=None):
+def build_filtered_material_mat_spec(name:str,form:str,notes:str=None):
+    '''
+    Builds a material spec for a Ground Material.
+
+    ### Parameters
+
+    Name: Name of the Ingredient, must be the same as associated process and ingredient
+        ex: 'YVO4'
+    Form: Physical form of the ingredient. 
+        ex: 'Powder', 'Rod'
+
+    '''
+    attr_validate('Form',form)
+
+    MATERIAL_SPECS[f'{name} Filtered Material Spec'] = MaterialSpec(
+        name=f'{name} Filtered Material Spec',
+        template=OBJ_TEMPL['Filtered Material'],
+        process=PROCESS_SPECS[f'Filtering {name} Spec'],
+        properties=[
+            PropertyAndConditions(
+                property=Property(
+                name='Form',
+                template=ATTR_TEMPL['Form'],
+                value=NominalCategorical(form)
+                )
+            )
+        ],
+        notes=notes
+    )
+
+    return MATERIAL_SPECS[f'{name} Filtered Material Spec']
+
+def build_ground_material_mat_spec(name:str,form:str='Powder',notes:str=None):
     '''
     Builds a material spec for a Ground Material.
 
@@ -329,7 +476,7 @@ def build_ground_material_mat_spec(name,form='Powder',notes=None):
 
     return MATERIAL_SPECS[f'{name} Ground Material Spec']
 
-def build_heated_material_mat_spec(name,form,notes=None):
+def build_heated_material_mat_spec(name:str,form:str,notes:str=None):
     '''
     Builds a material spec for a Ground Material.
 
@@ -364,7 +511,7 @@ def build_heated_material_mat_spec(name,form,notes=None):
 def build_pressed_material_mat_spec():
     pass
 
-def build_raw_material_mat_spec(name,form,purity,notes=None):
+def build_raw_material_mat_spec(name:str,form:str,purity:float,notes:str=None):
     '''
     Builds a material spec for a Raw Material.
 
@@ -405,7 +552,7 @@ def build_raw_material_mat_spec(name,form,purity,notes=None):
             
     return MATERIAL_SPECS[f'{name} Raw Material Spec']
 
-def build_solution_material_mat_spec(name,form='Solution',notes=None):
+def build_solution_material_mat_spec(name:str,form:str='Solution',notes:str=None):
     '''
     Builds a material spec for a Solution Material (dissolved).
 
@@ -441,7 +588,7 @@ def build_solution_material_mat_spec(name,form='Solution',notes=None):
 
 INGREDIENT_SPECS = {}
 
-def build_ingredient_spec(name,process,material,quantity,notes=None):
+def build_ingredient_spec(name:str,process:ProcessSpec,material:MaterialSpec,quantity,notes:str=None):
     '''
     Builds an ingredient spec.
 
@@ -473,7 +620,7 @@ MEASUREMENT_SPECS = {}
 def build_temperature_meas_spec():
     pass
 
-def build_xrd_meas_spec(name,duration,range,adhesive,location='X-Ray Diffraction Panel',file=None,notes=None):
+def build_xrd_meas_spec(name:str,duration:float,range:str,adhesive:str,location:str='X-Ray Diffraction Panel',file:FileLink=None,notes:str=None):
     '''
     Builds a measurement spec for X-Ray Diffraction
 

@@ -3,7 +3,7 @@
 ### Imports ###
 
 from gemd.entity.template import PropertyTemplate, ParameterTemplate, ConditionTemplate
-from gemd.entity.bounds import CategoricalBounds, RealBounds
+from gemd.entity.bounds import CategoricalBounds, RealBounds, IntegerBounds, CompositionBounds
 import json
 import os
 
@@ -117,6 +117,29 @@ ATTR_TEMPL[name] = ParameterTemplate(
     name,
     bounds=RealBounds(0,500,'MPa'),
     description='The pressure at which a sample is held during a given process. In our case, it is often used for pressing rods or pellets',
+)
+
+name = 'Solvent'
+ATTR_TEMPL[name] = ParameterTemplate(
+    name,
+    bounds=CategoricalBounds(config['BOUNDS'][name]['categories']),
+    description='The solvent used to wash a filtration'
+)
+
+name = 'Step'
+ATTR_TEMPL[name] = ParameterTemplate(
+    name,
+    bounds=CompositionBounds(
+        components=['Number','Type','Temp','Duration']
+    ),
+    description='A dictionary of steps in a process'
+)
+
+name = 'StepsNum'
+ATTR_TEMPL[name] = ParameterTemplate(
+    name,
+    bounds=IntegerBounds(1,100),
+    description='The number of steps in a process'
 )
 
 name = 'Time of Event'

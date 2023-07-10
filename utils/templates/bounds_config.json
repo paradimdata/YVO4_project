@@ -48,7 +48,8 @@
         "Torch",
         "Thermocouple",
         "Tongs",
-        "Autoclave"
+        "Autoclave",
+        "Vacuum Filter"
       ]
     },
     "Lot ID": {
@@ -88,6 +89,20 @@
         "Bucket",
         "Hot Lab",
         "Wet Lab"
+      ]
+    },
+    "Solvent": {
+      "categories": [
+        "Water",
+        "Ethanol"
+      ]
+    },
+    "Step Type": {
+      "categories": [
+        "Ramp",
+        "Hold",
+        "End",
+        "Init"
       ]
     }
   }

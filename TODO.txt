@@ -1,13 +1,14 @@
-(A) 2023-07-07 Complete GBM1004 entry
 2023-06-26 Find resources for graphical neural networks over knowledge graphs
 2023-06-26 Migrate lab notebook into experiment specs
 2023-06-28 Complete spec builders toolbox
 2023-06-29 Make the heating material process more robust for complex heating programs
-2023-07-07 Develop file capture and parsing system
+2023-07-07 Develop file capture and parsing system for filelinks or check existing tooling
+2023-07-10 Integrate real Workflow objects from GEMDtools
 x (A) 2023-06-26 Ask about Blocks and Workflows
 x (A) 2023-06-26 Complete electronic lab notebook template
 x (A) 2023-06-26 Outline procedures for each growth method
 x (A) 2023-06-28 Fix build_raw_material_mat_spec
+x (A) 2023-07-07 Complete GBM1004 entry
 x 2023-06-26 Populate attribute templates
 x 2023-06-26 Populate object templates
 x 2023-06-28 Create tool to convert molarity to %wt
