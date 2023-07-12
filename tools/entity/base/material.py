@@ -82,7 +82,7 @@ class Material(BaseNode):
             if not isinstance(spec, MaterialSpec):
                 raise TypeError('spec must be a MaterialSpec.')
 
-            material.spec = spec
+            material._spec = spec
 
             material.spec.name = name
             material.spec.notes = notes
@@ -95,7 +95,7 @@ class Material(BaseNode):
             if not isinstance(run, MaterialRun):
                 raise TypeError('run must be a MaterialRun.')
 
-            material.run = run
+            material._run = run
             material.run.name = name
             material.run.notes = notes
 

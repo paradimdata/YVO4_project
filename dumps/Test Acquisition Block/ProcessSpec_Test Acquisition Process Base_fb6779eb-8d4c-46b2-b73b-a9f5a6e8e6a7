@@ -1,0 +1,17 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "name": "Test Acquisition Process Base",
+   "notes": null,
+   "parameters": [],
+   "tags": [],
+   "template": {
+      "id": "d1bc6e2f-15f2-4093-9d24-2398b8b7f975",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "process_spec",
+   "uids": {
+      "auto": "fb6779eb-8d4c-46b2-b73b-a9f5a6e8e6a7"
+   }
+}

@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "Test Acquired Material Base",
+   "notes": null,
+   "process": {
+      "id": "25d9519b-3372-4da0-94b5-b1e094b3068c",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "c600e41c-357d-4701-904a-37600ce7f143",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "68f4c93e-255d-4cec-b847-7faf9b8a7f96"
+   }
+}
