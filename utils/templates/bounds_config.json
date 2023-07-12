@@ -34,7 +34,8 @@
         "1314-36-9",
         "1314-62-1",
         "554-13-2",
-        "7697-37-2"
+        "7697-37-2",
+        "000-00-000"
       ]
     },
     "Equipment Used": {
@@ -61,7 +62,8 @@
         "23195800",
         "0198917/2.1",
         "221613",
-        "182153"
+        "182153",
+        "00000"
       ]
     },
     "Manufacturer": {
@@ -71,7 +73,8 @@
         "Yeemeida Technology Co. LTD",
         "Strem Chemicals",
         "Noah Technologies Corporation",
-        "Fisher Commercial"
+        "Fisher Commercial",
+        "XYZ Chemicals"
       ]
     },
     "Atmosphere": {

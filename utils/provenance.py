@@ -8,7 +8,7 @@ class Provenance:
             name='User Name',
             tag='TAG',page='0000',
             title='Entry Title',
-            date=date.today()
+            date=str(date.today())
             ):
         
         self.name = name    # Full name of the notebook keeper (ex: John Doe)
