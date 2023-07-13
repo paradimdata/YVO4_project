@@ -1,0 +1,71 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "name": "V2O5 Acquisition Process",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Manufacturer",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "5957a2ac-667b-45c3-a418-71af331080a0",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Noah Technologies Corporation",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Lot ID",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "1ee3a7db-733f-453f-96a1-f67e6d9bf521",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "0198917/2.1",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "CAS RN",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "60861b92-436d-482f-8da8-b788a2e6ded8",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "1314-62-1",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "source": {
+      "performed_by": "gmurra12@jh.edu",
+      "performed_date": "2023-06-09T00:00:00",
+      "type": "performed_source"
+   },
+   "spec": {
+      "id": "95344427-b2d1-495d-94c2-7b459b2c53b2",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "process_run",
+   "uids": {
+      "auto": "708fa368-2ccf-4446-971e-350e7fe597b8"
+   }
+}

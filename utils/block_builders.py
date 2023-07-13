@@ -150,7 +150,7 @@ def build_acquiring_material_block(name:str,manufacturer:str,lot_id:str,cas_rn:s
     ### Build Block ###
 
     block = Block(
-        name=f'{name} Acquisition Block',
+        name=f'{name}AcquisitionBlock',
         workflow=workflow,
         process=process,
         material=material

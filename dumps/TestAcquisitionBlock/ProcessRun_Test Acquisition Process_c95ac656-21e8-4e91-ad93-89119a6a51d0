@@ -1,0 +1,71 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "name": "Test Acquisition Process",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Manufacturer",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "f29cfdff-6b01-4167-bea0-e8c0d9de8103",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "XYZ Chemicals",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Lot ID",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "5f9ef487-1550-4594-906f-996a7a1a546a",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "00000",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "CAS RN",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "cfbbec0b-2fb8-42af-a7b5-50fb293fb523",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "000-00-000",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "source": {
+      "performed_by": "user@domain.edu",
+      "performed_date": "2023-07-13T00:00:00",
+      "type": "performed_source"
+   },
+   "spec": {
+      "id": "366d6769-6a44-404e-b798-176253f9d6e8",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "process_run",
+   "uids": {
+      "auto": "c95ac656-21e8-4e91-ad93-89119a6a51d0"
+   }
+}

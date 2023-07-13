@@ -1,0 +1,51 @@
+{
+   "conditions": [
+      {
+         "file_links": [],
+         "name": "Location",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "e5848c02-f61f-4709-967f-ab0dc9909ad9",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "condition",
+         "value": {
+            "category": "Hot Lab",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "file_links": [],
+   "name": "GBM1003A Grinding Process",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Equipment Used",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "e95bad21-2c6c-4cc2-b8c8-fec82c515ecc",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Mortar and Pestle",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "970117b1-94e4-4026-8adc-d8118bd7126a",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "process_spec",
+   "uids": {
+      "auto": "58e362da-fec8-4f0d-b9d8-afba1354220a"
+   }
+}

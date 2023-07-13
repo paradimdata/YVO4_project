@@ -60,7 +60,6 @@ class Ingredient(BaseNode):
         Note that the spec's template will be set to the class template,
         and the run's spec will be set to this spec.
         '''
-        '''
         if spec is None and run is None:
             raise ValueError('At least one of spec or run must be given.')
 
@@ -69,32 +68,28 @@ class Ingredient(BaseNode):
         if spec is not None:
 
             if not isinstance(spec, IngredientSpec):
-                raise TypeError('spec must be an IngredientSpec.')
+                raise TypeError('spec must be a MeasurementSpec.')
 
             ingredient._spec = spec
 
             ingredient.spec.name = name
             ingredient.spec.notes = notes
 
-            # ingredient.update_properties_and_conditions()
-
         if run is not None:
 
             if not isinstance(run, IngredientRun):
-                raise TypeError('run must be an IngredientRun.')
+                raise TypeError('run must be a MeasurementRun.')
 
             ingredient._run = run
-            ingredient.run.name = name
-            ingredient.run.notes = notes
 
+            # ingredient._run.name = name
+            ingredient.run.notes = notes
             ingredient.run.spec = ingredient.spec
-        
+
         else:
             ingredient.run = make_instance(ingredient.spec)
 
         return ingredient
-        
-        '''
-        pass
+
     def to_form(self) -> str:
         pass

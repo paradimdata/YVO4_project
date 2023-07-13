@@ -1,0 +1,56 @@
+{
+   "conditions": [
+      {
+         "file_links": [],
+         "name": "Location",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "e5848c02-f61f-4709-967f-ab0dc9909ad9",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "condition",
+         "value": {
+            "category": "Hot Lab",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "file_links": [],
+   "name": "GBM1003C Grinding Process",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Equipment Used",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "e95bad21-2c6c-4cc2-b8c8-fec82c515ecc",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Mortar and Pestle",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "source": {
+      "performed_by": "gmurra12@jh.edu",
+      "performed_date": "2023-06-09T00:00:00",
+      "type": "performed_source"
+   },
+   "spec": {
+      "id": "e71fcc39-f0ea-4f50-8cd2-99968ff6324e",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "process_run",
+   "uids": {
+      "auto": "97849cde-4f26-4c5a-93f3-b6c077b7ebea"
+   }
+}

@@ -27,14 +27,14 @@ class Block:
         pass
 
     def thin_dumps(self, encoder, destination):
-        # for ingredient in self.ingredients:
-            # ingredient.thin_dumps(encoder, destination)
+        for ingredient in self.ingredients:
+            ingredient.thin_dumps(encoder, destination)
         if self.process:
             self.process.thin_dumps(encoder, destination)
         if self.material:
             self.material.thin_dumps(encoder, destination)
-        # for measurement in self.measurements:
-            # measurement.thin_dumps(encoder, destination)
+        for measurement in self.measurements:
+            measurement.thin_dumps(encoder, destination)
 
     def dumps(self, encoder, destination):
         for ingredient in self.ingredients:
