@@ -167,6 +167,8 @@ def build_grinding_material_proc_spec(name:str,location:str,equipment:str='Morta
     )
 
     return PROCESS_SPECS[f'Grinding {name} Spec']
+"""
+Newer version below with dynamic step input
 
 def build_heating_material_proc_spec(name:str,temperature:str,rate:float,duration:float,location:str,notes:str=None):
     '''
@@ -218,8 +220,9 @@ def build_heating_material_proc_spec(name:str,temperature:str,rate:float,duratio
     )
 
     return PROCESS_SPECS[f'Heating {name} Spec']
+"""
 
-def build_improved_heating_proc_spec(name:str,steps:int,location:str='Hot Lab',notes:str=None):
+def build_heating_material_proc_spec(name:str,steps:int,location:str='Hot Lab',notes:str=None):
 
     '''
     Dynamically builds a process spec for heating a material in a multi-step temperature program.
@@ -444,7 +447,7 @@ def build_filtered_material_mat_spec(name:str,form:str,notes:str=None):
 
     return MATERIAL_SPECS[f'{name} Filtered Material Spec']
 
-def build_ground_material_mat_spec(name:str,form:str='Powder',notes:str=None):
+def build_ground_material_mat_spec(name:str,process_spec:ProcessSpec,form:str='Powder',notes:str=None):
     '''
     Builds a material spec for a Ground Material.
 
@@ -461,7 +464,6 @@ def build_ground_material_mat_spec(name:str,form:str='Powder',notes:str=None):
     MATERIAL_SPECS[f'{name} Ground Material Spec'] = MaterialSpec(
         name=f'{name} Ground Material Spec',
         template=OBJ_TEMPL['Ground Material'],
-        process=PROCESS_SPECS[f'Grinding {name} Spec'],
         properties=[
             PropertyAndConditions(
                 property=Property(
@@ -471,12 +473,13 @@ def build_ground_material_mat_spec(name:str,form:str='Powder',notes:str=None):
                 )
             )
         ],
+        process=process_spec,
         notes=notes
     )
 
     return MATERIAL_SPECS[f'{name} Ground Material Spec']
 
-def build_heated_material_mat_spec(name:str,form:str,notes:str=None):
+def build_heated_material_mat_spec(name:str,form:str,process:ProcessSpec,notes:str=None):
     '''
     Builds a material spec for a Ground Material.
 
@@ -493,7 +496,7 @@ def build_heated_material_mat_spec(name:str,form:str,notes:str=None):
     MATERIAL_SPECS[f'{name} Heated Material Spec'] = MaterialSpec(
         name=f'{name} Heated Material Spec',
         template=OBJ_TEMPL['Heated Material'],
-        process=PROCESS_SPECS[f'Heating {name} Spec'],
+        process=process,
         properties=[
             PropertyAndConditions(
                 property=Property(
@@ -620,7 +623,7 @@ MEASUREMENT_SPECS = {}
 def build_temperature_meas_spec():
     pass
 
-def build_xrd_meas_spec(name:str,duration:float,range:str,adhesive:str,location:str='X-Ray Diffraction Panel',file:FileLink=None,notes:str=None):
+def build_xrd_meas_spec(name:str,duration:float,range:str,adhesive:str,location:str='X-Ray Diffraction Panel',file=None,notes:str=None):
     '''
     Builds a measurement spec for X-Ray Diffraction
 

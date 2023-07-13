@@ -105,7 +105,8 @@
         "Ramp",
         "Hold",
         "End",
-        "Init"
+        "Init",
+        "0"
       ]
     }
   }

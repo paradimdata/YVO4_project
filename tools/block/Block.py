@@ -2,6 +2,8 @@ from ..workflow import Workflow
 from typing import ClassVar, Type, Optional
 from ..entity.base.material import Material
 from ..entity.base.base_node import BaseNode
+from ..entity.base.ingredient import Ingredient
+from ..entity.base.measurement import Measurement
 
 
 class Block:
@@ -11,10 +13,10 @@ class Block:
         self,
         name,
         workflow: Workflow = None,
-        ingredients: Optional[list] = [],
+        ingredients: Optional[list[BaseNode]] = [],
         process: Optional[BaseNode] = None,
         material: Optional[Material] = None,
-        measurements: Optional[list] = [],
+        measurements: Optional[list[BaseNode]] = [],
     ):
         self.name = name
         self.workflow = workflow
@@ -25,14 +27,14 @@ class Block:
         pass
 
     def thin_dumps(self, encoder, destination):
-        for ingredient in self.ingredients:
-            ingredient.thin_dumps(encoder, destination)
+        # for ingredient in self.ingredients:
+            # ingredient.thin_dumps(encoder, destination)
         if self.process:
             self.process.thin_dumps(encoder, destination)
         if self.material:
             self.material.thin_dumps(encoder, destination)
-        for measurement in self.measurements:
-            measurement.thin_dumps(encoder, destination)
+        # for measurement in self.measurements:
+            # measurement.thin_dumps(encoder, destination)
 
     def dumps(self, encoder, destination):
         for ingredient in self.ingredients:

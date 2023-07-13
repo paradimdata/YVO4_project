@@ -1,4 +1,4 @@
-# Tools to build GEMD BaseNodes
+# Helpers to build GEMD Blocks
 
 ### Imports ###
 
@@ -159,7 +159,7 @@ def build_acquiring_material_block(name:str,manufacturer:str,lot_id:str,cas_rn:s
     block.link_within()
 
     return block
-
+'''
 def build_grinding_material_block(name:str,location:str,form:str='Powder',equipment:str='Mortar and Pestle',ingredient_dict:dict={},notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a Block for grinding a material.
@@ -315,3 +315,4 @@ def build_grinding_material_block(name:str,location:str,form:str='Powder',equipm
     )
 
     return block
+'''

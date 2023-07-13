@@ -43,7 +43,7 @@ class Measurement(ProcessOrMeasurement):
         if properties is None:
             properties = []
 
-        self.update_properties(properties=properties, replace_all=True)
+        # self.update_properties(properties=properties, replace_all=True)
 
         self.set_material(material)
 
@@ -105,7 +105,6 @@ class Measurement(ProcessOrMeasurement):
 
             measurement.update_conditions(which='run')
             measurement.update_parameters(which='run')
-            measurement.update_properties()
 
             source = measurement.get_source()
             measurement.set_source(email=source['performed_by'], iso_date=source['performed_date'])

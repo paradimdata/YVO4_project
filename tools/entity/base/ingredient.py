@@ -24,7 +24,12 @@ class Ingredient(BaseNode):
     _SpecType = IngredientSpec
     _RunType = IngredientRun
     
-    def __init__(self, name: str, *, notes: Optional[str] = None) -> None:
+    def __init__(
+        self, 
+        name: str, 
+        *, 
+        notes: Optional[str] = None
+        ) -> None:
 
         super(ABC, self).__init__()
         self._spec: Spec = self._SpecType(name=name, notes=notes)
@@ -48,15 +53,48 @@ class Ingredient(BaseNode):
         notes: Optional[str] = None,
         spec: IngredientSpec = None,
         run: IngredientRun = None
-        ) -> 'Process':
+        ) -> 'Ingredient':
         '''
         Instantiate a `Process` from a spec or run with appropriate validation.
 
         Note that the spec's template will be set to the class template,
         and the run's spec will be set to this spec.
         '''
-        pass
-        
+        '''
+        if spec is None and run is None:
+            raise ValueError('At least one of spec or run must be given.')
 
+        ingredient = cls(name, notes=notes)
+
+        if spec is not None:
+
+            if not isinstance(spec, IngredientSpec):
+                raise TypeError('spec must be an IngredientSpec.')
+
+            ingredient._spec = spec
+
+            ingredient.spec.name = name
+            ingredient.spec.notes = notes
+
+            # ingredient.update_properties_and_conditions()
+
+        if run is not None:
+
+            if not isinstance(run, IngredientRun):
+                raise TypeError('run must be an IngredientRun.')
+
+            ingredient._run = run
+            ingredient.run.name = name
+            ingredient.run.notes = notes
+
+            ingredient.run.spec = ingredient.spec
+        
+        else:
+            ingredient.run = make_instance(ingredient.spec)
+
+        return ingredient
+        
+        '''
+        pass
     def to_form(self) -> str:
         pass
