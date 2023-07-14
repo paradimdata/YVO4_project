@@ -223,7 +223,41 @@ def build_heating_material_proc_spec(name:str,temperature:str,rate:float,duratio
     return PROCESS_SPECS[f'Heating {name} Spec']
 """
 
-def build_heating_material_proc_spec(name:str,steps:int,location:str='Hot Lab',notes:str=None):
+def heating_program_step(type:str,temp:float,duration:float):
+    '''
+    Type: The type of heating step. 
+        ex: 'Init','Ramp','Hold','End'
+    Temp: The target end temperature of a ramp or the temperature maintained during a hold. Enter 0 for 'Init' or 'End' type steps. (degC)
+        ex: 250
+    Duration: Duration of the ramp or hold in hours.
+        ex: 24, 6.5
+    '''
+    return (type,temp,duration)
+
+def build_heating_program(program:list[tuple]):
+    '''
+    Argument should be a list of heating_program_step() functions.
+    '''
+
+    PROGRAM = []
+    i =0
+
+    for step in program:
+        PROGRAM.append(
+            {
+            'Type':step[0],
+            'Temp':step[1],
+            'Duration':step[2]
+            }
+        )
+
+        attr_validate('Step Type',PROGRAM[i]['Type'])
+        
+        i += 1
+    
+    return PROGRAM
+
+def build_heating_material_proc_spec(name:str,program:list[dict],location:str='Hot Lab',notes:str=None):
 
     '''
     Dynamically builds a process spec for heating a material in a multi-step temperature program.
@@ -235,17 +269,7 @@ def build_heating_material_proc_spec(name:str,steps:int,location:str='Hot Lab',n
     Steps: An integer number of steps in the temperature program.
         ex: 3
     Location: Location where a process was performed. Default is 'Hot Lab'
-        ex: 'Hot Lab' 'Synthesis Tube Furnace', 'X-Ray Diffraction Panel'
-
-        
-    #### After this function is called additional parameters will be prompted for each step. 
-
-    Type: The type of heating step. 
-        ex: 'Init','Ramp','Hold','End'
-    Temp: The target end temperature of a ramp or the temperature maintained during a hold. Enter 0 for 'Init' or 'End' type steps. (degC)
-        ex: 250
-    Duration: Duration of the ramp or hold in hours.
-        ex: 24, 6.5
+        ex: 'Hot Lab' 'Synthesis Tube Furnace', 'X-Ray Diffraction Panel'.
     '''
 
     attr_validate('Location',location)
@@ -253,13 +277,7 @@ def build_heating_material_proc_spec(name:str,steps:int,location:str='Hot Lab',n
     PROCESS_SPECS[f'Heating {name} Spec'] = ProcessSpec(
         name=f'Heating {name} Spec',
         template=OBJ_TEMPL['Improved Heating Material'],
-        parameters=[
-            Parameter(
-                name='StepsNum',
-                template=ATTR_TEMPL['StepsNum'],
-                value=NominalInteger(steps)
-            )
-        ],
+        parameters=[],
         conditions=[Condition(
                 name='Location',
                 template=ATTR_TEMPL['Location'],
@@ -269,28 +287,20 @@ def build_heating_material_proc_spec(name:str,steps:int,location:str='Hot Lab',n
         notes=notes
     )
 
-    STEPS = []
+    i = 0
 
-    for i in range(steps):
-        STEPS.append(
-            {
-            'Number':int(i+1),
-            'Type':str(input(f'Step {i+1} Type (Init,Ramp,Hold,End):')),
-            'Temp':float(input(f'Step {i+1} Temperature (degC):')),
-            'Duration':float(input(f'Step {i+1} Duration (hours):'))
-            }
-        )
-
-        attr_validate('Step Type',STEPS[i]['Type'])
+    for step in program:
 
         PROCESS_SPECS[f'Heating {name} Spec'].parameters.append(Parameter(
-            name=f'Step {i}',
+            name=f'Step {i+1}',
             template=ATTR_TEMPL['Step'],
             value=NominalComposition(
-                quantities=STEPS[i]
+                quantities=program[i]
                 )
             )
         )
+
+        i += 1
 
     return PROCESS_SPECS[f'Heating {name} Spec']    
 

@@ -79,7 +79,7 @@ def build_grinding_process_base(name:str,location:str,equipment:str,notes:str=No
 
     return process
 
-def build_heating_process_base(name:str,steps:int,location:str,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_heating_process_base(name:str,program:list[dict],location:str,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for heating a material.
 
@@ -95,7 +95,7 @@ def build_heating_process_base(name:str,steps:int,location:str,notes:str=None,wo
 
     process_spec = build_heating_material_proc_spec(
         name=name,
-        steps=steps,
+        program=program,
         location=location,
         notes=notes
     )
