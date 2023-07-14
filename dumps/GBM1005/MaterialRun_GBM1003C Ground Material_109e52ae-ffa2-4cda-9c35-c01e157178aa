@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "GBM1003C Ground Material",
+   "notes": null,
+   "process": {
+      "id": "2c68664f-b9f2-4161-b58e-07ece6b5693a",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "d85df364-dff8-41de-8cc8-d953725b168b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "109e52ae-ffa2-4cda-9c35-c01e157178aa"
+   }
+}

@@ -1,0 +1,101 @@
+{
+   "conditions": [
+      {
+         "file_links": [],
+         "name": "Location",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "b8a8661b-4687-4ef9-8a3f-b51c1be53c34",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "condition",
+         "value": {
+            "category": "X-Ray Diffraction Panel",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "file_links": [
+      {
+         "filename": "ML_Dukie_20230613_3_GBM_0_GBM1005C_YV1p05O4_5-60",
+         "type": "file_link",
+         "url": "https://occamy.chemistry.jhu.edu/data/XRD/Gannon/ML_Dukie_20230613_3_GBM_0_GBM1005C_YV1p05O4_5-60_15min.raw"
+      }
+   ],
+   "material": {
+      "id": "a2839aa4-55bc-41bc-85ef-4bc669c8e1ad",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1005C XRD Measurement",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Duration",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "a11a9224-a2b4-46e0-b157-e3766c0291a7",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.25,
+            "type": "nominal_real",
+            "units": "hour"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "XRD Range",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "2e584adf-744d-488b-9ccd-30efbc65b847",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "5-60",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "XRD Adhesive",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "465bd87b-86d8-4430-a73b-69207a9bbae0",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Vaseline",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "properties": [],
+   "source": {
+      "performed_by": "gmurra12@jh.edu",
+      "performed_date": "2023-06-13T00:00:00",
+      "type": "performed_source"
+   },
+   "spec": {
+      "id": "9a30d1cd-6234-49b7-a824-71cc6c8c5a9b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "measurement_run",
+   "uids": {
+      "auto": "8085ea9f-fbc9-4950-a9d5-8f7d05b32bc0"
+   }
+}
