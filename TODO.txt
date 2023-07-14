@@ -5,6 +5,8 @@
 2023-07-07 Develop file capture and parsing system for filelinks or check existing tooling
 2023-07-10 Integrate real Workflow objects from GEMDtools
 2023-07-12 Test from_spec_or_run method fix, branch and merge request
+2023-07-14 Refactor dynamic heating method or dictionary port
+2023-07-14 Update README with structure outline, instructions
 x (A) 2023-06-26 Ask about Blocks and Workflows
 x (A) 2023-06-26 Complete electronic lab notebook template
 x (A) 2023-06-26 Outline procedures for each growth method

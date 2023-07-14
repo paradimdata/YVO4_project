@@ -1,0 +1,29 @@
+{
+   "absolute_quantity": {
+      "nominal": 7.0,
+      "type": "nominal_real",
+      "units": "milliliter"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "3da4bad9-c44f-4fae-a5a8-06b39cb4bb9b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "HNO3 Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "0328f4bb-9cb9-4b7f-a8eb-4e9f1d20bafa",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_spec",
+   "uids": {
+      "auto": "47db63c0-5588-4880-acb2-df4a6a6a7b49"
+   },
+   "volume_fraction": null
+}

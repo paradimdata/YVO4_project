@@ -144,6 +144,204 @@ def build_heating_process_base(name:str,steps:int,location:str,notes:str=None,wo
 
     return process
 
+def build_dissolving_process_base(name:str,location:str,equipment:str,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+    """
+    Builds a basenode for dissolving a material.
+
+    ### Parameters:
+
+    Name: Name of the material being acquired
+        ex: 'YVO4'
+    Workflow: Workflow to which the Block belongs 
+        ex: Workflow()
+    Provenance: Provenance object describing the personnel involved
+        ex: Provenance()
+    """
+
+    process_spec = build_dissolving_material_proc_spec(
+        name=name,
+        location=location,
+        equipment=equipment,
+        notes=notes
+    )
+
+    process_run = ProcessRun( 
+        name=name,
+        spec=process_spec,
+        conditions=process_spec.conditions,
+        parameters=process_spec.parameters,
+        source= PerformedSource(prv.email,prv.date)
+    )
+
+    class DissolvingProcess(Process):
+
+        TEMPLATE: ClassVar[ProcessTemplate] = ProcessTemplate(name=__name__,)
+        _ATTRS: ClassVar[AttrsDict] = {'conditions':{},'parameters':{}}
+
+        define_attribute(
+            _ATTRS,
+            template=ParameterTemplate(
+                name='Equipment Used', bounds=ATTR_TEMPL['Equipment Used'].bounds
+            )      
+        )
+
+        define_attribute(
+            _ATTRS,
+            template=ConditionTemplate(
+                name='Location', bounds=ATTR_TEMPL['Location'].bounds
+            )      
+        )
+
+        finalize_template(_ATTRS, TEMPLATE)
+
+    process = DissolvingProcess.from_spec_or_run(
+                name=f'{name} Dissolving Process',
+                run=process_run,
+                spec=process_spec
+            )
+
+    return process
+
+def build_pressing_process_base(name:str,location:str,equipment:str,pressure:float,duration:float,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+    """
+    Builds a basenode for pressing a material.
+
+    ### Parameters:
+
+    Name: Name of the material being acquired
+        ex: 'YVO4'
+    Workflow: Workflow to which the Block belongs 
+        ex: Workflow()
+    Provenance: Provenance object describing the personnel involved
+        ex: Provenance()
+    """
+
+    process_spec = build_pressing_material_proc_spec(
+        name=name,
+        location=location,
+        pressure=pressure,
+        duration=duration,
+        equipment=equipment,
+        notes=notes
+    )
+
+    process_run = ProcessRun( 
+        name=name,
+        spec=process_spec,
+        conditions=process_spec.conditions,
+        parameters=process_spec.parameters,
+        source= PerformedSource(prv.email,prv.date)
+    )
+
+    class PressingProcess(Process):
+
+        TEMPLATE: ClassVar[ProcessTemplate] = ProcessTemplate(name=__name__,)
+        _ATTRS: ClassVar[AttrsDict] = {'conditions':{},'parameters':{}}
+
+        define_attribute(
+            _ATTRS,
+            template=ParameterTemplate(
+                name='Equipment Used', bounds=ATTR_TEMPL['Equipment Used'].bounds
+            )      
+        )
+
+        define_attribute(
+            _ATTRS,
+            template=ParameterTemplate(
+                name='Duration', bounds=ATTR_TEMPL['Duration'].bounds
+            )      
+        )
+
+        define_attribute(
+            _ATTRS,
+            template=ParameterTemplate(
+                name='Pressure', bounds=ATTR_TEMPL['Pressure'].bounds
+            )      
+        )
+
+        define_attribute(
+            _ATTRS,
+            template=ConditionTemplate(
+                name='Location', bounds=ATTR_TEMPL['Location'].bounds
+            )      
+        )
+
+        finalize_template(_ATTRS, TEMPLATE)
+
+    process = PressingProcess.from_spec_or_run(
+                name=f'{name} Pressing Process',
+                run=process_run,
+                spec=process_spec
+            )
+
+    return process
+
+def build_filtering_process_base(name:str,location:str,equipment:str,solvent:str,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+    """
+    Builds a basenode for dissolving a material.
+
+    ### Parameters:
+
+    Name: Name of the material being acquired
+        ex: 'YVO4'
+    Workflow: Workflow to which the Block belongs 
+        ex: Workflow()
+    Provenance: Provenance object describing the personnel involved
+        ex: Provenance()
+    """
+
+    process_spec = build_filtering_material_proc_spec(
+        name=name,
+        location=location,
+        equipment=equipment,
+        solvent=solvent,
+        notes=notes
+    )
+
+    process_run = ProcessRun( 
+        name=name,
+        spec=process_spec,
+        conditions=process_spec.conditions,
+        parameters=process_spec.parameters,
+        source= PerformedSource(prv.email,prv.date)
+    )
+
+    class FilteringProcess(Process):
+
+        TEMPLATE: ClassVar[ProcessTemplate] = ProcessTemplate(name=__name__,)
+        _ATTRS: ClassVar[AttrsDict] = {'conditions':{},'parameters':{}}
+
+        define_attribute(
+            _ATTRS,
+            template=ParameterTemplate(
+                name='Equipment Used', bounds=ATTR_TEMPL['Equipment Used'].bounds
+            )      
+        )
+
+        define_attribute(
+            _ATTRS,
+            template=ParameterTemplate(
+                name='Solvent', bounds=ATTR_TEMPL['Solvent'].bounds
+            )      
+        )
+
+        define_attribute(
+            _ATTRS,
+            template=ConditionTemplate(
+                name='Location', bounds=ATTR_TEMPL['Location'].bounds
+            )      
+        )
+
+        finalize_template(_ATTRS, TEMPLATE)
+
+    process = FilteringProcess.from_spec_or_run(
+                name=f'{name} Filtering Process',
+                run=process_run,
+                spec=process_spec
+            )
+
+    return process
+
 ### Material BaseNodes ###
 
 def build_ground_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str='Powder',notes:str=None,workflow:Workflow=None,prv:Provenance=None):
@@ -240,6 +438,156 @@ def build_heated_material_base(name:str,process_spec:ProcessSpec,process_run:Pro
 
     material = HeatedMaterial.from_spec_or_run(
                 name=f'{name} Heated Material',
+                run=material_run,
+                spec=material_spec
+            )
+    
+    return material
+
+def build_dissolved_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str='Solution',notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+    """
+    Builds a basenode for a solution material.
+
+    ### Parameters:
+
+    Name: Name of the material being acquired
+        ex: 'YVO4'
+    Workflow: Workflow to which the Block belongs 
+        ex: Workflow()
+    Provenance: Provenance object describing the personnel involved
+        ex: Provenance()
+    """
+
+    material_spec = build_dissolved_material_mat_spec( 
+        name=name,
+        form=form,
+        process=process_spec,
+        notes=notes
+    )
+
+    material_run = MaterialRun( 
+        name=name,
+        spec=material_spec,
+        process=process_run,
+        sample_type='experimental'
+    )
+
+    class DissolvedMaterial(Material):
+
+        TEMPLATE: ClassVar[MaterialTemplate] = MaterialTemplate(name=__name__,)
+        _ATTRS: ClassVar[AttrsDict] = {'properties':{}}
+
+        define_attribute(
+            _ATTRS,
+            template=PropertyTemplate(
+                name='Form', bounds=ATTR_TEMPL['Form'].bounds
+            )
+        )
+
+        finalize_template(_ATTRS, TEMPLATE)
+
+    material = DissolvedMaterial.from_spec_or_run(
+                name=f'{name} Dissolved Material',
+                run=material_run,
+                spec=material_spec
+            )
+    
+    return material
+
+def build_filtered_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+    """
+    Builds a basenode for a solution material.
+
+    ### Parameters:
+
+    Name: Name of the material being acquired
+        ex: 'YVO4'
+    Workflow: Workflow to which the Block belongs 
+        ex: Workflow()
+    Provenance: Provenance object describing the personnel involved
+        ex: Provenance()
+    """
+
+    material_spec = build_filtered_material_mat_spec( 
+        name=name,
+        form=form,
+        process=process_spec,
+        notes=notes
+    )
+
+    material_run = MaterialRun( 
+        name=name,
+        spec=material_spec,
+        process=process_run,
+        sample_type='experimental'
+    )
+
+    class FilteredMaterial(Material):
+
+        TEMPLATE: ClassVar[MaterialTemplate] = MaterialTemplate(name=__name__,)
+        _ATTRS: ClassVar[AttrsDict] = {'properties':{}}
+
+        define_attribute(
+            _ATTRS,
+            template=PropertyTemplate(
+                name='Form', bounds=ATTR_TEMPL['Form'].bounds
+            )
+        )
+
+        finalize_template(_ATTRS, TEMPLATE)
+
+    material = FilteredMaterial.from_spec_or_run(
+                name=f'{name} Filtered Material',
+                run=material_run,
+                spec=material_spec
+            )
+    
+    return material
+
+def build_pressed_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str='Pellet',notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+    """
+    Builds a basenode for a pressed material.
+
+    ### Parameters:
+
+    Name: Name of the material being acquired
+        ex: 'YVO4'
+    Workflow: Workflow to which the Block belongs 
+        ex: Workflow()
+    Provenance: Provenance object describing the personnel involved
+        ex: Provenance()
+    """
+
+    material_spec = build_pressed_material_mat_spec( 
+        name=name,
+        form=form,
+        process=process_spec,
+        notes=notes
+    )
+
+    material_run = MaterialRun( 
+        name=name,
+        spec=material_spec,
+        process=process_run,
+        sample_type='experimental'
+    )
+
+    class PressedMaterial(Material):
+
+        TEMPLATE: ClassVar[MaterialTemplate] = MaterialTemplate(name=__name__,)
+        _ATTRS: ClassVar[AttrsDict] = {'properties':{}}
+
+        define_attribute(
+            _ATTRS,
+            template=PropertyTemplate(
+                name='Form', bounds=ATTR_TEMPL['Form'].bounds
+            )
+        )
+
+        finalize_template(_ATTRS, TEMPLATE)
+
+    material = PressedMaterial.from_spec_or_run(
+                name=f'{name} Pressed Material',
                 run=material_run,
                 spec=material_spec
             )

@@ -167,6 +167,7 @@ def build_grinding_material_proc_spec(name:str,location:str,equipment:str='Morta
     )
 
     return PROCESS_SPECS[f'Grinding {name} Spec']
+
 """
 Newer version below with dynamic step input
 
@@ -353,10 +354,58 @@ def build_ldfz_material_proc_spec(name:str,power:float,rate:float,duration:float
         notes=notes
     )
 
-    return PROCESS_SPECS[f'Purchasing {name} Spec']
+    return PROCESS_SPECS[f'LDFZ {name} Spec']
 
-def build_pressing_material_proc_spec():
-    pass
+def build_pressing_material_proc_spec(name:str,equipment:str,pressure,duration:float,location:str,notes:str=None):
+    '''
+    Builds a process spec for filtering a material.
+
+    ### Parameters
+
+    Name: Name of the Process, must be the same as associated material and ingredient
+        ex: 'YVO4'
+    Location: Location where a process was performed. The default is 'Wet Lab'
+        ex: 'Synthesis Tube Furnace', 'X-Ray Diffraction Panel'
+    Equipment: Equipment used to perform an action. The default is 'vacuum filter'.
+        ex: 'Mortar and Pestle'
+    Solvent: Solvent used to wash/dissolve during the filtration (Optional).
+        ex: 'Water', 'Ethanol'
+
+    '''
+    attr_validate('Equipment Used',equipment)
+    attr_validate('Location',location)
+
+    PROCESS_SPECS[f'Pressing {name} Spec'] = ProcessSpec(
+        name=f'Pressing {name} Spec',
+        template=OBJ_TEMPL['Pressing Material'],
+        parameters=[
+            Parameter(
+                name='Equipment Used',
+                template=ATTR_TEMPL['Equipment Used'],
+                value=NominalCategorical(equipment)
+                    ),
+            Parameter(
+                name='Duration',
+                template=ATTR_TEMPL['Duration'],
+                value=NominalReal(duration,'hr')
+                ),
+            Parameter(
+                name='Pressure',
+                template=ATTR_TEMPL['Pressure'],
+                value=NominalReal(pressure,'MPa')
+            )
+                ],
+        conditions=[
+            Condition(
+                name='Location',
+                template=ATTR_TEMPL['Location'],
+                value=NominalCategorical(location)
+                    )
+                ],
+        notes=notes
+    )
+
+    return PROCESS_SPECS[f'Pressing {name} Spec']
 
 def build_acquire_raw_material_proc_spec(name:str,manufacturer:str,lot_id:str,cas_rn:str=None,notes:str=None):
     '''
@@ -415,7 +464,7 @@ MATERIAL_SPECS = {}
 def build_chunked_material_mat_spec():
     pass
 
-def build_filtered_material_mat_spec(name:str,form:str,notes:str=None):
+def build_filtered_material_mat_spec(name:str,form:str,process:ProcessSpec,notes:str=None):
     '''
     Builds a material spec for a Ground Material.
 
@@ -425,14 +474,13 @@ def build_filtered_material_mat_spec(name:str,form:str,notes:str=None):
         ex: 'YVO4'
     Form: Physical form of the ingredient. 
         ex: 'Powder', 'Rod'
-
     '''
     attr_validate('Form',form)
 
     MATERIAL_SPECS[f'{name} Filtered Material Spec'] = MaterialSpec(
         name=f'{name} Filtered Material Spec',
         template=OBJ_TEMPL['Filtered Material'],
-        process=PROCESS_SPECS[f'Filtering {name} Spec'],
+        process=process,
         properties=[
             PropertyAndConditions(
                 property=Property(
@@ -511,8 +559,37 @@ def build_heated_material_mat_spec(name:str,form:str,process:ProcessSpec,notes:s
 
     return MATERIAL_SPECS[f'{name} Heated Material Spec']
 
-def build_pressed_material_mat_spec():
-    pass
+def build_pressed_material_mat_spec(name:str,form:str,process:ProcessSpec,notes:str=None):
+    '''
+    Builds a material spec for a pressed Material.
+
+    ### Parameters
+
+    Name: Name of the Ingredient, must be the same as associated process and ingredient
+        ex: 'YVO4'
+    Form: Physical form of the ingredient. 
+        ex: 'Powder', 'Rod'
+
+    '''
+    attr_validate('Form',form)
+
+    MATERIAL_SPECS[f'{name} Pressed Material Spec'] = MaterialSpec(
+        name=f'{name} Pressed  Material Spec',
+        template=OBJ_TEMPL['Pressed Material'],
+        process=process,
+        properties=[
+            PropertyAndConditions(
+                property=Property(
+                name='Form',
+                template=ATTR_TEMPL['Form'],
+                value=NominalCategorical(form)
+                )
+            )
+        ],
+        notes=notes
+    )
+
+    return MATERIAL_SPECS[f'{name} Pressed Material Spec']
 
 def build_raw_material_mat_spec(name:str,form:str,purity:float,notes:str=None):
     '''
@@ -555,9 +632,9 @@ def build_raw_material_mat_spec(name:str,form:str,purity:float,notes:str=None):
             
     return MATERIAL_SPECS[f'{name} Raw Material Spec']
 
-def build_solution_material_mat_spec(name:str,form:str='Solution',notes:str=None):
+def build_dissolved_material_mat_spec(name:str,form:str='Solution',process:ProcessSpec=None,notes:str=None):
     '''
-    Builds a material spec for a Solution Material (dissolved).
+    Builds a material spec for a dissolved Material (solution).
 
     ### Parameters
 
@@ -569,10 +646,10 @@ def build_solution_material_mat_spec(name:str,form:str='Solution',notes:str=None
     '''
     attr_validate('Form',form)
 
-    MATERIAL_SPECS[f'{name} Solution Material Spec'] = MaterialSpec(
-        name=f'{name} Solution Material Spec',
+    MATERIAL_SPECS[f'{name} Dissolved Material Spec'] = MaterialSpec(
+        name=f'{name} Dissolved Material Spec',
         template=OBJ_TEMPL['Solution Material'],
-        process=PROCESS_SPECS[f'Dissolving {name} Spec'],
+        process=process,
         properties=[
             PropertyAndConditions(
                 property=Property(
@@ -585,7 +662,7 @@ def build_solution_material_mat_spec(name:str,form:str='Solution',notes:str=None
         notes=notes
     )
 
-    return MATERIAL_SPECS[f'{name} Solution Material Spec']
+    return MATERIAL_SPECS[f'{name} Dissolved Material Spec']
 
 ### Ingredient Spec Builders ###
 

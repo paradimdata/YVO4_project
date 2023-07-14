@@ -50,7 +50,8 @@
         "Thermocouple",
         "Tongs",
         "Autoclave",
-        "Vacuum Filter"
+        "Vacuum Filter",
+        "Pellet Press"
       ]
     },
     "Lot ID": {
@@ -74,7 +75,8 @@
         "Strem Chemicals",
         "Noah Technologies Corporation",
         "Fisher Commercial",
-        "XYZ Chemicals"
+        "XYZ Chemicals",
+        "Fisher Chemical"
       ]
     },
     "Atmosphere": {

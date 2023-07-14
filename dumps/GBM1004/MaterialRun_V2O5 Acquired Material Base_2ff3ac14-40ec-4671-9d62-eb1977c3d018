@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "V2O5 Acquired Material Base",
+   "notes": null,
+   "process": {
+      "id": "7086e0d9-025a-48b4-ae4f-0a3e532aab55",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "d540fd80-67fa-4f9e-915d-2d86f5c2fb12",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "2ff3ac14-40ec-4671-9d62-eb1977c3d018"
+   }
+}
