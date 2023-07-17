@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "GBM1012 Heated Material",
+   "notes": null,
+   "process": {
+      "id": "86687e62-1039-4719-afe9-ffae3d080e6f",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "12ed851f-ba08-4a82-bb4f-fa0475462c6c",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "f7638f09-f600-46e0-a0ec-4b2a1f143122"
+   }
+}

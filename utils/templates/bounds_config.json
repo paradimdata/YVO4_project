@@ -14,7 +14,8 @@
         "Chunk",
         "Chunk and Powder",
         "Solution",
-        "Rod"
+        "Rod",
+        "None"
       ]
     },
     "XRD Adhesive": {
@@ -35,7 +36,8 @@
         "1314-62-1",
         "554-13-2",
         "7697-37-2",
-        "000-00-000"
+        "000-00-000",
+        ""
       ]
     },
     "Equipment Used": {
@@ -64,7 +66,8 @@
         "0198917/2.1",
         "221613",
         "182153",
-        "00000"
+        "00000",
+        ""
       ]
     },
     "Manufacturer": {
@@ -76,7 +79,8 @@
         "Noah Technologies Corporation",
         "Fisher Commercial",
         "XYZ Chemicals",
-        "Fisher Chemical"
+        "Fisher Chemical",
+        "McQueen Lab"
       ]
     },
     "Atmosphere": {

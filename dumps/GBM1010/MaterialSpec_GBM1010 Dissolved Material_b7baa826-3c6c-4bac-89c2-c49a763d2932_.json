@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1010 Dissolved Material",
+   "notes": null,
+   "process": {
+      "id": "55131cf0-d3b8-4335-bcee-e4e76ed3dc35",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "dad2726e-2ccb-4eb3-872b-fce794c6d6de",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "None",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "890970ac-c3bb-4e52-b651-03fc3142492b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "b7baa826-3c6c-4bac-89c2-c49a763d2932"
+   }
+}

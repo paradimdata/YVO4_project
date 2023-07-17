@@ -227,6 +227,9 @@ class GemdModeller:
     def handle_gemd_value(self, G, uid, assets, add_separate_node):
         # TODO: add pointing to templates?
         for att in assets:
+
+            node_name = 'Unknown Node Name'
+
             if type(att) in [str]:  # is a gemd tag
                 if "::" in att:
                     self.add_to_graph(G, uid, att, "tags", add_separate_node=False)
@@ -424,7 +427,7 @@ class GemdModeller:
             "add_tags": args.add_tags,
         }
         G, relabeled_G, name_mapping = viewer.build_graph(
-            add_separate_node=args.add_separate_node, assets_to_add=assets_to_add
+            add_separate_node=args.add_separate_node, assets_to_add=assets_to_add,
         )
 
         if args.identifier:

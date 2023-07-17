@@ -367,6 +367,6 @@ class BaseNode(ABC):
     def dump_loop(self, encoder_func, destination):
         for obj in [self._spec, self._run]:
             encoder_func(obj, indent=3)  # trigger uids assignment
-            fn = "_".join([obj.__class__.__name__, obj.name, obj.uids["auto"]])
+            fn = "_".join([obj.__class__.__name__, obj.name, obj.uids["auto"],'.json'])
             with open(os.path.join(destination, fn), "w") as fp:
                 fp.write(encoder_func(obj, indent=3))
