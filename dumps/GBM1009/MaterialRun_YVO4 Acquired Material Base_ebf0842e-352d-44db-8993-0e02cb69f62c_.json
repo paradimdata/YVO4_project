@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "YVO4 Acquired Material Base",
+   "notes": null,
+   "process": {
+      "id": "b03d117e-4ada-42a6-a507-95e33f518abc",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "e82e2c03-9793-429f-a6ac-3106de8b2b20",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "ebf0842e-352d-44db-8993-0e02cb69f62c"
+   }
+}

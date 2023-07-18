@@ -226,10 +226,10 @@ class GemdModeller:
 
     def handle_gemd_value(self, G, uid, assets, add_separate_node):
         # TODO: add pointing to templates?
+
+        node_name = None
+
         for att in assets:
-
-            node_name = 'Unknown Node Name'
-
             if type(att) in [str]:  # is a gemd tag
                 if "::" in att:
                     self.add_to_graph(G, uid, att, "tags", add_separate_node=False)
@@ -237,7 +237,7 @@ class GemdModeller:
                 # reading gemd file links
                 if att["type"] == "file_link":
                     self.add_to_graph(
-                        G, uid, att["url"], "file_links", add_separate_node=False
+                        G, uid, att,node_name=["url", "file_links"], add_separate_node=False
                     )
                     continue
                 # reading gemd attributes
@@ -255,17 +255,21 @@ class GemdModeller:
                     node_name = "{}, {}".format(att_name, value["category"])
                 self.add_to_graph(G, uid, node_name, att_name, add_separate_node)
 
-    def add_to_graph(self, G, uid, node_name, att_name, add_separate_node):
+    def add_to_graph(self, G, uid, att_name, add_separate_node, node_name):
+
+        if isinstance(att_name, dict):
+            att_name = att_name.get('name', 'default_name')
         if add_separate_node == True:  # add as a separate node
             G.add_node(node_name, shape="rectangle", color="orange")
             G.add_edge(uid, node_name)
         else:  # add as an attribute of the node
             if att_name in G.nodes[uid].keys():  # already exists, append to it
-                count = len(G.nodes[uid][att_name])
-                G.nodes[uid][att_name][count] = node_name
-                # if not type(G.nodes[uid][att_name]) == list:
-                #     G.nodes[uid][att_name] = [G.nodes[uid][att_name]]
-                # G.nodes[uid][att_name].append(node_name)
+                if not type(G.nodes[uid][att_name]) == list:
+                      G.nodes[uid][att_name] = [G.nodes[uid][att_name]]
+                if type(G.nodes[uid][att_name]) == list:
+                    count = len(G.nodes[uid][att_name])
+                    G.nodes[uid][att_name][count-1] = node_name
+                    G.nodes[uid][att_name].append(node_name)
                 return
             if att_name in ["file_links", "tags"]:
                 G.nodes[uid][att_name] = {0: node_name}

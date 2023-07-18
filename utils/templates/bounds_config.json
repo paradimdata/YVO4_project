@@ -15,7 +15,8 @@
         "Chunk and Powder",
         "Solution",
         "Rod",
-        "None"
+        "None",
+        "Single Crystal(s)"
       ]
     },
     "XRD Adhesive": {
@@ -37,7 +38,8 @@
         "554-13-2",
         "7697-37-2",
         "000-00-000",
-        ""
+        "",
+        "13566-12-6"
       ]
     },
     "Equipment Used": {
@@ -67,7 +69,8 @@
         "221613",
         "182153",
         "00000",
-        ""
+        "",
+        "23765"
       ]
     },
     "Manufacturer": {

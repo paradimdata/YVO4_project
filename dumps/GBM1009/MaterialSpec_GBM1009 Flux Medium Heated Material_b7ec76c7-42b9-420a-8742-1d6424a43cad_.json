@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1009 Flux Medium Heated Material",
+   "notes": null,
+   "process": {
+      "id": "4df93ab2-ac8d-4a27-be3e-5db974894e33",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "81937571-ee29-46fd-ab09-7935a4c0719d",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Solid",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "89a722ec-064e-4bcd-8ce4-e0310de5bbc2",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "b7ec76c7-42b9-420a-8742-1d6424a43cad"
+   }
+}

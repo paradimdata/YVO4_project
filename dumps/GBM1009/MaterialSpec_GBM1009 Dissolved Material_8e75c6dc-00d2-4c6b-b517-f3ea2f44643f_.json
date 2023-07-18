@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1009 Dissolved Material",
+   "notes": null,
+   "process": {
+      "id": "7741c77e-b3bf-4d38-b9b9-bba6948970e8",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "81937571-ee29-46fd-ab09-7935a4c0719d",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Single Crystal(s)",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "16eed42f-984f-4bf6-a58c-7d1bc6d9c7be",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "8e75c6dc-00d2-4c6b-b517-f3ea2f44643f"
+   }
+}
