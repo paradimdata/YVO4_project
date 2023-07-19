@@ -240,7 +240,7 @@ def build_heating_program(program:list[tuple]):
     '''
 
     PROGRAM = []
-    i =0
+    i = 0
 
     for step in program:
         PROGRAM.append(
@@ -761,3 +761,39 @@ def build_xrd_meas_spec(name:str,duration:float,range:str,adhesive:str,location:
     )
 
     return MEASUREMENT_SPECS[f'{name} XRD Measurement Spec']
+
+def build_photo_meas_spec(name:str,equipment,location:str,file=None,notes:str=None):
+    '''
+    Builds a measurement spec for sample photography
+
+    ### Parameters
+
+    Name: Name of the Measurement, must be the same as associated material and ingredient
+        ex: 'YVO4'
+    Location: Location in which the measurement was taken.
+        ex: 'XRD Panel'
+    '''
+    attr_validate('Location',location)
+    attr_validate('Equipment Used',equipment)
+
+    MEASUREMENT_SPECS[f'{name} Photo Measurement Spec'] = MeasurementSpec(
+        name=f'{name} Photo Measurement Spec',
+        template=OBJ_TEMPL['Photography'],
+        parameters=[
+            Parameter(
+                name='Equipment Used',
+                template=ATTR_TEMPL['Equipment Used'],
+                value=NominalCategorical(equipment)
+                    )
+            ],
+        conditions=[Condition(
+                    name='Location',
+                    template=ATTR_TEMPL['Location'],
+                    value=NominalCategorical(location)
+                )
+            ],
+        file_links=file,
+        notes=notes
+    )
+
+    return MEASUREMENT_SPECS[f'{name} Photo Measurement Spec']

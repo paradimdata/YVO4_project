@@ -1,0 +1,29 @@
+{
+   "absolute_quantity": {
+      "nominal": 2888.8,
+      "type": "nominal_real",
+      "units": "milligram"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "686ebfd8-3afe-4768-ade6-645127b12536",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "Li2CO3 Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "a961c4ef-ee68-45f8-a45c-10251bd92e2b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_spec",
+   "uids": {
+      "auto": "beb39c46-9d26-4091-a71f-3af3a18cb3e9"
+   },
+   "volume_fraction": null
+}

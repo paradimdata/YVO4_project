@@ -1,0 +1,71 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "name": "HNO3 Acquisition Process",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Manufacturer",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "0cd42e7f-9f21-435c-a7cc-2edfe5f0cb5d",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Fisher Chemical",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Lot ID",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "a883e510-68f9-4e6b-88d2-b6da45234961",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "182153",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "CAS RN",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "1a24df85-dbf4-4039-bb9e-1e50a9f22c72",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "7697-37-2",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "source": {
+      "performed_by": "gmurra12@jh.edu",
+      "performed_date": "2023-07-10T00:00:00",
+      "type": "performed_source"
+   },
+   "spec": {
+      "id": "64187848-bc3e-473b-b0e2-890a41509583",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "process_run",
+   "uids": {
+      "auto": "b00d953f-e4f5-4dc2-8fa6-9f88e9c1ed4d"
+   }
+}

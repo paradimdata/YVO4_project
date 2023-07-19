@@ -1,0 +1,72 @@
+{
+   "conditions": [
+      {
+         "file_links": [],
+         "name": "Location",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "d358fb88-fa93-4126-af26-80414c3b32cd",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "condition",
+         "value": {
+            "category": "Wet Lab",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "file_links": [],
+   "name": "GBM1014 Filtering Process",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Equipment Used",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "c95d575e-408a-4c64-91ed-d120b30d0692",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Vacuum Filter",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Solvent",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "422757d3-9a7d-4874-89b6-93913a0abf27",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "DI H2O",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "source": {
+      "performed_by": "gmurra12@jh.edu",
+      "performed_date": "2023-07-10T00:00:00",
+      "type": "performed_source"
+   },
+   "spec": {
+      "id": "66d6ddea-2b16-4681-93c1-3a28b94c7d1e",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "process_run",
+   "uids": {
+      "auto": "0d13d7ab-9e4c-4c1d-95a4-9ecfac86f00b"
+   }
+}

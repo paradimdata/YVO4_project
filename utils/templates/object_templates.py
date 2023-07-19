@@ -258,3 +258,15 @@ OBJ_TEMPL[name] = MeasurementTemplate(
         ATTR_TEMPL['XRD Adhesive']
     ]
 )
+
+name = 'Photography'
+OBJ_TEMPL[name] = MeasurementTemplate(
+    name,
+    description = 'Takign photographs of a sample',
+    parameters = [
+        ATTR_TEMPL['Equipment Used']
+    ],
+    conditions = [
+        ATTR_TEMPL['Location']
+    ]
+)

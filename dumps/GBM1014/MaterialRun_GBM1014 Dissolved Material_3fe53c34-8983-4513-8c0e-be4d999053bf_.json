@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "GBM1014 Dissolved Material",
+   "notes": null,
+   "process": {
+      "id": "971c3d73-1e2f-40c2-a81e-e545229a3c37",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "1a4bc2a7-1a32-4d0f-b46f-3ba8ffdd7fb6",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "3fe53c34-8983-4513-8c0e-be4d999053bf"
+   }
+}

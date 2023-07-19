@@ -697,3 +697,57 @@ def build_xrd_measurement_base(name:str,duration:float,range:str,adhesive:str,ma
             )
 
     return measurement
+
+def build_photograph_base(name:str,material:MaterialRun,equipment,location:str,file=None,notes:str=None,prv:Provenance=None):
+
+    '''
+    Returns a sample photograph BaseNode.
+    '''
+
+    measurement_spec = build_photo_meas_spec(
+        name=name,
+        equipment=equipment,
+        location=location,
+        file=None,
+        notes=notes
+    )
+
+    measurement_run = MeasurementRun(
+        name=name,
+        spec=measurement_spec,
+        material=material,
+        parameters=measurement_spec.parameters,
+        conditions=measurement_spec.conditions,
+        notes=notes,
+        file_links=file,
+        source=PerformedSource(prv.email,prv.date)
+    )
+
+    class PhotoMeasurement(Measurement):
+
+        TEMPLATE: ClassVar[MeasurementTemplate] = MeasurementTemplate(name=__name__,)
+        _ATTRS: ClassVar[AttrsDict] = {'conditions':{},'parameters':{}}
+
+        define_attribute(
+            _ATTRS,
+            template=ConditionTemplate(
+                name='Location', bounds=ATTR_TEMPL['Location'].bounds
+            )      
+        )
+
+        define_attribute(
+            _ATTRS,
+            template=ParameterTemplate(
+                name='Equipment Used', bounds=ATTR_TEMPL['Equipment Used'].bounds
+            )      
+        )
+
+        finalize_template(_ATTRS, TEMPLATE)
+
+    measurement = PhotoMeasurement.from_spec_or_run(
+                name=f'{name} Photo Measurement',
+                run=measurement_run,
+                spec=measurement_spec
+            )
+
+    return measurement

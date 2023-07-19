@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "DI H2O Acquired Material Base",
+   "notes": null,
+   "process": {
+      "id": "9dbc9168-ddde-41e0-89b7-935844af0e0a",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "e362befa-6437-4ce0-9449-ac04b232aa80",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "9441e7ec-7fa0-42f8-8288-3f81b9851ab4"
+   }
+}

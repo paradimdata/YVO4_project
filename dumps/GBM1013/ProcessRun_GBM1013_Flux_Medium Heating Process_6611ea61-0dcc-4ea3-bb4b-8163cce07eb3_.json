@@ -1,0 +1,140 @@
+{
+   "conditions": [
+      {
+         "file_links": [],
+         "name": "Location",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "1aeb4347-98ae-4da7-8858-b505e2626336",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "condition",
+         "value": {
+            "category": "Hot Lab",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "file_links": [],
+   "name": "GBM1013_Flux_Medium Heating Process",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Step 1",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "e47445f4-9062-4a73-9018-db1c90e08817",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "quantities": {
+               "Duration": 0.0,
+               "Temp": 0.0,
+               "Type": "Init"
+            },
+            "type": "nominal_composition"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Step 2",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "e47445f4-9062-4a73-9018-db1c90e08817",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "quantities": {
+               "Duration": 9.0,
+               "Temp": 900.0,
+               "Type": "Ramp"
+            },
+            "type": "nominal_composition"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Step 3",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "e47445f4-9062-4a73-9018-db1c90e08817",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "quantities": {
+               "Duration": 1.0,
+               "Temp": 900.0,
+               "Type": "Hold"
+            },
+            "type": "nominal_composition"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Step 4",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "e47445f4-9062-4a73-9018-db1c90e08817",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "quantities": {
+               "Duration": 9.0,
+               "Temp": 0.0,
+               "Type": "Ramp"
+            },
+            "type": "nominal_composition"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Step 5",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "e47445f4-9062-4a73-9018-db1c90e08817",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "quantities": {
+               "Duration": 0.0,
+               "Temp": 0.0,
+               "Type": "End"
+            },
+            "type": "nominal_composition"
+         }
+      }
+   ],
+   "source": {
+      "performed_by": "gmurra12@jh.edu",
+      "performed_date": "2023-07-06T00:00:00",
+      "type": "performed_source"
+   },
+   "spec": {
+      "id": "472abfc9-1ccd-4f69-9d8c-d7c19eef8699",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "process_run",
+   "uids": {
+      "auto": "6611ea61-0dcc-4ea3-bb4b-8163cce07eb3"
+   }
+}

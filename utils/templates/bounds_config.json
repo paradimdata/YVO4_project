@@ -16,7 +16,8 @@
         "Solution",
         "Rod",
         "None",
-        "Single Crystal(s)"
+        "Single Crystal(s)",
+        "Liquid"
       ]
     },
     "XRD Adhesive": {
@@ -55,7 +56,8 @@
         "Tongs",
         "Autoclave",
         "Vacuum Filter",
-        "Pellet Press"
+        "Pellet Press",
+        "Zeiss Axiocam 208 Color, Stemi508 Microscope"
       ]
     },
     "Lot ID": {
@@ -101,7 +103,8 @@
         "X-Ray Diffraction Panel",
         "Bucket",
         "Hot Lab",
-        "Wet Lab"
+        "Wet Lab",
+        "PARADIM"
       ]
     },
     "Solvent": {

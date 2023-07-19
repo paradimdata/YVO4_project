@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1013_YVO4 Ground Material",
+   "notes": null,
+   "process": {
+      "id": "009d1454-4713-438e-8831-f65d650a8a53",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "a074e3d4-3325-4c12-b121-a91861507346",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Powder",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "50cf63bf-dd20-42e0-87c2-2afe1f22c4b7",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "5ab7d45d-7fcd-4c94-9b0d-7a5382bc6035"
+   }
+}
