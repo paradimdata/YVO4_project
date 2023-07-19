@@ -8,6 +8,7 @@
 2023-07-14 Refactor dynamic heating method or dictionary port
 2023-07-14 Update README with structure outline, instructions
 2023-07-17 Fix dump filetyping
+2023-07-19 (A) Fix GBM1009 errors
 x (A) 2023-06-26 Ask about Blocks and Workflows
 x (A) 2023-06-26 Complete electronic lab notebook template
 x (A) 2023-06-26 Outline procedures for each growth method

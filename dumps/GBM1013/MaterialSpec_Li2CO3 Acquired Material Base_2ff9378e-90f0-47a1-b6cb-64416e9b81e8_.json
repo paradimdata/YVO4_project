@@ -1,0 +1,63 @@
+{
+   "file_links": [],
+   "name": "Li2CO3 Acquired Material Base",
+   "notes": null,
+   "process": {
+      "id": "e818bd92-c6a9-49e4-992c-a9bb3474e093",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "7961d657-5053-4997-a1e1-0ee759210998",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Powder",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      },
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Purity Percentage",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "f65cda1c-598d-4c0e-a08f-8a2c3221372d",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "nominal": 99.998,
+               "type": "nominal_real",
+               "units": "dimensionless"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "51068fa8-57e8-40e4-bb3e-4223b85eff71",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "2ff9378e-90f0-47a1-b6cb-64416e9b81e8"
+   }
+}

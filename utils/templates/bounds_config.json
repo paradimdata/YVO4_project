@@ -70,7 +70,8 @@
         "182153",
         "00000",
         "",
-        "23765"
+        "23765",
+        "GBM1005C"
       ]
     },
     "Manufacturer": {
@@ -106,7 +107,8 @@
     "Solvent": {
       "categories": [
         "Water",
-        "Ethanol"
+        "Ethanol",
+        "DI H2O"
       ]
     },
     "Step Type": {

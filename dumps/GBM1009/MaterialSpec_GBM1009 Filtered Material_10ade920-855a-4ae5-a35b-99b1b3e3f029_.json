@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1009 Filtered Material",
+   "notes": null,
+   "process": {
+      "id": "ba35a4b5-2706-488f-831b-1a08694b037b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "dcb7bd59-1338-4bae-aef0-b75686a4e71c",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Single Crystal(s)",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "38439ecd-dde8-45f5-b55a-902cd9761ef2",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "10ade920-855a-4ae5-a35b-99b1b3e3f029"
+   }
+}
