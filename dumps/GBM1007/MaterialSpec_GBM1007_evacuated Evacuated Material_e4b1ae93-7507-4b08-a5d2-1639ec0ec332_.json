@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1007_evacuated Evacuated Material",
+   "notes": null,
+   "process": {
+      "id": "c50b6e1b-106e-485f-b2c3-f2a055f065a2",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "e0b76907-b566-4e3f-95f8-515b99df51c6",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Powder",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "5377a4c7-2640-4e3d-aac4-3069c8ecec0a",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "e4b1ae93-7507-4b08-a5d2-1639ec0ec332"
+   }
+}

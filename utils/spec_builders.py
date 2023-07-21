@@ -304,67 +304,93 @@ def build_heating_material_proc_spec(name:str,program:list[dict],location:str='H
 
     return PROCESS_SPECS[f'Heating {name} Spec']    
 
-def build_ldfz_material_proc_spec(name:str,power:float,rate:float,duration:float,atmosphere:str,location:str,notes:str=None):
+def ldfz_program_step(type:str,power:float,duration:float,rotation:tuple,rate:float,notes:str=None):
     '''
-    Builds a process spec for heating a material.
+    Type: The type of heating step. 
+        ex: 'Init','Ramp','Hold','End'
+    Temp: The target end temperature of a ramp or the temperature maintained during a hold. Enter 0 for 'Init' or 'End' type steps. (degC)
+        ex: 250
+    Duration: Duration of the ramp or hold in hours.
+        ex: 24, 6.5
+    '''
+    return (type,power,rotation,rate,duration,notes)
+
+def build_ldfz_program(program:list[tuple]):
+    '''
+    Argument should be a list of heating_program_step() functions.
+    '''
+
+    PROGRAM = []
+    i = 0
+
+    for step in program:
+        PROGRAM.append(
+            {
+            'Type':step[0],
+            'Power':step[1],
+            'Rotation':step[2],
+            'Rate':step[3],
+            'Duration':step[4],
+            'Notes':step[5]
+            }
+        )
+
+        attr_validate('Step Type',PROGRAM[i]['Type'])
+        
+        i += 1
+    
+    return PROGRAM
+
+def build_ldfz_proc_spec(name:str,program:list[dict],atmosphere,location:str='PARADIM',notes:str=None):
+    '''
+    Dynamically builds a process spec for heating a material in a multi-step temperature program.
 
     ### Parameters
 
     Name: Name of the Process, must be the same as associated material and ingredient
         ex: 'YVO4'
-    Temperature: Holding temperature of the heating process in degC
-        ex: 750.
-    Rate: The ramp rate in degC/hr of the heating/cooling of the material.
-        ex: 100.
-    Duration: Duration of the heating process in hours
-        ex: 10.
-    Location: Location where a process was performed
-        ex: 'Synthesis Tube Furnace', 'X-Ray Diffraction Panel'
-
+    Steps: An integer number of steps in the temperature program.
+        ex: 3
+    Location: Location where a process was performed. Default is 'Hot Lab'
+        ex: 'Hot Lab' 'Synthesis Tube Furnace', 'X-Ray Diffraction Panel'.
     '''
-    attr_validate('Location',location)
+    attr_validate('Location',location),
     attr_validate('Atmosphere',atmosphere)
 
     PROCESS_SPECS[f'LDFZ {name} Spec'] = ProcessSpec(
         name=f'LDFZ {name} Spec',
         template=OBJ_TEMPL['LDFZ Material'],
-        parameters=[
-            Parameter(
-                name='Laser Power',
-                template=ATTR_TEMPL['Laser Power'],
-                value=NominalReal(power,'')
-                    ),
-            Parameter(
-                name='Laser Rate',
-                template=ATTR_TEMPL['Laser Rate'],
-                value=NominalReal(rate,'')
-                    ),
-            Parameter(
-                name='Duration',
-                template=ATTR_TEMPL['Duration'],
-                value=NominalReal(duration,'hr')
-            )
-                ],
-        conditions=[
-            PropertyAndConditions(
-            Condition(
+        parameters=[],
+        conditions=[Condition(
                 name='Location',
                 template=ATTR_TEMPL['Location'],
                 value=NominalCategorical(location)
-                    )
-                ),
-            PropertyAndConditions(
-            Condition(
+                    ),
+                    Condition(
                 name='Atmosphere',
                 template=ATTR_TEMPL['Atmosphere'],
                 value=NominalCategorical(atmosphere)
                     )
-                )   
-            ],   
+                ],   
         notes=notes
     )
 
-    return PROCESS_SPECS[f'LDFZ {name} Spec']
+    i = 0
+
+    for step in program:
+
+        PROCESS_SPECS[f'LDFZ {name} Spec'].parameters.append(Parameter(
+            name=f'Step {i+1}',
+            template=ATTR_TEMPL['Step'],
+            value=NominalComposition(
+                quantities=program[i]
+                )
+            )
+        )
+
+        i += 1
+
+    return PROCESS_SPECS[f'LDFZ {name} Spec'] 
 
 def build_pressing_material_proc_spec(name:str,equipment:str,pressure,duration:float,location:str,notes:str=None):
     '''
@@ -416,6 +442,50 @@ def build_pressing_material_proc_spec(name:str,equipment:str,pressure,duration:f
     )
 
     return PROCESS_SPECS[f'Pressing {name} Spec']
+
+def build_evacuating_proc_spec(name:str,equipment:str,duration:float,location:str,notes:str=None):
+    '''
+    Builds a process spec for putting a material under vacuum.
+
+    ### Parameters
+
+    Name: Name of the Process, must be the same as associated material and ingredient
+        ex: 'YVO4'
+    Location: Location where a process was performed. The default is 'Wet Lab'
+        ex: 'Synthesis Tube Furnace', 'X-Ray Diffraction Panel'
+    Equipment: Equipment used to perform an action. The default is 'vacuum filter'.
+        ex: 'Mortar and Pestle'
+
+    '''
+    attr_validate('Equipment Used',equipment)
+    attr_validate('Location',location)
+
+    PROCESS_SPECS[f'Evacuating {name} Spec'] = ProcessSpec(
+        name=f'Evacuating {name} Spec',
+        template=OBJ_TEMPL['Evacuating Material'],
+        parameters=[
+            Parameter(
+                name='Equipment Used',
+                template=ATTR_TEMPL['Equipment Used'],
+                value=NominalCategorical(equipment)
+                    ),
+            Parameter(
+                name='Duration',
+                template=ATTR_TEMPL['Duration'],
+                value=NominalReal(duration,'hr')
+                )
+                ],
+        conditions=[
+            Condition(
+                name='Location',
+                template=ATTR_TEMPL['Location'],
+                value=NominalCategorical(location)
+                    )
+                ],
+        notes=notes
+    )
+
+    return PROCESS_SPECS[f'Evacuating {name} Spec']
 
 def build_acquire_raw_material_proc_spec(name:str,manufacturer:str,lot_id:str,cas_rn:str=None,notes:str=None):
     '''
@@ -601,6 +671,38 @@ def build_pressed_material_mat_spec(name:str,form:str,process:ProcessSpec,notes:
 
     return MATERIAL_SPECS[f'{name} Pressed Material Spec']
 
+def build_evacuated_material_mat_spec(name:str,form:str,process:ProcessSpec,notes:str=None):
+    '''
+    Builds a material spec for a pressed Material.
+
+    ### Parameters
+
+    Name: Name of the Ingredient, must be the same as associated process and ingredient
+        ex: 'YVO4'
+    Form: Physical form of the ingredient. 
+        ex: 'Powder', 'Rod'
+
+    '''
+    attr_validate('Form',form)
+
+    MATERIAL_SPECS[f'{name} Evacuated Material Spec'] = MaterialSpec(
+        name=f'{name} Evacuated  Material Spec',
+        template=OBJ_TEMPL['Evacuated Material'],
+        process=process,
+        properties=[
+            PropertyAndConditions(
+                property=Property(
+                name='Form',
+                template=ATTR_TEMPL['Form'],
+                value=NominalCategorical(form)
+                )
+            )
+        ],
+        notes=notes
+    )
+
+    return MATERIAL_SPECS[f'{name} Evacuated Material Spec']
+
 def build_raw_material_mat_spec(name:str,form:str,purity:float,notes:str=None):
     '''
     Builds a material spec for a Raw Material.
@@ -673,6 +775,38 @@ def build_dissolved_material_mat_spec(name:str,form:str='Solution',process:Proce
     )
 
     return MATERIAL_SPECS[f'{name} Dissolved Material Spec']
+
+def build_terminal_material_spec(name:str,form:str,process:ProcessSpec,notes:str=None):
+    '''
+    Builds a material spec for a pressed Material.
+
+    ### Parameters
+
+    Name: Name of the Ingredient, must be the same as associated process and ingredient
+        ex: 'YVO4'
+    Form: Physical form of the ingredient. 
+        ex: 'Powder', 'Rod'
+
+    '''
+    attr_validate('Form',form)
+
+    MATERIAL_SPECS[f'{name} Terminal Material Spec'] = MaterialSpec(
+        name=f'{name} Terminal Material Spec',
+        template=OBJ_TEMPL['Terminal Material'],
+        process=process,
+        properties=[
+            PropertyAndConditions(
+                property=Property(
+                name='Form',
+                template=ATTR_TEMPL['Form'],
+                value=NominalCategorical(form)
+                )
+            )
+        ],
+        notes=notes
+    )
+
+    return MATERIAL_SPECS[f'{name} Terminal Material Spec']
 
 ### Ingredient Spec Builders ###
 

@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1017 Terminal Material",
+   "notes": null,
+   "process": {
+      "id": "b4780575-8457-4749-910b-3cae250d7208",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "0e9497ef-82af-4a23-9ee0-f4d6b1a7ad30",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Crystal",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "5cbe4588-4a3e-468b-8fad-d25e55750143",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "002f616e-47e5-4113-9a6b-84deace279b4"
+   }
+}

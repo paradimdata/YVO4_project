@@ -57,7 +57,9 @@
         "Autoclave",
         "Vacuum Filter",
         "Pellet Press",
-        "Zeiss Axiocam 208 Color, Stemi508 Microscope"
+        "Zeiss Axiocam 208 Color, Stemi508 Microscope",
+        "Vacuum Pump",
+        "CIP"
       ]
     },
     "Lot ID": {
@@ -92,7 +94,8 @@
     "Atmosphere": {
       "categories": [
         "Inner Atmosphere Glovebox",
-        "Air"
+        "Air",
+        "1 L/min O2, 0.5 L/min Ar"
       ]
     },
     "Location": {

@@ -1,0 +1,34 @@
+{
+   "absolute_quantity": {
+      "nominal": 73.0,
+      "type": "nominal_real",
+      "units": "millimeter"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "82b65730-ce67-4e26-a959-7c61f5357baf",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1007_rod Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "88a52322-fb17-4b21-93e1-c121fc0f26db",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "spec": {
+      "id": "1420dfe3-8270-4d05-bd21-1d68573898ca",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_run",
+   "uids": {
+      "auto": "bfede400-deb9-4a59-8346-71b7343f9ddf"
+   },
+   "volume_fraction": null
+}

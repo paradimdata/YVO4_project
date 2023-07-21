@@ -74,6 +74,15 @@ OBJ_TEMPL[name] = MaterialTemplate(
     ]
 )
 
+name = 'Evacuated Material'
+OBJ_TEMPL[name] = MaterialTemplate(
+    name,
+    description='A material under vacuum',
+    properties=[
+        ATTR_TEMPL['Form'],
+    ]
+)
+
 name = 'Terminal Material'
 OBJ_TEMPL[name] = MaterialTemplate(
     name,
@@ -180,6 +189,19 @@ OBJ_TEMPL[name] = ProcessTemplate(
         ATTR_TEMPL['Equipment Used'],
         ATTR_TEMPL['Duration'],
         ATTR_TEMPL['Pressure']
+    ],
+)
+
+name = 'Evacuating Material'
+OBJ_TEMPL[name] = ProcessTemplate(
+    name,
+    description='Putting a material under vacuum.',
+    conditions=[
+        ATTR_TEMPL['Location']
+    ],
+    parameters=[
+        ATTR_TEMPL['Equipment Used'],
+        ATTR_TEMPL['Duration']
     ],
 )
 
