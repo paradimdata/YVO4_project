@@ -297,41 +297,38 @@ This graph not only provides convenient data visualiztion, but also creates the 
 
 ## Glossary
 
-### Notebooks
+#### Notebooks
 In this project, notebooks serve two purposes. First, they serve as a tool to document the details of an experiment, similar to an electronic lab notebook. Second, they serve as an interface to interact with the rest of the codebase. [Read more](#notebooks).
 
-### GEMD Objects
+#### GEMD Objects
 GEMD (Graphical Expression of Materials Data) is an open-source format for storing interconnected Data Objects, including Materials, Processes, Measurements, and Ingredients. Data Objects exist in Template, Spec, and Run states. [Read more](#gemd-objects).
 
-### BaseNode
+#### BaseNode
 BaseNodes are objects that contain all of the state data related to a GEMD Data Object. BaseNodes have the same four types as GEMD Data Objects and each contains and links Template, Spec, and Run data. [Read more](#basenode).
 
-### Block
+#### Block
 Blocks are objects that contain a set of related BaseNodes. Blocks are very process-oriented and usually include BaseNodes for a Process, the Material created by that process, Ingredients consumed in that process, and any Measurements performed on the material. Blocks contain methods to link their constituent objects to one another and to objects in other Blocks. [Read more](#block).
 
-### Workflow
+#### Workflow
 A Workflow is an object that contains a series of Blocks and describes an entire experimental procedure from start to finish. It is represented using a dictionary with unique, descriptive string keys to access Block objects. [Read more](#workflow).
 
-### Builders
+#### Builders
 Builders are helper functions used to instantiate GEMD objects, BaseNodes, and Blocks. They simplify repetitive data entry and allow users to work at high abstraction levels. [Read more](#builders).
 
-### Spec Builders
+#### Spec Builders
 Spec Builders are functions that instantiate a Spec for a given GEMD Data Object and validate arguments against Templates and Bounds. [Read more](#spec-builders).
 
-### Base Builders
+#### Base Builders
 Base Builders are functions that instantiate a BaseNode by first building a Spec and creating a Run from that Spec. [Read more](#base-builders).
 
-### Block Builders
+#### Block Builders
 Block Builders are functions that instantiate a Block by instantiating BaseNodes and adding them to Block objects. [Read more](#block-builders).
 
-### JSON Dumping
+#### JSON Dumping
 JSON Dumping refers to the process of converting Blocks, which are serializable objects, into a collection of JSON files for further processing and analysis. [Read more](#json-dumping).
 
-### OpenMSIModel
+#### OpenMSIModel
 OpenMSIModel is a set of tools and utilities for GEMD developed by Ali Rachidi and Soren Bear. It enables the use of Block and Workflow classes for advanced data visualization and analysis. [Read more](#openmsimodel).
 
-### gemd_modeller
+#### gemd_modeller
 gemd_modeller is a powerful tool available in OpenMSIModel that creates an interactive graph of a material's history using JSON files generated from Blocks. It provides convenient data visualization, machine learning model application, and advanced queryability. [Read more](#gemd-modeller).
-
-### Related Documents
-Links to additional documentation and resources related to GEMD, GEMD Python, and OpenMSIModel. [Read more](#related-documents).
