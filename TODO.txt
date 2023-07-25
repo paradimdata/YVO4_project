@@ -1,7 +1,6 @@
 2023-06-26 Find resources for graphical neural networks over knowledge graphs
 2023-06-28 Complete spec builders toolbox
 2023-07-07 Develop file capture and parsing system for filelinks or check existing tooling
-2023-07-19 Finish updating README
 x (A) 2023-06-26 Ask about Blocks and Workflows
 x (A) 2023-06-26 Complete electronic lab notebook template
 x (A) 2023-06-26 Outline procedures for each growth method
@@ -25,4 +24,5 @@ x 2023-07-12 Test from_spec_or_run method fix, branch and merge request
 x 2023-07-14 Refactor dynamic heating method or dictionary port
 x 2023-07-14 Update README with structure outline, instructions
 x 2023-07-17 Fix dump filetyping
+x 2023-07-19 Finish updating README
 x 2023-07-19 Measurement Processing Tools
