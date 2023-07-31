@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1003C Ground Material",
+   "notes": null,
+   "process": {
+      "id": "2f13e60f-5a1f-4c0d-88e1-c7775dcad402",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "bc97511d-cf67-4580-8580-7b280f92d48d",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Powder",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "f7e8fdca-b61a-4568-a1c8-bffc5ecebcde",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "1b202ae1-03d2-4323-ba28-e6a0e11db8c0"
+   }
+}

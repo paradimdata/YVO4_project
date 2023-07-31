@@ -1,0 +1,29 @@
+{
+   "absolute_quantity": {
+      "nominal": 266.7,
+      "type": "nominal_real",
+      "units": "milligram"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "e9c68f43-af2b-42f3-b5f3-9b0899aa8fcc",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1005C Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "c2f694ac-7983-46ee-85c0-4d23ff339bed",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_spec",
+   "uids": {
+      "auto": "41325e8d-e91a-4666-848f-a18a067d1d2a"
+   },
+   "volume_fraction": null
+}
