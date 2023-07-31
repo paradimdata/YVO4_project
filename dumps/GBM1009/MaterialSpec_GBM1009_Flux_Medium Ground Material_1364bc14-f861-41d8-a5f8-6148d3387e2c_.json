@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1009_Flux_Medium Ground Material",
+   "notes": null,
+   "process": {
+      "id": "40b36827-26f0-4009-b3ff-f67187c50b14",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "febc27b8-458f-477e-a9a6-6595d13639fa",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Powder",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "d1d97321-970b-4ef4-913e-5f304df358b0",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "1364bc14-f861-41d8-a5f8-6148d3387e2c"
+   }
+}

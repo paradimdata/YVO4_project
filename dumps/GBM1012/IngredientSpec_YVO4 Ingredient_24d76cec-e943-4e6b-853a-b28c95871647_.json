@@ -1,0 +1,29 @@
+{
+   "absolute_quantity": {
+      "nominal": 250.0,
+      "type": "nominal_real",
+      "units": "milligram"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "dfc41e80-3a17-41cd-97a2-29e83cd401be",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "YVO4 Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "a64f3966-1597-46ac-bae5-e469edc9b99a",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_spec",
+   "uids": {
+      "auto": "24d76cec-e943-4e6b-853a-b28c95871647"
+   },
+   "volume_fraction": null
+}

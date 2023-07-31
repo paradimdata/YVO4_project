@@ -1,0 +1,88 @@
+{
+   "conditions": [
+      {
+         "file_links": [],
+         "name": "Location",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "b289806d-1216-4330-9321-a042a400781b",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "condition",
+         "value": {
+            "category": "PARADIM",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "file_links": [
+      {
+         "filename": "PDC_20230629_1_GBM_1_GBM1007A_YVO4_Image1",
+         "type": "file_link",
+         "url": "https://occamy.chemistry.jhu.edu/data/IQMMIPShare/Images/Gannon/PDC_20230629_1_GBM_1_GBM1007A_YVO4_Image1.jpg"
+      },
+      {
+         "filename": "PDC_20230629_1_GBM_1_GBM1007A_YVO4_Image2",
+         "type": "file_link",
+         "url": "https://occamy.chemistry.jhu.edu/data/IQMMIPShare/Images/Gannon/PDC_20230629_1_GBM_1_GBM1007A_YVO4_Image2.jpg"
+      },
+      {
+         "filename": "PDC_20230629_1_GBM_2_GBM1007A_YVO4_Image1.jpg",
+         "type": "file_link",
+         "url": "https://occamy.chemistry.jhu.edu/data/IQMMIPShare/Images/Gannon/PDC_20230629_1_GBM_2_GBM1007A_YVO4_Image1.jpg"
+      },
+      {
+         "filename": "PDC_20230629_1_GBM_2_GBM1007A_YVO4_Image2",
+         "type": "file_link",
+         "url": "https://occamy.chemistry.jhu.edu/data/IQMMIPShare/Images/Gannon/PDC_20230629_1_GBM_2_GBM1007A_YVO4_Image2.jpg"
+      },
+      {
+         "filename": "PDC_20230629_1_GBM_3_GBM1007A_YVO4_Image1",
+         "type": "file_link",
+         "url": "https://occamy.chemistry.jhu.edu/data/IQMMIPShare/Images/Gannon/PDC_20230629_1_GBM_3_GBM1007A_YVO4_Image1.jpg"
+      }
+   ],
+   "material": {
+      "id": "d085e826-8e24-41d5-a4e7-6fe56b45e4e2",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1007 Photos (5) Photo Measurement",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Equipment Used",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "1eeac253-bede-496e-928d-4cad711593fa",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Zeiss Axiocam 208 Color, Stemi508 Microscope",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "properties": [],
+   "source": {
+      "performed_by": "gmurra12@jh.edu",
+      "performed_date": "2023-06-12T00:00:00",
+      "type": "performed_source"
+   },
+   "spec": {
+      "id": "bcbce78f-1cec-4fdd-9feb-8524bb3ccc19",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "measurement_run",
+   "uids": {
+      "auto": "6321e9b6-8e59-4c4a-a367-5d6b47224904"
+   }
+}
