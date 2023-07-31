@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "GBM1009_Flux_Medium Ground Material",
+   "notes": null,
+   "process": {
+      "id": "70873746-57cf-44dd-9219-4e2c3cc97d69",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "f3d81146-9bdb-4837-b3a5-96a8d70b50f4",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "52912e3d-3f06-4f63-ad95-80766f43c551"
+   }
+}

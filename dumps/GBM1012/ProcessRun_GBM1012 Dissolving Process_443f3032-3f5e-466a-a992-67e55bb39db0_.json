@@ -1,0 +1,56 @@
+{
+   "conditions": [
+      {
+         "file_links": [],
+         "name": "Location",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ab1baacd-8476-4c26-be61-2957f97fee05",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "condition",
+         "value": {
+            "category": "Wet Lab",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "file_links": [],
+   "name": "GBM1012 Dissolving Process",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Equipment Used",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "72edecbe-69a1-4780-83bd-8bd1eadd754c",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Vacuum Filter",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "source": {
+      "performed_by": "gmurra12@jh.edu",
+      "performed_date": "2023-07-05T00:00:00",
+      "type": "performed_source"
+   },
+   "spec": {
+      "id": "f5b39901-94b6-401a-98f0-b946b8413294",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "process_run",
+   "uids": {
+      "auto": "443f3032-3f5e-466a-a992-67e55bb39db0"
+   }
+}

@@ -1,0 +1,34 @@
+{
+   "absolute_quantity": {
+      "nominal": 10000.1,
+      "type": "nominal_real",
+      "units": "milligram"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "864712da-37e2-4a87-947a-3997ac98d072",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1009 Flux Medium Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "50c6a68e-09be-4de0-97d5-b751a40ef119",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "spec": {
+      "id": "e267120d-2f34-4860-a194-01029856f9b8",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_run",
+   "uids": {
+      "auto": "9a06c432-5b31-4721-b03e-1d73387785ad"
+   },
+   "volume_fraction": null
+}

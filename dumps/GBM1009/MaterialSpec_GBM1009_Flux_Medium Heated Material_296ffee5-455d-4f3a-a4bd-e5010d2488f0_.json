@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1009_Flux_Medium Heated Material",
+   "notes": null,
+   "process": {
+      "id": "78583c91-92ae-49c9-9ede-ca78ba6ace91",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "febc27b8-458f-477e-a9a6-6595d13639fa",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Solid",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "ef91d48e-f971-4d96-b8a3-5eaf799fd95e",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "296ffee5-455d-4f3a-a4bd-e5010d2488f0"
+   }
+}

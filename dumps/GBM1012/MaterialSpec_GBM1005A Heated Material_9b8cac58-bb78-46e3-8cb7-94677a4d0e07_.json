@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1005A Heated Material",
+   "notes": null,
+   "process": {
+      "id": "f869a8d2-28c2-4158-883d-dc906cd6d442",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "359929dc-9a4b-4f19-92bb-4a956e48d5f2",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Pellet",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "e77a028c-4845-4dee-8bac-f0bf65d6ea45",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "9b8cac58-bb78-46e3-8cb7-94677a4d0e07"
+   }
+}

@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "GBM1005A Heated Material",
+   "notes": null,
+   "process": {
+      "id": "5434d145-3fdb-4dd7-92d4-0e32fe99a4c2",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "9b8cac58-bb78-46e3-8cb7-94677a4d0e07",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "7923072c-5171-4cbd-92ea-e7c1db184ef9"
+   }
+}

@@ -1,0 +1,35 @@
+{
+   "absolute_quantity": {
+      "lower_bound": 272.1,
+      "type": "uniform_real",
+      "units": "milligram",
+      "upper_bound": 273.1
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "7923072c-5171-4cbd-92ea-e7c1db184ef9",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "YVO4 Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "db7aca27-31a3-4277-b625-fc16176311c3",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "spec": {
+      "id": "b447ca7a-6f65-4a0f-9606-a5ae2b2145ff",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_run",
+   "uids": {
+      "auto": "4e28147e-79b0-48b1-8ca3-2a99fd618a8d"
+   },
+   "volume_fraction": null
+}

@@ -1,0 +1,29 @@
+{
+   "absolute_quantity": {
+      "nominal": 10250.0,
+      "type": "nominal_real",
+      "units": "milliliter"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "11e0abaa-f03d-41e9-ba14-f02b89874513",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1009 Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "56d19995-1906-46f7-9c45-25e363fcc2e5",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_spec",
+   "uids": {
+      "auto": "f5c71b59-a2ad-40fd-8671-0ed371af68b9"
+   },
+   "volume_fraction": null
+}

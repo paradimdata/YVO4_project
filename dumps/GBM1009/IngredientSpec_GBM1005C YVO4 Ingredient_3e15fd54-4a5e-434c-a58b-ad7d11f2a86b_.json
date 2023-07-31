@@ -1,0 +1,29 @@
+{
+   "absolute_quantity": {
+      "nominal": 250.0,
+      "type": "nominal_real",
+      "units": "milligram"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "8a394457-d691-4a09-9ca6-7b97cc751529",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1005C YVO4 Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "46376ce2-46d6-4439-ae79-0b13f95e7130",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_spec",
+   "uids": {
+      "auto": "3e15fd54-4a5e-434c-a58b-ad7d11f2a86b"
+   },
+   "volume_fraction": null
+}
