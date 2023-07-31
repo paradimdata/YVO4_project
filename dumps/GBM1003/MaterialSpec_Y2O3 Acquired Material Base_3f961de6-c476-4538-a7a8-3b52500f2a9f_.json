@@ -1,0 +1,63 @@
+{
+   "file_links": [],
+   "name": "Y2O3 Acquired Material Base",
+   "notes": null,
+   "process": {
+      "id": "e5b8ce00-3e34-4433-abe1-e910d353692c",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "3f652cfb-cc89-47ee-80b2-e75efef00ffe",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Powder",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      },
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Purity Percentage",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "8ffb8431-6394-4c1e-aa2b-9558549a9f23",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "nominal": 99.99,
+               "type": "nominal_real",
+               "units": "dimensionless"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "f06487d0-7dce-4c18-9ffb-cbade34d37ba",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "3f961de6-c476-4538-a7a8-3b52500f2a9f"
+   }
+}

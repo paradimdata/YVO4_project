@@ -21,7 +21,7 @@ from utils.templates.attribute_templates import ATTR_TEMPL
 
 ### Process BaseNodes ###
 
-def build_grinding_process_base(name:str,location:str,equipment:str,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_grinding_process_base(name:str,location:str,equipment:str,tags:list=[],notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for grinding a material.
 
@@ -39,6 +39,7 @@ def build_grinding_process_base(name:str,location:str,equipment:str,notes:str=No
         name=name,
         location=location,
         equipment=equipment,
+        tags=tags,
         notes=notes
     )
 
@@ -47,6 +48,7 @@ def build_grinding_process_base(name:str,location:str,equipment:str,notes:str=No
         spec=process_spec,
         conditions=process_spec.conditions,
         parameters=process_spec.parameters,
+        tags=process_spec.tags,
         source= PerformedSource(prv.email,prv.date)
     )
 
@@ -79,7 +81,7 @@ def build_grinding_process_base(name:str,location:str,equipment:str,notes:str=No
 
     return process
 
-def build_heating_process_base(name:str,program:list[dict],location:str,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_heating_process_base(name:str,program:list[dict],location:str,tags:list=[],notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for heating a material.
 
@@ -97,6 +99,7 @@ def build_heating_process_base(name:str,program:list[dict],location:str,notes:st
         name=name,
         program=program,
         location=location,
+        tags=tags,
         notes=notes
     )
 
@@ -105,6 +108,7 @@ def build_heating_process_base(name:str,program:list[dict],location:str,notes:st
         spec=process_spec,
         conditions=process_spec.conditions,
         parameters=process_spec.parameters,
+        tags=process_spec.tags,
         source= PerformedSource(prv.email,prv.date)
     )
 
@@ -144,7 +148,7 @@ def build_heating_process_base(name:str,program:list[dict],location:str,notes:st
 
     return process
 
-def build_ldfz_process_base(name:str,program:list[dict],atmosphere,location:str,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_ldfz_process_base(name:str,program:list[dict],atmosphere,location:str,tags:list=[],notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for heating a material.
 
@@ -163,6 +167,7 @@ def build_ldfz_process_base(name:str,program:list[dict],atmosphere,location:str,
         program=program,
         atmosphere=atmosphere,
         location=location,
+        tags=tags,
         notes=notes
     )
 
@@ -171,6 +176,7 @@ def build_ldfz_process_base(name:str,program:list[dict],atmosphere,location:str,
         spec=process_spec,
         conditions=process_spec.conditions,
         parameters=process_spec.parameters,
+        tags=process_spec.tags,
         source= PerformedSource(prv.email,prv.date)
     )
 
@@ -211,7 +217,7 @@ def build_ldfz_process_base(name:str,program:list[dict],atmosphere,location:str,
 
     return process
 
-def build_dissolving_process_base(name:str,location:str,equipment:str,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_dissolving_process_base(name:str,location:str,equipment:str,tags:list=[],notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for dissolving a material.
 
@@ -229,6 +235,7 @@ def build_dissolving_process_base(name:str,location:str,equipment:str,notes:str=
         name=name,
         location=location,
         equipment=equipment,
+        tags=tags,
         notes=notes
     )
 
@@ -237,6 +244,7 @@ def build_dissolving_process_base(name:str,location:str,equipment:str,notes:str=
         spec=process_spec,
         conditions=process_spec.conditions,
         parameters=process_spec.parameters,
+        tags=process_spec.tags,
         source= PerformedSource(prv.email,prv.date)
     )
 
@@ -269,7 +277,7 @@ def build_dissolving_process_base(name:str,location:str,equipment:str,notes:str=
 
     return process
 
-def build_pressing_process_base(name:str,location:str,equipment:str,pressure:float,duration:float,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_pressing_process_base(name:str,location:str,equipment:str,pressure:float,duration:float,tags:list=[],notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for pressing a material.
 
@@ -289,6 +297,7 @@ def build_pressing_process_base(name:str,location:str,equipment:str,pressure:flo
         pressure=pressure,
         duration=duration,
         equipment=equipment,
+        tags=tags,
         notes=notes
     )
 
@@ -297,6 +306,7 @@ def build_pressing_process_base(name:str,location:str,equipment:str,pressure:flo
         spec=process_spec,
         conditions=process_spec.conditions,
         parameters=process_spec.parameters,
+        tags=process_spec.tags,
         source= PerformedSource(prv.email,prv.date)
     )
 
@@ -343,7 +353,7 @@ def build_pressing_process_base(name:str,location:str,equipment:str,pressure:flo
 
     return process
 
-def build_filtering_process_base(name:str,location:str,equipment:str,solvent:str,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_filtering_process_base(name:str,location:str,equipment:str,solvent:str,notes:str=None,tags:list=[],workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for dissolving a material.
 
@@ -362,6 +372,7 @@ def build_filtering_process_base(name:str,location:str,equipment:str,solvent:str
         location=location,
         equipment=equipment,
         solvent=solvent,
+        tags=tags,
         notes=notes
     )
 
@@ -370,6 +381,7 @@ def build_filtering_process_base(name:str,location:str,equipment:str,solvent:str
         spec=process_spec,
         conditions=process_spec.conditions,
         parameters=process_spec.parameters,
+        tags=process_spec.tags,
         source= PerformedSource(prv.email,prv.date)
     )
 
@@ -409,7 +421,7 @@ def build_filtering_process_base(name:str,location:str,equipment:str,solvent:str
 
     return process
 
-def build_evacuating_process_base(name:str,location:str,equipment:str,duration:float,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_evacuating_process_base(name:str,location:str,equipment:str,duration:float,tags:list=[],notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for putting a material under vacuum.
 
@@ -428,6 +440,7 @@ def build_evacuating_process_base(name:str,location:str,equipment:str,duration:f
         location=location,
         equipment=equipment,
         duration=duration,
+        tags=tags,
         notes=notes
     )
 
@@ -436,6 +449,7 @@ def build_evacuating_process_base(name:str,location:str,equipment:str,duration:f
         spec=process_spec,
         conditions=process_spec.conditions,
         parameters=process_spec.parameters,
+        tags=process_spec.tags,
         source= PerformedSource(prv.email,prv.date)
     )
 
@@ -477,7 +491,7 @@ def build_evacuating_process_base(name:str,location:str,equipment:str,duration:f
 
 ### Material BaseNodes ###
 
-def build_ground_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str='Powder',notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_ground_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str='Powder',tags:list=[],notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for a ground material.
 
@@ -496,12 +510,14 @@ def build_ground_material_base(name:str,process_spec:ProcessSpec,process_run:Pro
         form=form,
         process_spec=process_spec,
         notes=notes,
+        tags=tags
     )
 
     material_run = MaterialRun( 
         name=name,
         spec=material_spec,
         process=process_run,
+        tags=material_spec.tags,
         sample_type='experimental'
     )
 
@@ -527,7 +543,7 @@ def build_ground_material_base(name:str,process_spec:ProcessSpec,process_run:Pro
     
     return material
 
-def build_heated_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_heated_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str,tags:list=[],notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for a ground material.
 
@@ -545,6 +561,7 @@ def build_heated_material_base(name:str,process_spec:ProcessSpec,process_run:Pro
         name=name,
         form=form,
         process=process_spec,
+        tags=tags,
         notes=notes
     )
 
@@ -552,6 +569,7 @@ def build_heated_material_base(name:str,process_spec:ProcessSpec,process_run:Pro
         name=name,
         spec=material_spec,
         process=process_run,
+        tags=material_spec.tags,
         sample_type='experimental'
     )
 
@@ -577,7 +595,7 @@ def build_heated_material_base(name:str,process_spec:ProcessSpec,process_run:Pro
     
     return material
 
-def build_ldfz_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_ldfz_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str,tags:list=[],notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for a ground material.
 
@@ -591,10 +609,11 @@ def build_ldfz_material_base(name:str,process_spec:ProcessSpec,process_run:Proce
         ex: Provenance()
     """
 
-    material_spec = build_ldfz_material_mat_spec( 
+    material_spec = build_ldfz_material_spec( 
         name=name,
         form=form,
         process=process_spec,
+        tags=tags,
         notes=notes
     )
 
@@ -602,6 +621,7 @@ def build_ldfz_material_base(name:str,process_spec:ProcessSpec,process_run:Proce
         name=name,
         spec=material_spec,
         process=process_run,
+        tags=material_spec.tags,
         sample_type='experimental'
     )
 
@@ -627,7 +647,7 @@ def build_ldfz_material_base(name:str,process_spec:ProcessSpec,process_run:Proce
     
     return material
 
-def build_dissolved_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str='Solution',notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_dissolved_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str='Solution',tags:list=[],notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for a solution material.
 
@@ -645,6 +665,7 @@ def build_dissolved_material_base(name:str,process_spec:ProcessSpec,process_run:
         name=name,
         form=form,
         process=process_spec,
+        tags=tags,
         notes=notes
     )
 
@@ -652,6 +673,7 @@ def build_dissolved_material_base(name:str,process_spec:ProcessSpec,process_run:
         name=name,
         spec=material_spec,
         process=process_run,
+        tags=material_spec.tags,
         sample_type='experimental'
     )
 
@@ -677,7 +699,7 @@ def build_dissolved_material_base(name:str,process_spec:ProcessSpec,process_run:
     
     return material
 
-def build_filtered_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_filtered_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str,tags:list=[],notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for a solution material.
 
@@ -695,6 +717,7 @@ def build_filtered_material_base(name:str,process_spec:ProcessSpec,process_run:P
         name=name,
         form=form,
         process=process_spec,
+        tags=tags,
         notes=notes
     )
 
@@ -702,6 +725,7 @@ def build_filtered_material_base(name:str,process_spec:ProcessSpec,process_run:P
         name=name,
         spec=material_spec,
         process=process_run,
+        tags=material_spec.tags,
         sample_type='experimental'
     )
 
@@ -727,7 +751,7 @@ def build_filtered_material_base(name:str,process_spec:ProcessSpec,process_run:P
     
     return material
 
-def build_pressed_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str='Pellet',notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_pressed_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str='Pellet',tags:list=[],notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for a pressed material.
 
@@ -745,6 +769,7 @@ def build_pressed_material_base(name:str,process_spec:ProcessSpec,process_run:Pr
         name=name,
         form=form,
         process=process_spec,
+        tags=tags,
         notes=notes
     )
 
@@ -752,6 +777,7 @@ def build_pressed_material_base(name:str,process_spec:ProcessSpec,process_run:Pr
         name=name,
         spec=material_spec,
         process=process_run,
+        tags=material_spec.tags,
         sample_type='experimental'
     )
 
@@ -777,7 +803,7 @@ def build_pressed_material_base(name:str,process_spec:ProcessSpec,process_run:Pr
     
     return material
 
-def build_evacuated_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_evacuated_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str,tags:list=[],notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for an evacuated material.
 
@@ -795,6 +821,7 @@ def build_evacuated_material_base(name:str,process_spec:ProcessSpec,process_run:
         name=name,
         form=form,
         process=process_spec,
+        tags=tags,
         notes=notes
     )
 
@@ -802,6 +829,7 @@ def build_evacuated_material_base(name:str,process_spec:ProcessSpec,process_run:
         name=name,
         spec=material_spec,
         process=process_run,
+        tags=material_spec.tags,
         sample_type='experimental'
     )
 
@@ -827,7 +855,7 @@ def build_evacuated_material_base(name:str,process_spec:ProcessSpec,process_run:
     
     return material
 
-def build_terminal_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str,notes:str=None,workflow:Workflow=None,prv:Provenance=None):
+def build_terminal_material_base(name:str,process_spec:ProcessSpec,process_run:ProcessRun,form:str,tags:list=[],notes:str=None,workflow:Workflow=None,prv:Provenance=None):
     """
     Builds a basenode for an evacuated material.
 
@@ -845,6 +873,7 @@ def build_terminal_material_base(name:str,process_spec:ProcessSpec,process_run:P
         name=name,
         form=form,
         process=process_spec,
+        tags=tags,
         notes=notes
     )
 
@@ -852,6 +881,7 @@ def build_terminal_material_base(name:str,process_spec:ProcessSpec,process_run:P
         name=name,
         spec=material_spec,
         process=process_run,
+        tags=material_spec.tags,
         sample_type='experimental'
     )
 
@@ -879,7 +909,7 @@ def build_terminal_material_base(name:str,process_spec:ProcessSpec,process_run:P
 
 ### Ingredient BaseNode ###
 
-def build_ingredient_base(name:str,material_spec:MaterialSpec,material_run:MaterialRun,quantity_spec,quantity_run,process_spec:ProcessSpec,process_run:ProcessRun,notes:str=None):
+def build_ingredient_base(name:str,material_spec:MaterialSpec,material_run:MaterialRun,quantity_spec,quantity_run,process_spec:ProcessSpec,process_run:ProcessRun,tags:list=[],notes:str=None):
 
     '''
     Returns an ingredient BaseNode.
@@ -890,6 +920,7 @@ def build_ingredient_base(name:str,material_spec:MaterialSpec,material_run:Mater
         process=process_spec,
         material=material_spec,
         quantity=quantity_spec,
+        tags=tags,
         notes=notes
     )
 
@@ -898,6 +929,7 @@ def build_ingredient_base(name:str,material_spec:MaterialSpec,material_run:Mater
         process=process_run,
         absolute_quantity=quantity_run,
         spec=spec,
+        tags=spec.tags,
         notes=notes
     )
 
@@ -912,7 +944,7 @@ def build_ingredient_base(name:str,material_spec:MaterialSpec,material_run:Mater
 
 ### Measurement BaseNodes ###
 
-def build_xrd_measurement_base(name:str,duration:float,range:str,adhesive:str,material:MaterialRun,location:str='X-Ray Diffraction Panel',file=None,notes:str=None,prv:Provenance=None):
+def build_xrd_measurement_base(name:str,duration:float,range:str,adhesive:str,material:MaterialRun,location:str='X-Ray Diffraction Panel',file=None,tags:list=[],notes:str=None,prv:Provenance=None):
 
     '''
     Returns an XRD measurement BaseNode.
@@ -924,6 +956,7 @@ def build_xrd_measurement_base(name:str,duration:float,range:str,adhesive:str,ma
         range=range,
         adhesive=adhesive,
         location=location,
+        tags=tags,
         file=None
     )
 
@@ -935,6 +968,7 @@ def build_xrd_measurement_base(name:str,duration:float,range:str,adhesive:str,ma
         conditions=measurement_spec.conditions,
         notes=notes,
         file_links=file,
+        tags=measurement_spec.tags,
         source=PerformedSource(prv.email,prv.date)
     )
 
@@ -981,7 +1015,7 @@ def build_xrd_measurement_base(name:str,duration:float,range:str,adhesive:str,ma
 
     return measurement
 
-def build_photograph_base(name:str,material:MaterialRun,equipment,location:str,file=None,notes:str=None,prv:Provenance=None):
+def build_photograph_base(name:str,material:MaterialRun,equipment,location:str,file=None,tags:list=[],notes:str=None,prv:Provenance=None):
 
     '''
     Returns a sample photograph BaseNode.
@@ -992,6 +1026,7 @@ def build_photograph_base(name:str,material:MaterialRun,equipment,location:str,f
         equipment=equipment,
         location=location,
         file=None,
+        tags=tags,
         notes=notes
     )
 
@@ -1003,6 +1038,7 @@ def build_photograph_base(name:str,material:MaterialRun,equipment,location:str,f
         conditions=measurement_spec.conditions,
         notes=notes,
         file_links=file,
+        tags=measurement_spec.tags,
         source=PerformedSource(prv.email,prv.date)
     )
 

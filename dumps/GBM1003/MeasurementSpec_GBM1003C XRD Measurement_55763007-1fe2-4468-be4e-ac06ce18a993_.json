@@ -1,0 +1,96 @@
+{
+   "conditions": [
+      {
+         "file_links": [],
+         "name": "Location",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "12d0cca2-576a-462f-8f19-0716213aeab5",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "condition",
+         "value": {
+            "category": "X-Ray Diffraction Panel",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "file_links": [],
+   "name": "GBM1003C XRD Measurement",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Duration",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "0d286a72-ee36-440f-a2b2-bc8733bdd385",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.25,
+            "type": "nominal_real",
+            "units": "hour"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "XRD Range",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "f04dc322-495e-4a3c-9350-1625c5e4ce42",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "5-60",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "XRD Adhesive",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "e547c8fc-6476-4b73-a744-8259e97704d9",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Vaseline",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "tags": [
+      "method::crucible",
+      "provenance::GBM",
+      "furnace::Dukie",
+      "furnace::Dukie",
+      "furnace::Dukie",
+      "furnace::Dukie",
+      "furnace::Dukie",
+      "furnace::Dukie",
+      "furnace::Dukie",
+      "furnace::Dukie",
+      "furnace::Dukie"
+   ],
+   "template": {
+      "id": "019eedca-87d1-4ec9-a5e4-ef2c8e373614",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "measurement_spec",
+   "uids": {
+      "auto": "55763007-1fe2-4468-be4e-ac06ce18a993"
+   }
+}

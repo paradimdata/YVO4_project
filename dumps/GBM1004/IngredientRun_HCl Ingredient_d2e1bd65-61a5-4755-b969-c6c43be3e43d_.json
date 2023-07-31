@@ -1,0 +1,37 @@
+{
+   "absolute_quantity": {
+      "nominal": 7.0,
+      "type": "nominal_real",
+      "units": "milliliter"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "3eb984bd-c8ed-43f4-8dec-1626979c5d27",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "HCl Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "d263ce04-3d5b-4401-8f21-73c8ee8d9259",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "spec": {
+      "id": "e264eecb-6366-4c88-af53-da2d52a93831",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::hydrothermal",
+      "provenance::GBM"
+   ],
+   "type": "ingredient_run",
+   "uids": {
+      "auto": "d2e1bd65-61a5-4755-b969-c6c43be3e43d"
+   },
+   "volume_fraction": null
+}

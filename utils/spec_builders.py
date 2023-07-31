@@ -43,7 +43,7 @@ PROCESS_SPECS = {}
 def build_chunking_material_proc_spec():
     pass
 
-def build_dissolving_material_proc_spec(name:str,location:str,equipment:str,notes:str=None):
+def build_dissolving_material_proc_spec(name:str,location:str,equipment:str,tags:list=[],notes:str=None):
     '''
     Builds a process spec for dissolving a material.
 
@@ -77,12 +77,13 @@ def build_dissolving_material_proc_spec(name:str,location:str,equipment:str,note
                 value=NominalCategorical(location)
                     )
                 ],
+        tags=tags,
         notes=notes
     )
 
     return PROCESS_SPECS[f'Dissolving {name} Spec']
 
-def build_filtering_material_proc_spec(name:str,location:str='Wet Lab',equipment:str='Vacuum Filter',solvent:str=None,notes:str=None):
+def build_filtering_material_proc_spec(name:str,location:str='Wet Lab',equipment:str='Vacuum Filter',solvent:str=None,tags:list=[],notes:str=None):
     '''
     Builds a process spec for filtering a material.
 
@@ -124,12 +125,13 @@ def build_filtering_material_proc_spec(name:str,location:str='Wet Lab',equipment
                 value=NominalCategorical(location)
                     )
                 ],
+        tags=tags,
         notes=notes
     )
 
     return PROCESS_SPECS[f'Filtering {name} Spec']
 
-def build_grinding_material_proc_spec(name:str,location:str,equipment:str='Mortar and Pestle',notes:str=None):
+def build_grinding_material_proc_spec(name:str,location:str,equipment:str='Mortar and Pestle',tags:list=[],notes:str=None):
     '''
     Builds a process spec for grinding a material.
 
@@ -163,6 +165,7 @@ def build_grinding_material_proc_spec(name:str,location:str,equipment:str='Morta
                 value=NominalCategorical(location)
                     )
                 ],
+        tags=tags,
         notes=notes
     )
 
@@ -257,7 +260,7 @@ def build_heating_program(program:list[tuple]):
     
     return PROGRAM
 
-def build_heating_material_proc_spec(name:str,program:list[dict],location:str='Hot Lab',notes:str=None):
+def build_heating_material_proc_spec(name:str,program:list[dict],location:str='Hot Lab',tags:list=[],notes:str=None):
 
     '''
     Dynamically builds a process spec for heating a material in a multi-step temperature program.
@@ -284,6 +287,7 @@ def build_heating_material_proc_spec(name:str,program:list[dict],location:str='H
                 value=NominalCategorical(location)
                     ) 
                 ],   
+        tags=tags,
         notes=notes
     )
 
@@ -304,7 +308,7 @@ def build_heating_material_proc_spec(name:str,program:list[dict],location:str='H
 
     return PROCESS_SPECS[f'Heating {name} Spec']    
 
-def ldfz_program_step(type:str,power:float,duration:float,rotation:tuple,rate:float,notes:str=None):
+def ldfz_program_step(type:str,power:float,duration:float,rotation:tuple,rate:float,tags:list=[],notes:str=None):
     '''
     Type: The type of heating step. 
         ex: 'Init','Ramp','Hold','End'
@@ -341,7 +345,7 @@ def build_ldfz_program(program:list[tuple]):
     
     return PROGRAM
 
-def build_ldfz_proc_spec(name:str,program:list[dict],atmosphere,location:str='PARADIM',notes:str=None):
+def build_ldfz_proc_spec(name:str,program:list[dict],atmosphere,location:str='PARADIM',tags:list=[],notes:str=None):
     '''
     Dynamically builds a process spec for heating a material in a multi-step temperature program.
 
@@ -372,6 +376,7 @@ def build_ldfz_proc_spec(name:str,program:list[dict],atmosphere,location:str='PA
                 value=NominalCategorical(atmosphere)
                     )
                 ],   
+        tags=tags,
         notes=notes
     )
 
@@ -392,7 +397,7 @@ def build_ldfz_proc_spec(name:str,program:list[dict],atmosphere,location:str='PA
 
     return PROCESS_SPECS[f'LDFZ {name} Spec'] 
 
-def build_pressing_material_proc_spec(name:str,equipment:str,pressure,duration:float,location:str,notes:str=None):
+def build_pressing_material_proc_spec(name:str,equipment:str,pressure,duration:float,location:str,tags:list=[],notes:str=None):
     '''
     Builds a process spec for filtering a material.
 
@@ -438,12 +443,13 @@ def build_pressing_material_proc_spec(name:str,equipment:str,pressure,duration:f
                 value=NominalCategorical(location)
                     )
                 ],
+        tags=tags,
         notes=notes
     )
 
     return PROCESS_SPECS[f'Pressing {name} Spec']
 
-def build_evacuating_proc_spec(name:str,equipment:str,duration:float,location:str,notes:str=None):
+def build_evacuating_proc_spec(name:str,equipment:str,duration:float,location:str,tags:list=[],notes:str=None):
     '''
     Builds a process spec for putting a material under vacuum.
 
@@ -482,12 +488,13 @@ def build_evacuating_proc_spec(name:str,equipment:str,duration:float,location:st
                 value=NominalCategorical(location)
                     )
                 ],
+        tags=tags,
         notes=notes
     )
 
     return PROCESS_SPECS[f'Evacuating {name} Spec']
 
-def build_acquire_raw_material_proc_spec(name:str,manufacturer:str,lot_id:str,cas_rn:str=None,notes:str=None):
+def build_acquire_raw_material_proc_spec(name:str,manufacturer:str,lot_id:str,cas_rn:str=None,tags:list=[],notes:str=None):
     '''
     Builds a process spec for acquiring a new material.
 
@@ -523,6 +530,7 @@ def build_acquire_raw_material_proc_spec(name:str,manufacturer:str,lot_id:str,ca
                 value=NominalCategorical(cas_rn)
                 )
         ],
+        tags=tags,
         notes=notes
     )
 
@@ -544,7 +552,7 @@ MATERIAL_SPECS = {}
 def build_chunked_material_mat_spec():
     pass
 
-def build_filtered_material_mat_spec(name:str,form:str,process:ProcessSpec,notes:str=None):
+def build_filtered_material_mat_spec(name:str,form:str,process:ProcessSpec,tags:list=[],notes:str=None):
     '''
     Builds a material spec for a Ground Material.
 
@@ -570,12 +578,13 @@ def build_filtered_material_mat_spec(name:str,form:str,process:ProcessSpec,notes
                 )
             )
         ],
+        tags=tags,
         notes=notes
     )
 
     return MATERIAL_SPECS[f'{name} Filtered Material Spec']
 
-def build_ground_material_mat_spec(name:str,process_spec:ProcessSpec,form:str='Powder',notes:str=None):
+def build_ground_material_mat_spec(name:str,process_spec:ProcessSpec,form:str='Powder',tags:list=[],notes:str=None):
     '''
     Builds a material spec for a Ground Material.
 
@@ -602,12 +611,13 @@ def build_ground_material_mat_spec(name:str,process_spec:ProcessSpec,form:str='P
             )
         ],
         process=process_spec,
+        tags=tags,
         notes=notes
     )
 
     return MATERIAL_SPECS[f'{name} Ground Material Spec']
 
-def build_heated_material_mat_spec(name:str,form:str,process:ProcessSpec,notes:str=None):
+def build_heated_material_mat_spec(name:str,form:str,process:ProcessSpec,tags:list=[],notes:str=None):
     '''
     Builds a material spec for a Ground Material.
 
@@ -634,12 +644,13 @@ def build_heated_material_mat_spec(name:str,form:str,process:ProcessSpec,notes:s
                 )
             )
         ],
+        tags=tags,
         notes=notes
     )
 
     return MATERIAL_SPECS[f'{name} Heated Material Spec']
 
-def build_pressed_material_mat_spec(name:str,form:str,process:ProcessSpec,notes:str=None):
+def build_pressed_material_mat_spec(name:str,form:str,process:ProcessSpec,tags:list=[],notes:str=None):
     '''
     Builds a material spec for a pressed Material.
 
@@ -666,12 +677,13 @@ def build_pressed_material_mat_spec(name:str,form:str,process:ProcessSpec,notes:
                 )
             )
         ],
+        tags=tags,
         notes=notes
     )
 
     return MATERIAL_SPECS[f'{name} Pressed Material Spec']
 
-def build_evacuated_material_mat_spec(name:str,form:str,process:ProcessSpec,notes:str=None):
+def build_evacuated_material_mat_spec(name:str,form:str,process:ProcessSpec,tags:list=[],notes:str=None):
     '''
     Builds a material spec for a pressed Material.
 
@@ -698,12 +710,13 @@ def build_evacuated_material_mat_spec(name:str,form:str,process:ProcessSpec,note
                 )
             )
         ],
+        tags=tags,
         notes=notes
     )
 
     return MATERIAL_SPECS[f'{name} Evacuated Material Spec']
 
-def build_raw_material_mat_spec(name:str,form:str,purity:float,notes:str=None):
+def build_raw_material_mat_spec(name:str,form:str,purity:float,tags:list=[],notes:str=None):
     '''
     Builds a material spec for a Raw Material.
 
@@ -738,13 +751,14 @@ def build_raw_material_mat_spec(name:str,form:str,purity:float,notes:str=None):
                 )
             )
         ],
+        tags=tags,
         notes=notes
     )
 
             
     return MATERIAL_SPECS[f'{name} Raw Material Spec']
 
-def build_dissolved_material_mat_spec(name:str,form:str='Solution',process:ProcessSpec=None,notes:str=None):
+def build_dissolved_material_mat_spec(name:str,form:str='Solution',process:ProcessSpec=None,tags:list=[],notes:str=None):
     '''
     Builds a material spec for a dissolved Material (solution).
 
@@ -771,12 +785,13 @@ def build_dissolved_material_mat_spec(name:str,form:str='Solution',process:Proce
                 )
             )
         ],
+        tags=tags,
         notes=notes
     )
 
     return MATERIAL_SPECS[f'{name} Dissolved Material Spec']
 
-def build_terminal_material_spec(name:str,form:str,process:ProcessSpec,notes:str=None):
+def build_terminal_material_spec(name:str,form:str,process:ProcessSpec,tags:list=[],notes:str=None):
     '''
     Builds a material spec for a pressed Material.
 
@@ -803,16 +818,50 @@ def build_terminal_material_spec(name:str,form:str,process:ProcessSpec,notes:str
                 )
             )
         ],
+        tags=tags,
         notes=notes
     )
 
     return MATERIAL_SPECS[f'{name} Terminal Material Spec']
 
+def build_ldfz_material_spec(name:str,form:str,process:ProcessSpec,tags:list=[],notes:str=None):
+    '''
+    Builds a material spec for a Material grown in an LDFZ.
+
+    ### Parameters
+
+    Name: Name of the Ingredient, must be the same as associated process and ingredient
+        ex: 'YVO4'
+    Form: Physical form of the ingredient. 
+        ex: 'Powder', 'Rod'
+
+    '''
+    attr_validate('Form',form)
+
+    MATERIAL_SPECS[f'{name} LDFZ Material Spec'] = MaterialSpec(
+        name=f'{name} LDFZ Material Spec',
+        template=OBJ_TEMPL['LDFZ Material'],
+        process=process,
+        properties=[
+            PropertyAndConditions(
+                property=Property(
+                name='Form',
+                template=ATTR_TEMPL['Form'],
+                value=NominalCategorical(form)
+                )
+            )
+        ],
+        tags=tags,
+        notes=notes
+    )
+
+    return MATERIAL_SPECS[f'{name} LDFZ Material Spec']
+
 ### Ingredient Spec Builders ###
 
 INGREDIENT_SPECS = {}
 
-def build_ingredient_spec(name:str,process:ProcessSpec,material:MaterialSpec,quantity,notes:str=None):
+def build_ingredient_spec(name:str,process:ProcessSpec,material:MaterialSpec,quantity,tags:list=[],notes:str=None):
     '''
     Builds an ingredient spec.
 
@@ -832,6 +881,7 @@ def build_ingredient_spec(name:str,process:ProcessSpec,material:MaterialSpec,qua
         process=process,
         material=material,
         absolute_quantity=quantity,
+        tags=tags,
         notes=notes
     )
 
@@ -844,7 +894,7 @@ MEASUREMENT_SPECS = {}
 def build_temperature_meas_spec():
     pass
 
-def build_xrd_meas_spec(name:str,duration:float,range:str,adhesive:str,location:str='X-Ray Diffraction Panel',file=None,notes:str=None):
+def build_xrd_meas_spec(name:str,duration:float,range:str,adhesive:str,location:str='X-Ray Diffraction Panel',file=None,tags:list=[],notes:str=None):
     '''
     Builds a measurement spec for X-Ray Diffraction
 
@@ -891,12 +941,13 @@ def build_xrd_meas_spec(name:str,duration:float,range:str,adhesive:str,location:
                 )
             ],
         file_links=file,
+        tags=tags,
         notes=notes
     )
 
     return MEASUREMENT_SPECS[f'{name} XRD Measurement Spec']
 
-def build_photo_meas_spec(name:str,equipment,location:str,file=None,notes:str=None):
+def build_photo_meas_spec(name:str,equipment,location:str,file=None,tags:list=[],notes:str=None):
     '''
     Builds a measurement spec for sample photography
 
@@ -927,6 +978,7 @@ def build_photo_meas_spec(name:str,equipment,location:str,file=None,notes:str=No
                 )
             ],
         file_links=file,
+        tags=tags,
         notes=notes
     )
 

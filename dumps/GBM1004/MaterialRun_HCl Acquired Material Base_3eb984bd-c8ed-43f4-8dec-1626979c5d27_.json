@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "HCl Acquired Material Base",
+   "notes": null,
+   "process": {
+      "id": "658e577f-1e56-4f0d-9baf-551805f8d295",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "b368ae30-ce51-4136-8672-eebf40e0434b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "3eb984bd-c8ed-43f4-8dec-1626979c5d27"
+   }
+}

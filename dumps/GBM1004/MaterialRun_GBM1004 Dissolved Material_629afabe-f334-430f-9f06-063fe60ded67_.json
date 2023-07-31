@@ -1,0 +1,24 @@
+{
+   "file_links": [],
+   "name": "GBM1004 Dissolved Material",
+   "notes": null,
+   "process": {
+      "id": "d263ce04-3d5b-4401-8f21-73c8ee8d9259",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "0cca53bc-73d7-4132-9ef3-b8cb00ceee1f",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::hydrothermal",
+      "provenance::GBM"
+   ],
+   "type": "material_run",
+   "uids": {
+      "auto": "629afabe-f334-430f-9f06-063fe60ded67"
+   }
+}

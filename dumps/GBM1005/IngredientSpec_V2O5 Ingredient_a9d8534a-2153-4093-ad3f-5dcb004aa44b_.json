@@ -1,0 +1,32 @@
+{
+   "absolute_quantity": {
+      "nominal": 223.1,
+      "type": "nominal_real",
+      "units": "milligram"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "623beba4-5582-4cb7-b7b2-a4289b35e12a",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "V2O5 Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "c96dcedf-e37f-4e84-919d-69a510307975",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::crucible",
+      "provenance::GBM"
+   ],
+   "type": "ingredient_spec",
+   "uids": {
+      "auto": "a9d8534a-2153-4093-ad3f-5dcb004aa44b"
+   },
+   "volume_fraction": null
+}

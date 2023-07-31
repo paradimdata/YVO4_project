@@ -1,0 +1,24 @@
+{
+   "file_links": [],
+   "name": "GBM1003A Ground Material",
+   "notes": null,
+   "process": {
+      "id": "c83ecfcf-87e2-4784-bfdd-ec0809f4f0bd",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "c0ba3abe-5556-4d83-b87b-e7aa837ee1db",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::crucible",
+      "provenance::GBM"
+   ],
+   "type": "material_run",
+   "uids": {
+      "auto": "1d4fb236-7470-41b8-82cd-a5fbdc2cdd01"
+   }
+}

@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "HNO3 Acquired Material Base",
+   "notes": null,
+   "process": {
+      "id": "4faf6bf4-ea23-4e78-bc2a-e5a9b0b65b46",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "01ff2055-9392-49f7-91e2-f9d5d86d7138",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "7df3531c-1141-4ffd-96f1-8f9ef3d7d7b8"
+   }
+}

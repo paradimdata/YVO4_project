@@ -1,0 +1,37 @@
+{
+   "absolute_quantity": {
+      "nominal": 14.0,
+      "type": "nominal_real",
+      "units": "milliliter"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "2828861f-569e-4164-b7ed-bf91cc8a9c3e",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1006 Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "a159606e-0bcb-4278-8ce1-558ef3d80bb3",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "spec": {
+      "id": "260e36fd-d403-4536-949f-573c4214be2c",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::hydrothermal",
+      "provenance::GBM"
+   ],
+   "type": "ingredient_run",
+   "uids": {
+      "auto": "f6e4184a-354f-4082-afe3-58c57cb9643c"
+   },
+   "volume_fraction": null
+}

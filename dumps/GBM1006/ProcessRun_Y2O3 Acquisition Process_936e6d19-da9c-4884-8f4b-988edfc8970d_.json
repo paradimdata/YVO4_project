@@ -1,0 +1,71 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "name": "Y2O3 Acquisition Process",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Manufacturer",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ff3feb78-ff21-4755-8f21-64e25f27d7da",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Strem Chemicals",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Lot ID",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "67cf941f-59a0-4e17-bb3b-8cb5e554ea33",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "23195800",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "CAS RN",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "38143552-e31d-4f49-a994-86b57af88918",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "1314-36-9",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "source": {
+      "performed_by": "gmurra12@jh.edu",
+      "performed_date": "2023-06-15T00:00:00",
+      "type": "performed_source"
+   },
+   "spec": {
+      "id": "c7553573-3123-489d-8d2f-b91a5cd43175",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "process_run",
+   "uids": {
+      "auto": "936e6d19-da9c-4884-8f4b-988edfc8970d"
+   }
+}

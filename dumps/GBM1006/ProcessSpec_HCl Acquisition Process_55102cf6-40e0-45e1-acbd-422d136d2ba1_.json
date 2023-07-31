@@ -1,0 +1,66 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "name": "HCl Acquisition Process",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Manufacturer",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ff3feb78-ff21-4755-8f21-64e25f27d7da",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Fisher Chemical",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Lot ID",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "67cf941f-59a0-4e17-bb3b-8cb5e554ea33",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "221613",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "CAS RN",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "38143552-e31d-4f49-a994-86b57af88918",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "7697-37-2",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "14eee7b6-83e5-4c95-9912-393c3b6fbafd",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "process_spec",
+   "uids": {
+      "auto": "55102cf6-40e0-45e1-acbd-422d136d2ba1"
+   }
+}

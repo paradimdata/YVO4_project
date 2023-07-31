@@ -1,0 +1,88 @@
+{
+   "conditions": [
+      {
+         "file_links": [],
+         "name": "Location",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "66cb1194-33c2-4761-845b-715483fbac57",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "condition",
+         "value": {
+            "category": "Hot Lab",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "file_links": [],
+   "name": "GBM1005B Pressing Process",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Equipment Used",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "66d01546-c868-43d9-970c-acf7e5d63a24",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Pellet Press",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Duration",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "f4cb9d82-5216-400f-985f-ecf4eb1ce0bc",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.1,
+            "type": "nominal_real",
+            "units": "hour"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Pressure",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "45721077-a91d-4eb2-a07b-c086c5f3e66c",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 27.5,
+            "type": "nominal_real",
+            "units": "megapascal"
+         }
+      }
+   ],
+   "tags": [
+      "method::crucible",
+      "provenance::GBM"
+   ],
+   "template": {
+      "id": "c19fa928-16e3-4341-a623-68e0fe74d631",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "process_spec",
+   "uids": {
+      "auto": "98a6c519-7250-426e-960e-b3ee4b32f0a7"
+   }
+}

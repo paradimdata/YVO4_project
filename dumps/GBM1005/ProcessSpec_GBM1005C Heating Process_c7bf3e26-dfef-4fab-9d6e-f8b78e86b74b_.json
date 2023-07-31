@@ -1,0 +1,138 @@
+{
+   "conditions": [
+      {
+         "file_links": [],
+         "name": "Location",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "66cb1194-33c2-4761-845b-715483fbac57",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "condition",
+         "value": {
+            "category": "Hot Lab",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "file_links": [],
+   "name": "GBM1005C Heating Process",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Step 1",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "aebaec93-de07-411a-b246-164a8e145b6d",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "quantities": {
+               "Duration": 0,
+               "Temp": 0,
+               "Type": "Init"
+            },
+            "type": "nominal_composition"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Step 2",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "aebaec93-de07-411a-b246-164a8e145b6d",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "quantities": {
+               "Duration": 6.5,
+               "Temp": 650.0,
+               "Type": "Ramp"
+            },
+            "type": "nominal_composition"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Step 3",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "aebaec93-de07-411a-b246-164a8e145b6d",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "quantities": {
+               "Duration": 24.0,
+               "Temp": 650.0,
+               "Type": "Hold"
+            },
+            "type": "nominal_composition"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Step 4",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "aebaec93-de07-411a-b246-164a8e145b6d",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "quantities": {
+               "Duration": 6.5,
+               "Temp": 0,
+               "Type": "Ramp"
+            },
+            "type": "nominal_composition"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Step 5",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "aebaec93-de07-411a-b246-164a8e145b6d",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "quantities": {
+               "Duration": 0,
+               "Temp": 0,
+               "Type": "End"
+            },
+            "type": "nominal_composition"
+         }
+      }
+   ],
+   "tags": [
+      "method::crucible",
+      "provenance::GBM"
+   ],
+   "template": {
+      "id": "f570c221-4215-44ad-b0ec-e18db44dddbf",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "process_spec",
+   "uids": {
+      "auto": "c7bf3e26-dfef-4fab-9d6e-f8b78e86b74b"
+   }
+}

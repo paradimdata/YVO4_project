@@ -1,0 +1,59 @@
+{
+   "conditions": [
+      {
+         "file_links": [],
+         "name": "Location",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "18865c5c-6747-4dc0-b7a4-65806bc5676a",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "condition",
+         "value": {
+            "category": "Wet Lab",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "file_links": [],
+   "name": "GBM1006 Dissolving Process",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Equipment Used",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "91fec4e4-77fa-4313-a5e2-759d4efd09df",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Autoclave",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "source": {
+      "performed_by": "gmurra12@jh.edu",
+      "performed_date": "2023-06-15T00:00:00",
+      "type": "performed_source"
+   },
+   "spec": {
+      "id": "8c0abb1e-bcd8-4457-a57a-c5c2eeaa0eb9",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::hydrothermal",
+      "provenance::GBM"
+   ],
+   "type": "process_run",
+   "uids": {
+      "auto": "a22fa58a-f51e-4925-b8f7-beb8757bf4ad"
+   }
+}

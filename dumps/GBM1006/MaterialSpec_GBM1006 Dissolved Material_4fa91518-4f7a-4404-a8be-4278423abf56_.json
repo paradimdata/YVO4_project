@@ -1,0 +1,45 @@
+{
+   "file_links": [],
+   "name": "GBM1006 Dissolved Material",
+   "notes": null,
+   "process": {
+      "id": "34a59e26-4814-465f-a438-ee9c1aa168d0",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "a57f4774-a2aa-4cd7-9288-7c0e1fd06ab7",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "None",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [
+      "method::hydrothermal",
+      "provenance::GBM"
+   ],
+   "template": {
+      "id": "aa2b2f01-d573-47fc-ac5c-a299b6e884f4",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "4fa91518-4f7a-4404-a8be-4278423abf56"
+   }
+}

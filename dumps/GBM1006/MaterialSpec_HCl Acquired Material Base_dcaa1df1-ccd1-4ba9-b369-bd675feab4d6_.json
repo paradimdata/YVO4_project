@@ -1,0 +1,63 @@
+{
+   "file_links": [],
+   "name": "HCl Acquired Material Base",
+   "notes": null,
+   "process": {
+      "id": "55102cf6-40e0-45e1-acbd-422d136d2ba1",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "a57f4774-a2aa-4cd7-9288-7c0e1fd06ab7",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Solution",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      },
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Purity Percentage",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "dd455471-93d9-484a-b9bb-e94279ee3f7a",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "nominal": 10.938,
+               "type": "nominal_real",
+               "units": "dimensionless"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "d9d650c2-bf7f-48c9-b8d1-25ba82f4b023",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "dcaa1df1-ccd1-4ba9-b369-bd675feab4d6"
+   }
+}

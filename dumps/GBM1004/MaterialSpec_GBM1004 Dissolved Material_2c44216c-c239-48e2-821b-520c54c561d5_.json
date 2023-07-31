@@ -1,0 +1,47 @@
+{
+   "file_links": [],
+   "name": "GBM1004 Dissolved Material",
+   "notes": null,
+   "process": {
+      "id": "6957a188-55b3-4808-87e5-463ae248f687",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "b20de029-e798-4122-9d87-132c8de90ee6",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Chunk",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [
+      "method::hydrothermal",
+      "provenance::GBM",
+      "furnace::McNulty",
+      "autoclave::#O"
+   ],
+   "template": {
+      "id": "03a087f8-288c-428b-9edc-9b54c3ae88ee",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "2c44216c-c239-48e2-821b-520c54c561d5"
+   }
+}

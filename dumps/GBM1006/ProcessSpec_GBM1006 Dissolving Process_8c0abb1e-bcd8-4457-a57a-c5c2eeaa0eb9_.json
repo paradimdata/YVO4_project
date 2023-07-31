@@ -1,0 +1,54 @@
+{
+   "conditions": [
+      {
+         "file_links": [],
+         "name": "Location",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "18865c5c-6747-4dc0-b7a4-65806bc5676a",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "condition",
+         "value": {
+            "category": "Wet Lab",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "file_links": [],
+   "name": "GBM1006 Dissolving Process",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Equipment Used",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "91fec4e4-77fa-4313-a5e2-759d4efd09df",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Autoclave",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "tags": [
+      "method::hydrothermal",
+      "provenance::GBM"
+   ],
+   "template": {
+      "id": "8962a73d-f6ea-40b2-bf42-459e240095dd",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "process_spec",
+   "uids": {
+      "auto": "8c0abb1e-bcd8-4457-a57a-c5c2eeaa0eb9"
+   }
+}

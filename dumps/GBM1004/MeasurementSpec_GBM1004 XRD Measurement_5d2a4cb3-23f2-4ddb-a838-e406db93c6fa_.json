@@ -1,0 +1,89 @@
+{
+   "conditions": [
+      {
+         "file_links": [],
+         "name": "Location",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "d26852fe-731b-4530-b729-42dc94e1a1d4",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "condition",
+         "value": {
+            "category": "X-Ray Diffraction Panel",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "file_links": [],
+   "name": "GBM1004 XRD Measurement",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Duration",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "c0d1efc8-ca5d-4acf-8a8e-8c675533d92f",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 2.0,
+            "type": "nominal_real",
+            "units": "hour"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "XRD Range",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "4ecadd62-9d96-46a7-9940-6cc6a2387f2f",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "5-90",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "XRD Adhesive",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "8a6eea23-1343-47b0-aa6e-2bf55279cf34",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Vaseline",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "tags": [
+      "method::hydrothermal",
+      "provenance::GBM",
+      "furnace::McNulty",
+      "autoclave::#O"
+   ],
+   "template": {
+      "id": "2c6a176c-e706-4673-8e38-360c0f779368",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "measurement_spec",
+   "uids": {
+      "auto": "5d2a4cb3-23f2-4ddb-a838-e406db93c6fa"
+   }
+}

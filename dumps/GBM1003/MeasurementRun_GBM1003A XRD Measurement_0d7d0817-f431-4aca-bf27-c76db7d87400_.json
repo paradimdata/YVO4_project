@@ -1,0 +1,117 @@
+{
+   "conditions": [
+      {
+         "file_links": [],
+         "name": "Location",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "12d0cca2-576a-462f-8f19-0716213aeab5",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "condition",
+         "value": {
+            "category": "X-Ray Diffraction Panel",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "file_links": [
+      {
+         "filename": "GBM1003A Powder XRD",
+         "type": "file_link",
+         "url": "https://occamy.chemistry.jhu.edu/data/XRD/Gannon/ML_Dukie_20230609_1_GBM_0_GBM1003A_YVO4_5-60_15min.raw"
+      },
+      {
+         "filename": "GBM1003B Powder XRD",
+         "type": "file_link",
+         "url": "https://occamy.chemistry.jhu.edu/data/XRD/Gannon/ML_Dukie_20230609_2_GBM_0_GBM1003B_YV0p95O4_5-60_15min.raw"
+      },
+      {
+         "filename": "GBM1003C Powder XRD",
+         "type": "file_link",
+         "url": "https://occamy.chemistry.jhu.edu/data/XRD/Gannon/ML_Dukie_20230609_3_GBM_0_GBM1003C_YV1p05O4_5-60_15min.raw"
+      }
+   ],
+   "material": {
+      "id": "4aa1380f-7cf6-475f-949c-0d7c7b6b925a",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1003A XRD Measurement",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Duration",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "0d286a72-ee36-440f-a2b2-bc8733bdd385",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.25,
+            "type": "nominal_real",
+            "units": "hour"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "XRD Range",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "f04dc322-495e-4a3c-9350-1625c5e4ce42",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "5-60",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "XRD Adhesive",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "e547c8fc-6476-4b73-a744-8259e97704d9",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Vaseline",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "properties": [],
+   "source": {
+      "performed_by": "gmurra12@jh.edu",
+      "performed_date": "2023-06-09T00:00:00",
+      "type": "performed_source"
+   },
+   "spec": {
+      "id": "67b3a767-7d09-4849-9e65-3f338546bf2e",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::crucible",
+      "provenance::GBM",
+      "furnace::Dukie",
+      "furnace::Dukie",
+      "furnace::Dukie"
+   ],
+   "type": "measurement_run",
+   "uids": {
+      "auto": "0d7d0817-f431-4aca-bf27-c76db7d87400"
+   }
+}

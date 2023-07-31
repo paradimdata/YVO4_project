@@ -1,0 +1,32 @@
+{
+   "absolute_quantity": {
+      "nominal": 308.5,
+      "type": "nominal_real",
+      "units": "milligram"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "2180cdfb-9c6f-4653-ba2c-24930507ed39",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "V2O5 Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "34490be4-2741-430f-adda-427c137d908b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::hydrothermal",
+      "provenance::GBM"
+   ],
+   "type": "ingredient_spec",
+   "uids": {
+      "auto": "e486348b-c84f-4e7d-afab-c48a092c289d"
+   },
+   "volume_fraction": null
+}
