@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "Li2CO3 Acquired Material Base",
+   "notes": null,
+   "process": {
+      "id": "6c60a3ba-d161-48f2-8b38-b3624013cc9b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "1183f1d0-1f67-4f10-a473-44de9af1c443",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "be0cbeb6-6caa-450a-b9ee-88fffab80fc7"
+   }
+}

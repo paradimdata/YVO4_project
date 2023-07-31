@@ -1,0 +1,29 @@
+{
+   "absolute_quantity": {
+      "nominal": 10000.0,
+      "type": "nominal_real",
+      "units": "milligram"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "b3312b99-d30b-42ce-92ec-3e098141544e",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1007_evacuated Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "b6c346fe-cab8-46e2-a327-0d6946719353",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_spec",
+   "uids": {
+      "auto": "88e76aff-1661-4717-98cd-33572c1259b4"
+   },
+   "volume_fraction": null
+}

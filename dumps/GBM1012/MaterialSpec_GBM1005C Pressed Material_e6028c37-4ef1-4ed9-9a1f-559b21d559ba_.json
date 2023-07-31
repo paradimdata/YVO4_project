@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1005C Pressed Material",
+   "notes": null,
+   "process": {
+      "id": "85f6a673-a4bd-47f0-9132-32448ae27a8b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "df2d8620-f6a6-4286-b980-1a8b14038e25",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Pellet",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "d4fb35f8-b4b5-4865-9771-081c70c38e11",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "e6028c37-4ef1-4ed9-9a1f-559b21d559ba"
+   }
+}

@@ -1,0 +1,78 @@
+{
+   "conditions": [
+      {
+         "file_links": [],
+         "name": "Location",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "2aacf5a5-8f98-4f1a-9104-d4e8786193d2",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "condition",
+         "value": {
+            "category": "PARADIM",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "file_links": [
+      {
+         "filename": "ML-Krakatoa_20230720_1_GBM_0_GBM1017",
+         "type": "file_link",
+         "url": "https://occamy.chemistry.jhu.edu/data/IQMMIPShare/Images/Gannon/ML-Krakatoa_20230720_1_GBM_0_GBM1015.png"
+      },
+      {
+         "filename": "ML-Krakatoa_20230720_1_GBM_1_GBM1015",
+         "type": "file_link",
+         "url": "https://occamy.chemistry.jhu.edu/data/IQMMIPShare/Images/Gannon/ML-Krakatoa_20230720_1_GBM_1_GBM1015.png"
+      },
+      {
+         "filename": "ML-Krakatoa_20230720_1_GBM_2_GBM1015",
+         "type": "file_link",
+         "url": "https://occamy.chemistry.jhu.edu/data/IQMMIPShare/Images/Gannon/ML-Krakatoa_20230720_1_GBM_2_GBM1015.png"
+      }
+   ],
+   "material": {
+      "id": "ae68914d-29b0-42d2-bbe5-4a0efccb8b59",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1017 Photos (5) Photo Measurement",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Equipment Used",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ae1d9501-cbcc-4325-a6b6-682406b287dd",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Zeiss Axiocam 208 Color, Stemi508 Microscope",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "properties": [],
+   "source": {
+      "performed_by": "gmurra12@jh.edu",
+      "performed_date": "2023-07-20T00:00:00",
+      "type": "performed_source"
+   },
+   "spec": {
+      "id": "4e329f37-90b4-446e-89c3-1a7ca5abab2b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "measurement_run",
+   "uids": {
+      "auto": "0a9e1bd9-11a3-4182-bed7-fa63173083dd"
+   }
+}

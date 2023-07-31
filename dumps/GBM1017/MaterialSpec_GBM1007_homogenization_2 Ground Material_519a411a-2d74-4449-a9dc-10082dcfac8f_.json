@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1007_homogenization_2 Ground Material",
+   "notes": null,
+   "process": {
+      "id": "8ab9cda8-c98b-48fe-9975-b44311cc3066",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "cb420326-6933-43b4-8053-b07c542b7e26",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Powder",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "89b1d8d1-92fb-4439-8482-58fb294ce865",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "519a411a-2d74-4449-a9dc-10082dcfac8f"
+   }
+}

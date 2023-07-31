@@ -1,0 +1,34 @@
+{
+   "absolute_quantity": {
+      "nominal": 10096.6,
+      "type": "nominal_real",
+      "units": "milligram"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "d982922f-e875-41ca-8de9-ca6a5122a38f",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1007_evacuated Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "c9a0949e-2b2a-4736-8798-a6bfaaf14dcd",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "spec": {
+      "id": "dd05c1bc-4f17-460e-b37c-619c453d3ba2",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_run",
+   "uids": {
+      "auto": "4446138e-37a8-458b-b954-1b6367279c78"
+   },
+   "volume_fraction": null
+}

@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1007_homogenization_2 Heated Material",
+   "notes": null,
+   "process": {
+      "id": "181f2790-6872-4fbf-ade4-411a596e167b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "cb420326-6933-43b4-8053-b07c542b7e26",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Powder",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "9ddcf198-2169-4104-b5a9-448deec47887",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "f2ae3657-bb30-4ef9-b414-08f6b32b9aec"
+   }
+}

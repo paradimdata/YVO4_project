@@ -1,0 +1,29 @@
+{
+   "absolute_quantity": {
+      "nominal": 10000.0,
+      "type": "nominal_real",
+      "units": "milligram"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "fbcbfbb9-441c-4edb-81d6-8207ff94ecbb",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1007_homogenization_1 Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "7e97954c-4317-4c99-baaf-2e954661b7b8",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_spec",
+   "uids": {
+      "auto": "21c050d0-99f1-4ef1-b7ad-0438c2548035"
+   },
+   "volume_fraction": null
+}
