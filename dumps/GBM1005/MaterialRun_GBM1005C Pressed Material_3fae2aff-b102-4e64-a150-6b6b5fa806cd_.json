@@ -1,0 +1,24 @@
+{
+   "file_links": [],
+   "name": "GBM1005C Pressed Material",
+   "notes": null,
+   "process": {
+      "id": "504f379c-224b-4c6d-83b1-9151e4746354",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "a4d5d32a-891f-4ac0-9f49-f569d2e3874a",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::crucible",
+      "provenance::GBM"
+   ],
+   "type": "material_run",
+   "uids": {
+      "auto": "3fae2aff-b102-4e64-a150-6b6b5fa806cd"
+   }
+}
