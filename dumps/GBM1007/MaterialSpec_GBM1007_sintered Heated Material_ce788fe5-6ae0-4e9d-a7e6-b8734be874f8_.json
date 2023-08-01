@@ -1,0 +1,45 @@
+{
+   "file_links": [],
+   "name": "GBM1007_sintered Heated Material",
+   "notes": null,
+   "process": {
+      "id": "dbf6deb2-195e-4b66-bd48-a46aefdc5a68",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "f2ec8f13-e117-493a-8c98-18aa4eb99788",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Rod",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [
+      "method::ldfz",
+      "provenance::GBM"
+   ],
+   "template": {
+      "id": "a4dd21bf-f872-41ff-9bec-9a2d3ce807cb",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "ce788fe5-6ae0-4e9d-a7e6-b8734be874f8"
+   }
+}

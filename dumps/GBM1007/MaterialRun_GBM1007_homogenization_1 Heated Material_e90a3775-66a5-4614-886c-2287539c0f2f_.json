@@ -1,0 +1,24 @@
+{
+   "file_links": [],
+   "name": "GBM1007_homogenization_1 Heated Material",
+   "notes": null,
+   "process": {
+      "id": "70d534e4-34d6-4b9b-a9d2-eb7ec726ec00",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "bca39f61-8931-485c-aa3e-32101948eba2",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::ldfz",
+      "provenance::GBM"
+   ],
+   "type": "material_run",
+   "uids": {
+      "auto": "e90a3775-66a5-4614-886c-2287539c0f2f"
+   }
+}

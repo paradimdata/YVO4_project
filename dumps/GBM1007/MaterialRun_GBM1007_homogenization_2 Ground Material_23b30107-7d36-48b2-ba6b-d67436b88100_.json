@@ -1,0 +1,24 @@
+{
+   "file_links": [],
+   "name": "GBM1007_homogenization_2 Ground Material",
+   "notes": null,
+   "process": {
+      "id": "2d6dca3a-de58-4109-800a-d04b53427303",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "97204361-9e22-4025-9fd1-48fbfd0ff480",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::ldfz",
+      "provenance::GBM"
+   ],
+   "type": "material_run",
+   "uids": {
+      "auto": "23b30107-7d36-48b2-ba6b-d67436b88100"
+   }
+}

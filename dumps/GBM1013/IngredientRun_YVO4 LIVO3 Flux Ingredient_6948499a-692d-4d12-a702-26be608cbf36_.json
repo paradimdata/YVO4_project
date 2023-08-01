@@ -1,0 +1,34 @@
+{
+   "absolute_quantity": {
+      "nominal": 11007.599999999999,
+      "type": "nominal_real",
+      "units": "milligram"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "2ff63c2f-604a-477d-9a8d-ca24c62afdfc",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "YVO4 LIVO3 Flux Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "ae5036b7-55ef-4d62-9b10-28ee60ed196e",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "spec": {
+      "id": "896b0b67-07d8-4e66-8122-49242d44d38c",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_run",
+   "uids": {
+      "auto": "6948499a-692d-4d12-a702-26be608cbf36"
+   },
+   "volume_fraction": null
+}

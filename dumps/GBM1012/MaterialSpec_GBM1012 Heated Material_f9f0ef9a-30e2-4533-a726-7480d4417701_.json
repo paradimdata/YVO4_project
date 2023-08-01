@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1012 Heated Material",
+   "notes": null,
+   "process": {
+      "id": "d1a5597e-b379-415c-9e7e-051e8951133f",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "6480ed17-c62b-4e35-9e0f-636aa91bbdee",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Solution",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "f56ec303-8079-424b-b96e-4df39adff394",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "f9f0ef9a-30e2-4533-a726-7480d4417701"
+   }
+}

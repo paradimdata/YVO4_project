@@ -1,0 +1,29 @@
+{
+   "absolute_quantity": {
+      "nominal": 9.305,
+      "type": "nominal_real",
+      "units": "milligram"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "fd307a5a-814f-478a-a84c-5786afb0116b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "H2O Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "8e9c8a83-b759-4ba9-ab44-cb223a4291df",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_spec",
+   "uids": {
+      "auto": "bc349f0f-68b7-436c-b901-ee2cc1319dc6"
+   },
+   "volume_fraction": null
+}

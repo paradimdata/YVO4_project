@@ -1,0 +1,24 @@
+{
+   "file_links": [],
+   "name": "GBM1007_rod Pressed Material",
+   "notes": null,
+   "process": {
+      "id": "cd8e9613-45aa-47a0-969d-0d7fa41ae5bd",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "90b5aab7-2b96-4221-bbf6-ebf7229838ff",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::ldfz",
+      "provenance::GBM"
+   ],
+   "type": "material_run",
+   "uids": {
+      "auto": "6ad5b488-e5dd-481d-8a58-3b32a4cf41d0"
+   }
+}

@@ -1,0 +1,45 @@
+{
+   "file_links": [],
+   "name": "GBM1007_rod Pressed Material",
+   "notes": null,
+   "process": {
+      "id": "0a7cbc6c-c035-46d2-8d93-4313318fba69",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "f2ec8f13-e117-493a-8c98-18aa4eb99788",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Rod",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [
+      "method::ldfz",
+      "provenance::GBM"
+   ],
+   "template": {
+      "id": "78d057c5-42f6-4f53-b6b2-a217d56ae3f7",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "00dc65b0-c1a9-4722-953a-cc12ab3851ea"
+   }
+}

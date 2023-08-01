@@ -1,0 +1,37 @@
+{
+   "absolute_quantity": {
+      "nominal": 101.0,
+      "type": "nominal_real",
+      "units": "millimeter"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "bee23778-a923-414f-9b52-f5097dcebe9f",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1007_sintered Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "997ca9c1-3c4e-4786-88d3-356df7cda8b8",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "spec": {
+      "id": "f0351409-47a8-40b3-a152-638bd7b50591",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::ldfz",
+      "provenance::GBM"
+   ],
+   "type": "ingredient_run",
+   "uids": {
+      "auto": "b6239141-e084-4c1f-bb1f-327b6a18d03c"
+   },
+   "volume_fraction": null
+}

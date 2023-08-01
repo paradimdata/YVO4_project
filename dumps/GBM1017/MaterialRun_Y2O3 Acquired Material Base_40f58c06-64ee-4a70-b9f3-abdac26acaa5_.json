@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "Y2O3 Acquired Material Base",
+   "notes": null,
+   "process": {
+      "id": "ea8e73e3-6a89-43e6-bbc0-6ca8172c7f14",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "772fd078-298c-4658-a077-ad6b42f8bf9b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "40f58c06-64ee-4a70-b9f3-abdac26acaa5"
+   }
+}

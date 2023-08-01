@@ -1,0 +1,24 @@
+{
+   "file_links": [],
+   "name": "GBM1007_evacuated Evacuated Material",
+   "notes": null,
+   "process": {
+      "id": "602efba9-e9fa-418e-b721-8fbd6d35283e",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "5e7c9a24-1402-4fb6-a0db-129ed4cf45a6",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::ldfz",
+      "provenance::GBM"
+   ],
+   "type": "material_run",
+   "uids": {
+      "auto": "c38dd8a9-bb97-4d84-a154-753381747e34"
+   }
+}

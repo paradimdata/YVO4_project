@@ -1,0 +1,24 @@
+{
+   "file_links": [],
+   "name": "GBM1009 Filtered Material",
+   "notes": null,
+   "process": {
+      "id": "6f737e6c-c904-4b20-a86a-2d7cc36cb696",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "56eb3396-1832-44cc-8e78-2e3ce06e11a4",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::flux",
+      "provenance::GBM"
+   ],
+   "type": "material_run",
+   "uids": {
+      "auto": "30af1efc-882c-434a-805d-25113422e7a8"
+   }
+}

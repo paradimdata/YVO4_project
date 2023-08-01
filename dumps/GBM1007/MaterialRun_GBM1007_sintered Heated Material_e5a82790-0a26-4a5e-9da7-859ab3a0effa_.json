@@ -1,0 +1,24 @@
+{
+   "file_links": [],
+   "name": "GBM1007_sintered Heated Material",
+   "notes": null,
+   "process": {
+      "id": "997ca9c1-3c4e-4786-88d3-356df7cda8b8",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "ce788fe5-6ae0-4e9d-a7e6-b8734be874f8",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::ldfz",
+      "provenance::GBM"
+   ],
+   "type": "material_run",
+   "uids": {
+      "auto": "e5a82790-0a26-4a5e-9da7-859ab3a0effa"
+   }
+}

@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1013_YVO4 Heated Material",
+   "notes": null,
+   "process": {
+      "id": "cd7e3092-71af-41b7-853d-fc37724e357a",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "4f55b128-c53a-4a0f-94a2-7467449f0632",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Powder",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "7c86076b-a962-4615-9e80-87da4fecf9d9",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "116dca35-725a-49cc-b0c1-1d649def7eda"
+   }
+}

@@ -1,0 +1,34 @@
+{
+   "absolute_quantity": {
+      "nominal": 14.0,
+      "type": "nominal_real",
+      "units": "milliliter"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "dfb9a56b-5f95-4ffa-85b5-cbb1828cbe14",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1012 Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "f0e8c5d8-c19c-4f08-8eb5-2c453a0d5630",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "spec": {
+      "id": "33506688-a20f-4c7b-b381-b8e86f1fe238",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_run",
+   "uids": {
+      "auto": "1e659094-09f7-404d-8b74-02f7d5a3fbdc"
+   },
+   "volume_fraction": null
+}

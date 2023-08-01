@@ -1,0 +1,45 @@
+{
+   "file_links": [],
+   "name": "GBM1014 Filtered Material",
+   "notes": null,
+   "process": {
+      "id": "3f471a76-cbcc-4c70-944f-783ce2ccc0a7",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "165bdf7a-f889-4e31-8cba-14ce94929225",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "None",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [
+      "method::hydrothermal",
+      "provenance::GBM"
+   ],
+   "template": {
+      "id": "141ccbf4-99c0-4263-a1dd-4805ce5bb776",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "b67ad52d-01b0-4635-8efc-e3346376f531"
+   }
+}

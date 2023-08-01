@@ -1,0 +1,29 @@
+{
+   "absolute_quantity": {
+      "nominal": 1000.0,
+      "type": "nominal_real",
+      "units": "milligram"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "116dca35-725a-49cc-b0c1-1d649def7eda",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1013 YVO4 Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "8f0edd18-a302-4c87-ae9d-38bbe1187a03",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_spec",
+   "uids": {
+      "auto": "5f84a9dd-633c-4f87-b201-45f3e5bf4789"
+   },
+   "volume_fraction": null
+}

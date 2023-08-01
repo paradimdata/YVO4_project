@@ -1,0 +1,24 @@
+{
+   "file_links": [],
+   "name": "GBM1007 Terminal Material",
+   "notes": null,
+   "process": {
+      "id": "017ff85a-75b9-414c-a667-2853b028b7d9",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "105579b0-3520-4718-bd6a-02e923e25294",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::ldfz",
+      "provenance::GBM"
+   ],
+   "type": "material_run",
+   "uids": {
+      "auto": "c5ac4547-d919-4dc3-b307-b0966d26cf4d"
+   }
+}

@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "GBM1013_YVO4 Ground Material",
+   "notes": null,
+   "process": {
+      "id": "daee77d2-2eb3-4f71-9e7e-817e98834a86",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "e85fa5ae-7935-43bf-927f-1e07a06496d5",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "d90f9c20-84d5-4839-b16b-b59bd6bf3840"
+   }
+}

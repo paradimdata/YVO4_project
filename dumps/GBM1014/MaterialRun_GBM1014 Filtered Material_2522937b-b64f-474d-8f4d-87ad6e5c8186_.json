@@ -1,0 +1,24 @@
+{
+   "file_links": [],
+   "name": "GBM1014 Filtered Material",
+   "notes": null,
+   "process": {
+      "id": "34a403ab-c709-4521-9135-26a6a26d75c9",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "b67ad52d-01b0-4635-8efc-e3346376f531",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::hydrothermal",
+      "provenance::GBM"
+   ],
+   "type": "material_run",
+   "uids": {
+      "auto": "2522937b-b64f-474d-8f4d-87ad6e5c8186"
+   }
+}

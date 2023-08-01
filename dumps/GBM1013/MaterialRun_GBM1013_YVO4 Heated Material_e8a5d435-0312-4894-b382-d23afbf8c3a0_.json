@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "GBM1013_YVO4 Heated Material",
+   "notes": null,
+   "process": {
+      "id": "abd3f28c-072c-41b0-be50-567502fcce8e",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "116dca35-725a-49cc-b0c1-1d649def7eda",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "e8a5d435-0312-4894-b382-d23afbf8c3a0"
+   }
+}

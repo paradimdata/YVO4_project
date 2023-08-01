@@ -1,0 +1,29 @@
+{
+   "absolute_quantity": {
+      "nominal": 175.7,
+      "type": "nominal_real",
+      "units": "milligram"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "aa7423e8-4663-40ca-88e8-8b7c5fdcd99a",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "Y2O3 Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "84235880-2a8c-421b-98b4-67deb70a3291",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_spec",
+   "uids": {
+      "auto": "4c82a37c-c4b6-4e4e-b787-c4a675a8780a"
+   },
+   "volume_fraction": null
+}

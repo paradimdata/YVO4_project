@@ -1,0 +1,21 @@
+{
+   "file_links": [],
+   "name": "GBM1009_Flux_Medium Heated Material",
+   "notes": null,
+   "process": {
+      "id": "0163bfc5-bc9c-48b1-8f63-5de4f7fe5606",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "9c3a7328-d3c8-478c-bd1c-46f12c83c5f9",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "material_run",
+   "uids": {
+      "auto": "8353544d-a9f0-4a86-9bf5-76179167785c"
+   }
+}

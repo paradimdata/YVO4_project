@@ -1,0 +1,29 @@
+{
+   "absolute_quantity": {
+      "nominal": 1000.0,
+      "type": "nominal_real",
+      "units": "milligram"
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "dc20a662-e069-4ea7-8796-2096273d0956",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1013_Flux_Medium Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "6fadb17d-057f-48ca-91e9-dc030695d26a",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "ingredient_spec",
+   "uids": {
+      "auto": "0e4a90dc-bd72-4ef7-8d44-b09384cdfa2a"
+   },
+   "volume_fraction": null
+}
