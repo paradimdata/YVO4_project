@@ -1,0 +1,45 @@
+{
+   "file_links": [],
+   "name": "GBM1003C Ground Material",
+   "notes": null,
+   "process": {
+      "id": "38e36769-2b38-4ab0-8dbf-f0822315328a",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "471e55bc-88e2-4fc1-836d-954fe918870a",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Powder",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [
+      "method::crucible",
+      "provenance::GBM"
+   ],
+   "template": {
+      "id": "fde7bfbb-21a5-4fba-b4c6-0508af7d3ad6",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "178b242d-d1a1-4998-9d07-0cc5dc37d3ee"
+   }
+}

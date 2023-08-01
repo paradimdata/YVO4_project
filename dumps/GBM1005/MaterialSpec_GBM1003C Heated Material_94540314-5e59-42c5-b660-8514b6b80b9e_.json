@@ -1,0 +1,42 @@
+{
+   "file_links": [],
+   "name": "GBM1003C Heated Material",
+   "notes": null,
+   "process": {
+      "id": "cca03ae3-70ec-451a-8ded-e664af714a50",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "471e55bc-88e2-4fc1-836d-954fe918870a",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Powder",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "26acbfcc-4a0c-4434-95e5-f86fb76a5fb7",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "94540314-5e59-42c5-b660-8514b6b80b9e"
+   }
+}

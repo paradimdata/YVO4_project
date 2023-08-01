@@ -1,0 +1,45 @@
+{
+   "file_links": [],
+   "name": "GBM1005B Pressed Material",
+   "notes": null,
+   "process": {
+      "id": "0a239c95-adcb-40ea-b282-60c1a59d2f0c",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Form",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "471e55bc-88e2-4fc1-836d-954fe918870a",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "category": "Pellet",
+               "type": "nominal_categorical"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [
+      "method::crucible",
+      "provenance::GBM"
+   ],
+   "template": {
+      "id": "62d85886-38d9-4321-b638-9d4279a1078d",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "8db9da41-8b88-4a69-81c9-0a022789049c"
+   }
+}
