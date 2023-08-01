@@ -1,0 +1,38 @@
+{
+   "absolute_quantity": {
+      "lower_bound": 370.0,
+      "type": "uniform_real",
+      "units": "milligram",
+      "upper_bound": 371.0
+   },
+   "file_links": [],
+   "labels": [],
+   "mass_fraction": null,
+   "material": {
+      "id": "fa2e3e79-0c07-4551-8a48-b4ac468c6eef",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "GBM1003A Ingredient",
+   "notes": null,
+   "number_fraction": null,
+   "process": {
+      "id": "11b5e5ff-76b3-4629-bcbc-99342e3d3747",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "spec": {
+      "id": "828cc2d6-6e65-4f24-8a6f-ed1fac843196",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::crucible",
+      "provenance::GBM"
+   ],
+   "type": "ingredient_run",
+   "uids": {
+      "auto": "ff93e7e8-f9ab-4530-ace1-5e724da009cc"
+   },
+   "volume_fraction": null
+}

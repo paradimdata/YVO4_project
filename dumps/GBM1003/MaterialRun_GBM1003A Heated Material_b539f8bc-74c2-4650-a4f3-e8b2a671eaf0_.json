@@ -1,0 +1,24 @@
+{
+   "file_links": [],
+   "name": "GBM1003A Heated Material",
+   "notes": null,
+   "process": {
+      "id": "12e12e0e-d507-4bf2-b3b2-18502bc12438",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "sample_type": "experimental",
+   "spec": {
+      "id": "9ab3b2d9-a801-4366-9ae8-8439ed870cb9",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [
+      "method::crucible",
+      "provenance::GBM"
+   ],
+   "type": "material_run",
+   "uids": {
+      "auto": "b539f8bc-74c2-4650-a4f3-e8b2a671eaf0"
+   }
+}
